@@ -13,7 +13,7 @@ AI-powered meeting assistant that automatically transcribes meetings, extracts a
 Automated system using AWS AI services that:
 - Transcribes meeting audio
 - Extracts action items with owners
-- Analyzes sentiment  
+- Analyzes sentiment
 - Sends email summaries
 - Tracks completion
 
@@ -50,12 +50,12 @@ For 20-person team:
 ## Quick Start
 
 Deploy for demo:
-```
+```bash
 bash setup.sh
 ```
 
 Teardown after demo:
-```
+```bash
 bash teardown.sh
 ```
 
