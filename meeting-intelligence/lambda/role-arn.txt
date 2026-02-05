@@ -1,0 +1,1 @@
+arn:aws:iam::751017186170:role/MeetingIntelligenceRole

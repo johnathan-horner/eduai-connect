@@ -1,0 +1,41 @@
+{
+  "Comment": "Meeting Intelligence Workflow",
+  "StartAt": "TranscribeMeeting",
+  "States": {
+    "TranscribeMeeting": {
+      "Type": "Task",
+      "Resource": "arn:aws:lambda:us-west-2:751017186170:function:MeetingTranscriber",
+      "Next": "WaitForTranscription"
+    },
+    "WaitForTranscription": {
+      "Type": "Wait",
+      "Seconds": 30,
+      "Next": "CheckTranscriptionStatus"
+    },
+    "CheckTranscriptionStatus": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::aws-sdk:transcribe:getTranscriptionJob",
+      "Parameters": {
+        "TranscriptionJobName.$": "$.jobName"
+      },
+      "ResultPath": "$.transcriptionStatus",
+      "Next": "IsTranscriptionComplete"
+    },
+    "IsTranscriptionComplete": {
+      "Type": "Choice",
+      "Choices": [
+        {
+          "Variable": "$.transcriptionStatus.TranscriptionJob.TranscriptionJobStatus",
+          "StringEquals": "COMPLETED",
+          "Next": "AnalyzeMeeting"
+        }
+      ],
+      "Default": "WaitForTranscription"
+    },
+    "AnalyzeMeeting": {
+      "Type": "Task",
+      "Resource": "arn:aws:lambda:us-west-2:751017186170:function:MeetingAnalyzer",
+      "End": true
+    }
+  }
+}

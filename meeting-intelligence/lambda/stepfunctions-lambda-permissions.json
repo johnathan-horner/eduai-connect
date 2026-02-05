@@ -1,0 +1,13 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "lambda:InvokeFunction",
+      "Resource": [
+        "arn:aws:lambda:us-west-2:751017186170:function:MeetingTranscriber",
+        "arn:aws:lambda:us-west-2:751017186170:function:MeetingAnalyzer"
+      ]
+    }
+  ]
+}

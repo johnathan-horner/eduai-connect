@@ -1,0 +1,256 @@
+import React, { useState, useEffect } from 'react';
+import { Calendar, CheckCircle, Circle, AlertTriangle, TrendingUp } from 'lucide-react';
+
+const API_ENDPOINT = 'https://zs7frctlt8.execute-api.us-west-2.amazonaws.com/prod';
+
+export default function MeetingDashboard() {
+  const [meetings, setMeetings] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [selectedMeeting, setSelectedMeeting] = useState(null);
+
+  useEffect(() => {
+    fetchMeetings();
+  }, []);
+
+  const fetchMeetings = async () => {
+    try {
+      const response = await fetch(`${API_ENDPOINT}/meetings`);
+      const data = await response.json();
+      setMeetings(data);
+      setLoading(false);
+    } catch (error) {
+      console.error('Error:', error);
+      setLoading(false);
+    }
+  };
+
+  const fetchMeetingDetails = async (meetingId) => {
+    try {
+      const response = await fetch(`${API_ENDPOINT}/meeting?id=${meetingId}`);
+      const data = await response.json();
+      setSelectedMeeting(data);
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  };
+
+  const getPriorityColor = (priority) => {
+    const colors = {
+      high: 'bg-red-100 text-red-800 border-red-300',
+      medium: 'bg-yellow-100 text-yellow-800 border-yellow-300',
+      low: 'bg-green-100 text-green-800 border-green-300'
+    };
+    return colors[priority] || 'bg-gray-100 text-gray-800';
+  };
+
+  const getSentimentColor = (sentiment) => {
+    const colors = {
+      POSITIVE: 'text-green-600',
+      NEGATIVE: 'text-red-600',
+      NEUTRAL: 'text-gray-600',
+      MIXED: 'text-yellow-600'
+    };
+    return colors[sentiment] || 'text-gray-600';
+  };
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 flex items-center justify-center">
+        <div className="text-2xl text-gray-600">Loading meetings...</div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 p-8">
+      <div className="max-w-7xl mx-auto">
+        {/* Header */}
+        <div className="mb-8">
+          <h1 className="text-4xl font-bold text-gray-900 mb-2">
+            🤖 AI Meeting Intelligence
+          </h1>
+          <p className="text-gray-600 text-lg">
+            Track meetings, action items, and decisions automatically
+          </p>
+        </div>
+
+        {/* Stats Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+          <div className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-purple-500">
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="text-gray-500 text-sm font-medium">Total Meetings</p>
+                <p className="text-3xl font-bold text-gray-900 mt-1">{meetings.length}</p>
+              </div>
+              <Calendar className="text-purple-500" size={32} />
+            </div>
+          </div>
+
+          <div className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-blue-500">
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="text-gray-500 text-sm font-medium">Action Items</p>
+                <p className="text-3xl font-bold text-gray-900 mt-1">
+                  {meetings.reduce((sum, m) => sum + m.action_items_count, 0)}
+                </p>
+              </div>
+              <CheckCircle className="text-blue-500" size={32} />
+            </div>
+          </div>
+
+          <div className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-green-500">
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="text-gray-500 text-sm font-medium">Avg Sentiment</p>
+                <p className="text-3xl font-bold text-gray-900 mt-1">
+                  {meetings.filter(m => m.sentiment === 'POSITIVE').length > meetings.length / 2 ? '😊' : '😐'}
+                </p>
+              </div>
+              <TrendingUp className="text-green-500" size={32} />
+            </div>
+          </div>
+
+          <div className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-orange-500">
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="text-gray-500 text-sm font-medium">This Week</p>
+                <p className="text-3xl font-bold text-gray-900 mt-1">
+                  {meetings.filter(m => {
+                    const date = new Date(m.createdAt);
+                    const weekAgo = new Date();
+                    weekAgo.setDate(weekAgo.getDate() - 7);
+                    return date > weekAgo;
+                  }).length}
+                </p>
+              </div>
+              <AlertTriangle className="text-orange-500" size={32} />
+            </div>
+          </div>
+        </div>
+
+        {/* Meetings List */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          {/* Left Column - Meetings List */}
+          <div className="bg-white rounded-xl shadow-lg p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Recent Meetings</h2>
+            <div className="space-y-4 max-h-[600px] overflow-y-auto">
+              {meetings.map((meeting) => (
+                <div
+                  key={meeting.meetingId}
+                  onClick={() => fetchMeetingDetails(meeting.meetingId)}
+                  className="border border-gray-200 rounded-lg p-4 hover:border-purple-500 hover:shadow-md cursor-pointer transition-all"
+                >
+                  <div className="flex justify-between items-start mb-2">
+                    <div className="flex-1">
+                      <p className="text-sm text-gray-500">
+                        {new Date(meeting.createdAt).toLocaleDateString('en-US', {
+                          month: 'short',
+                          day: 'numeric',
+                          year: 'numeric',
+                          hour: '2-digit',
+                          minute: '2-digit'
+                        })}
+                      </p>
+                      <p className="text-gray-800 mt-1">{meeting.summary}</p>
+                    </div>
+                    <span className={`px-3 py-1 rounded-full text-xs font-semibold ${getSentimentColor(meeting.sentiment)}`}>
+                      {meeting.sentiment}
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-4 text-sm text-gray-600">
+                    <span className="flex items-center gap-1">
+                      <CheckCircle size={16} />
+                      {meeting.action_items_count} actions
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Right Column - Meeting Details */}
+          <div className="bg-white rounded-xl shadow-lg p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Meeting Details</h2>
+            
+            {selectedMeeting ? (
+              <div className="space-y-6">
+                {/* Executive Summary */}
+                <div className="bg-purple-50 rounded-lg p-4 border border-purple-200">
+                  <h3 className="font-semibold text-purple-900 mb-2">📋 Executive Summary</h3>
+                  <p className="text-gray-700">{selectedMeeting.ai_analysis.executive_summary}</p>
+                </div>
+
+                {/* Action Items */}
+                <div>
+                  <h3 className="font-semibold text-gray-900 mb-3">🎯 Action Items ({selectedMeeting.ai_analysis.action_items.length})</h3>
+                  <div className="space-y-3">
+                    {selectedMeeting.ai_analysis.action_items.map((item, idx) => (
+                      <div key={idx} className={`border rounded-lg p-3 ${getPriorityColor(item.priority)}`}>
+                        <div className="flex items-start gap-3">
+                          <Circle size={20} className="mt-0.5 flex-shrink-0" />
+                          <div className="flex-1">
+                            <p className="font-medium">{item.task}</p>
+                            <div className="flex gap-4 mt-2 text-sm">
+                              <span>👤 {item.owner}</span>
+                              <span>📅 {item.due_date}</span>
+                              <span className="font-semibold uppercase">{item.priority}</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Decisions Made */}
+                <div>
+                  <h3 className="font-semibold text-gray-900 mb-3">✅ Decisions Made</h3>
+                  <ul className="space-y-2">
+                    {selectedMeeting.ai_analysis.decisions_made.map((decision, idx) => (
+                      <li key={idx} className="flex items-start gap-2 text-gray-700">
+                        <CheckCircle size={18} className="text-green-500 mt-0.5 flex-shrink-0" />
+                        <span>{decision}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Key Topics */}
+                <div>
+                  <h3 className="font-semibold text-gray-900 mb-3">💡 Key Topics</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {selectedMeeting.ai_analysis.key_topics.map((topic, idx) => (
+                      <span key={idx} className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
+                        {topic}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Sentiment Analysis */}
+                <div className="bg-gray-50 rounded-lg p-4 border border-gray-200">
+                  <h3 className="font-semibold text-gray-900 mb-2">📊 Sentiment Analysis</h3>
+                  <p className={`text-lg font-semibold ${getSentimentColor(selectedMeeting.comprehend_sentiment)}`}>
+                    {selectedMeeting.comprehend_sentiment}
+                  </p>
+                  <div className="mt-2 flex flex-wrap gap-2">
+                    {selectedMeeting.comprehend_key_phrases.slice(0, 5).map((phrase, idx) => (
+                      <span key={idx} className="text-sm bg-white px-2 py-1 rounded border border-gray-300 text-gray-700">
+                        {phrase}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <div className="text-center text-gray-500 py-20">
+                <Calendar size={64} className="mx-auto mb-4 text-gray-300" />
+                <p>Select a meeting to view details</p>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
