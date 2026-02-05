@@ -3,7 +3,7 @@ cat > README.md << 'READMEEOF'
 
 AI-powered meeting assistant that automatically transcribes meetings, extracts action items, and tracks follow-through.
 
-! [Architecture](architecture.png)
+![Architecture](architecture.png)
 
 ## Problem Solved
 
