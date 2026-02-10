@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Meta Tags -->
+    <title>Johnathan Horner - AWS Solutions Architect Professional | Ex-Amazon Cloud Engineer</title>
+    <meta name="description" content="Johnathan Horner - AWS Solutions Architect Professional, Ex-Amazon, 3x AWS Certified. Cloud consulting, GenAI projects, serverless architecture." />
+    <meta name="keywords" content="AWS Solutions Architect, Cloud Engineer, Ex-Amazon, AWS Certified, Cloud Consulting, GenAI, Three.js, React, Serverless Architecture, Brooklyn NY" />
+    <meta name="author" content="Johnathan Horner" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://johnathancloudspace.com/" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://johnathancloudspace.com/" />
+    <meta property="og:title" content="Johnathan Horner - AWS Solutions Architect Professional | Cloud Engineer" />
+    <meta property="og:description" content="Ex-Amazon engineer with AWS Solutions Architect Professional certification. Specializing in cloud migrations, GenAI applications, and 3D web experiences." />
+    <meta property="og:image" content="https://johnathancloudspace.com/img/logo.png" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://johnathancloudspace.com/" />
+    <meta property="twitter:title" content="Johnathan Horner - AWS Solutions Architect & Cloud Engineer" />
+    <meta property="twitter:description" content="Ex-Amazon engineer specializing in cloud migrations and 3D web experiences." />
+    <meta property="twitter:image" content="https://johnathancloudspace.com/img/logo.png" />
+
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="/img/bg.jpg" as="image" />
+    <link rel="preload" href="/img/logo.png" as="image" />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Johnathan Horner",
+      "jobTitle": "AWS Solutions Architect Professional",
+      "url": "https://johnathancloudspace.com",
+      "sameAs": [
+        "https://linkedin.com/in/johnathan-horner-99b37782",
+        "https://github.com/jaythagreat1",
+        "https://resume.johnathancloudspace.com"
+      ],
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "AWS Certified Solutions Architect – Professional"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "AWS Certified Solutions Architect – Associate"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "AWS Certified AI Practitioner"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "AWS Certified Generative AI Professional"
+        }
+      ],
+      "knowsAbout": ["AWS", "Cloud Computing", "Three.js", "React", "Serverless Architecture", "GenAI", "3D Web Development"]
+    }
+    </script>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            box-sizing: border-box;
+        }
+
+        /* Loading and fallback styles */
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease-out;
+        }
+
+        .loading-screen.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-top: 3px solid white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 20px;
+        }
+
+        .loading-text {
+            color: white;
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+        }
+
+        .loading-text h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .loading-text p {
+            margin: 5px 0;
+            opacity: 0.9;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Fallback background */
+        .fallback-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .fallback-background.active {
+            opacity: 1;
+        }
+
+        /* Error message styling */
+        .error-message {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(255, 0, 0, 0.9);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 14px;
+            z-index: 10000;
+            display: none;
+            max-width: 300px;
+        }
+
+        .error-message.show {
+            display: block;
+            animation: slideUp 0.3s ease-out;
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Mobile optimizations */
+        @media (max-width: 768px) {
+            .loading-text h1 {
+                font-size: 24px;
+            }
+
+            .loading-text p {
+                font-size: 16px;
+                padding: 0 20px;
+            }
+
+            .spinner {
+                width: 40px;
+                height: 40px;
+            }
+
+            .error-message {
+                left: 10px;
+                right: 10px;
+                bottom: 10px;
+                max-width: none;
+            }
+        }
+
+        /* High contrast for accessibility */
+        @media (prefers-contrast: high) {
+            .loading-screen {
+                background: #000;
+                color: #fff;
+            }
+
+            .fallback-background {
+                background: #000;
+            }
+        }
+
+        /* Reduced motion for accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            .spinner {
+                animation: none;
+                border: 3px solid white;
+            }
+
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="spinner"></div>
+        <div class="loading-text">
+            <h1>Johnathan CloudSpace</h1>
+            <p>Loading 3D Experience...</p>
+            <p style="font-size: 14px; opacity: 0.8;">AWS Solutions Architect Professional</p>
+        </div>
+    </div>
+
+    <!-- Fallback Background -->
+    <div id="fallback-background" class="fallback-background"></div>
+
+    <!-- Error Message -->
+    <div id="error-message" class="error-message"></div>
+
+    <!-- Main App Container -->
+    <div id="root"></div>
+
+    <script>
+        // Enhanced loading and error handling
+        let loadingTimeout;
+        let retryCount = 0;
+        const maxRetries = 2;
+
+        // Set loading timeout (5 seconds)
+        loadingTimeout = setTimeout(() => {
+            showFallbackBackground();
+        }, 5000);
+
+        // WebGL support detection
+        function checkWebGLSupport() {
+            try {
+                const canvas = document.createElement('canvas');
+                const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+                return !!(gl && gl.drawingBufferWidth);
+            } catch(e) {
+                return false;
+            }
+        }
+
+        // Show fallback background
+        function showFallbackBackground() {
+            const fallback = document.getElementById('fallback-background');
+            const loading = document.getElementById('loading-screen');
+
+            if (fallback && loading) {
+                fallback.classList.add('active');
+                loading.classList.add('hidden');
+
+                setTimeout(() => {
+                    loading.style.display = 'none';
+                }, 500);
+            }
+        }
+
+        // Hide loading screen when 3D loads successfully
+        function hideLoadingScreen() {
+            clearTimeout(loadingTimeout);
+            const loading = document.getElementById('loading-screen');
+            
+            if (loading) {
+                loading.classList.add('hidden');
+                setTimeout(() => {
+                    loading.style.display = 'none';
+                }, 500);
+            }
+        }
+
+        // Show error message
+        function showError(message) {
+            const errorDiv = document.getElementById('error-message');
+            if (errorDiv) {
+                errorDiv.textContent = message;
+                errorDiv.classList.add('show');
+
+                setTimeout(() => {
+                    errorDiv.classList.remove('show');
+                }, 5000);
+            }
+        }
+
+        // Global error handlers
+        window.addEventListener('error', (event) => {
+            console.error('Global error:', event.error);
+            
+            if (event.error && event.error.message) {
+                const message = event.error.message.toLowerCase();
+                
+                if (message.includes('potsdamer') || message.includes('hdr') || message.includes('webgl')) {
+                    if (retryCount < maxRetries) {
+                        retryCount++;
+                        console.log(`Retrying 3D load (attempt ${retryCount}/${maxRetries})...`);
+                        showError(`3D loading failed, retrying... (${retryCount}/${maxRetries})`);
+                    } else {
+                        showError('3D scene failed to load. Using fallback design.');
+                        showFallbackBackground();
+                    }
+                }
+            }
+        });
+
+        window.addEventListener('unhandledrejection', (event) => {
+            console.error('Unhandled promise rejection:', event.reason);
+            
+            if (event.reason && event.reason.toString().includes('potsdamer')) {
+                showError('3D environment loading failed');
+                if (retryCount >= maxRetries) {
+                    showFallbackBackground();
+                }
+            }
+        });
+
+        // Check WebGL support on load
+        if (!checkWebGLSupport()) {
+            showError('WebGL not supported. Showing fallback design.');
+            showFallbackBackground();
+        }
+
+        // Expose functions to React app
+        window.cloudspaceLoading = {
+            hide: hideLoadingScreen,
+            showFallback: showFallbackBackground,
+            showError: showError,
+            retryCount: () => retryCount,
+            maxRetries: maxRetries
+        };
+
+        // Performance monitoring
+        if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
+            try {
+                const observer = new PerformanceObserver((list) => {
+                    for (const entry of list.getEntries()) {
+                        if (entry.name.includes('three') || entry.name.includes('webgl')) {
+                            console.log(`3D Performance: ${entry.name} - ${entry.duration}ms`);
+                        }
+                    }
+                });
+                observer.observe({ entryTypes: ['measure', 'navigation'] });
+            } catch (e) {
+                console.warn('Performance Observer not supported:', e);
+            }
+        }
+    </script>
+
+    <script type="module" src="/src/main.jsx"></script>
+</body>
+</html>
