@@ -156,7 +156,7 @@ def render_sidebar():
             """)
 
         # Architecture Diagram
-        st.image("/Users/johnathanhorner/financial-anomaly-detection/docs/Transaction_Anomaly_Detection_AWS_Architecture.png",
+        st.image("docs/Transaction_Anomaly_Detection_AWS_Architecture.png",
                 caption="AWS Architecture Overview", width=None)
 
         # Tech Stack
