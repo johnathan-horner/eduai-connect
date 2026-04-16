@@ -220,11 +220,8 @@ def render_sidebar():
             """)
 
         # Architecture Diagram
-        try:
-            st.image("docs/Medical_Image_Triage_AWS_Architecture.png",
-                    caption="AWS Architecture", use_column_width=True)
-        except:
-            st.info("Architecture diagram not found")
+        st.image("/Users/johnathanhorner/medical-image-triage/docs/Medical_Image_Triage_AWS_Architecture.png",
+                caption="AWS Architecture", width=None)
 
         # Tech Stack
         st.markdown("**Tech Stack:**")
@@ -323,7 +320,7 @@ def render_triage_tab(demo_mode):
                     # Uploaded file
                     image = Image.open(uploaded_file)
 
-                st.image(image, caption="Uploaded Medical Image", use_column_width=True)
+                st.image(image, caption="Uploaded Medical Image", width=None)
 
                 # Triage button
                 if st.button("🔍 Analyze Image", type="primary", use_container_width=True):
@@ -495,8 +492,8 @@ def render_audit_tab(demo_mode):
             display_df['timestamp'] = display_df['timestamp'].dt.strftime('%Y-%m-%d %H:%M:%S')
 
         styled_df = display_df.style\
-            .map(style_routing_decision, subset=['routing_decision'])\
-            .map(style_confidence, subset=['confidence'])\
+            .apply(style_routing_decision, subset=['routing_decision'])\
+            .apply(style_confidence, subset=['confidence'])\
             .format({'confidence': '{:.1%}'})\
             .set_properties(**{'text-align': 'center'})
 
@@ -574,7 +571,7 @@ def render_dashboard_tab(demo_mode):
         )
         fig_line.add_hline(y=0.7, line_dash="dash", line_color="orange", annotation_text="Medium Confidence Threshold")
         fig_line.add_hline(y=0.9, line_dash="dash", line_color="green", annotation_text="High Confidence Threshold")
-        fig_line.update_yaxis(range=[0.5, 1.0])
+        fig_line.update_layout(yaxis=dict(range=[0.5, 1.0]))
         fig_line.update_layout(height=400)
         st.plotly_chart(fig_line, use_container_width=True)
 
