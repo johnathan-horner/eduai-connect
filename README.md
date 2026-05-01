@@ -1,5 +1,11 @@
 # EduAI Connect
 
+![CI](https://github.com/johnathan-horner/eduai-connect/actions/workflows/ci.yml/badge.svg)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://eduai-connect-horner.streamlit.app)
+[![Python 3.11](https://img.shields.io/badge/python-3.11-blue.svg)](https://www.python.org/downloads/)
+[![FERPA Compliant](https://img.shields.io/badge/FERPA-Compliant-green.svg)](docs/COMPLIANCE.md)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 AI-powered educational assistant that helps teachers proactively identify at-risk students through automated grading analysis and predictive insights.
 
 ## Problem Solved
@@ -129,3 +135,63 @@ Try the live system with sample data to see AI-powered student risk assessment i
 Built by Johnathan Horner as a portfolio project demonstrating advanced AI engineering, AWS architecture, and educational technology expertise.
 
 **Core Technologies**: Amazon Bedrock • LangGraph • AWS CDK • FERPA Compliance • Multi-Agent AI
+
+---
+
+## Architecture Decisions
+
+See [docs/decisions/](docs/decisions/) for architecture decision records explaining why each service and pattern was chosen.
+
+## AI System Documentation
+
+See [AI_SYSTEM_CARD.md](AI_SYSTEM_CARD.md) for detailed AI system documentation including RAG pipeline, multi-agent workflows, LLM usage, and governance framework.
+
+## API Documentation
+
+This project includes a FastAPI backend for educational data processing. Run the API server and visit `/docs` for interactive Swagger documentation.
+
+## 🔌 MCP Server Integration
+
+The EduAI Connect Platform includes a Model Context Protocol (MCP) server that exposes educational analysis functionality through a standardized interface for AI assistant integration.
+
+### Available Tools
+
+- `analyze_student_performance()` - Comprehensive student performance analysis with risk assessment
+- `generate_intervention_recommendations()` - AI-powered personalized intervention strategies
+- `evaluate_assignment_quality()` - Automated assignment evaluation with detailed feedback
+- `predict_student_outcomes()` - Predictive analytics for student success probability
+- `generate_progress_report()` - FERPA-compliant student progress reporting
+- `analyze_class_trends()` - Class-wide performance analysis and insights
+
+### Available Resources
+
+- `system://rag_pipeline` - RAG architecture and educational data source information
+- `data://student_data` - Student data sources and FERPA compliance controls
+
+### Available Prompts
+
+- `student_analysis` - Complete student analysis workflow using RAG and multi-agent AI
+- `intervention_planning` - AI-powered intervention strategy development
+
+Run with: `python mcp_server.py`
+
+## CI/CD Pipeline
+
+GitHub Actions automatically runs on push/PR to main:
+- Python 3.11 setup and dependency installation
+- Code linting with flake8 (max line length 120)
+- Import testing for core modules
+
+See [.github/workflows/ci.yml](.github/workflows/ci.yml) for full pipeline configuration.
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for development setup, architecture patterns, and contribution guidelines.
+
+## License
+
+Licensed under the MIT License. See [LICENSE](LICENSE) for details.
+
+---
+
+*Built by Johnathan Horner*
