@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "/Users/johnathanhorner/cdk-ai-constructs/logs/.7b05c838b142a1792238b37b1d2dca92ababe9a6-audit.json",
+    "files": [
+        {
+            "date": 1778982844256,
+            "name": "/Users/johnathanhorner/cdk-ai-constructs/logs/mcp-puppeteer-2026-05-16.log",
+            "hash": "6f6cd3bab90f626d9b2d02fb556a3c945068d287a415c50477e32cd3e16e0c1c"
+        }
+    ],
+    "hashType": "sha256"
+}
