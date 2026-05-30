@@ -528,7 +528,7 @@ body {
   <!-- HERO -->
   <section class="hero">
     <div class="hero-tag">AI Systems Portfolio</div>
-    <h1>I build AI systems that<br>could pass an <em>audit</em></h1>
+    <h1>I build AI systems<br><em>Built for Compliance</em></h1>
     <p class="hero-sub">Eight production AI systems across four regulated verticals: financial services, healthcare, education, and government. Every system ships with governance, compliance, and audit-ready documentation.</p>
 
     <div class="hero-stats">
@@ -537,6 +537,8 @@ body {
       <div><div class="stat-num">4</div><div class="stat-label">AWS Certifications</div></div>
       <div><div class="stat-num">4</div><div class="stat-label">Compliance Frameworks</div></div>
     </div>
+
+    <div class="compliance-caption" style="margin-top: 16px; font-family: 'DM Mono', monospace; font-size: 12px; color: #7c8aa5; letter-spacing: 0.5px; text-align: center;">HIPAA · FedRAMP · FERPA · SR 11-7 / SR 26-2</div>
 
     <div class="hero-links">
       <a href="https://linkedin.com/in/johnathan-horner" target="_blank">LinkedIn</a>
@@ -548,8 +550,15 @@ body {
 
   <!-- CAPABILITY BADGE ROW -->
   <div class="capability-badges">
-    <div class="capability-text">Every system includes: <span class="badge">MCP Integration</span> | <span class="badge">CI/CD Pipeline</span> | <span class="badge">OpenAPI Docs</span> | <span class="badge">Model Card</span> | <span class="badge">Architecture Decision Records</span></div>
+    <div class="capability-text">Every system includes: <span class="badge">MCP (Model Context Protocol) Integration</span> | <span class="badge">CI/CD Pipeline</span> | <span class="badge">OpenAPI Docs</span> | <span class="badge">Model Card</span> | <span class="badge">Architecture Decision Records</span></div>
   </div>
+
+  <!-- ABOUT -->
+  <section style="padding: 48px 0; border-bottom: 1px solid var(--border);">
+    <div style="max-width: 640px; margin: 0 auto; text-align: center;">
+      <p style="font-size: 17px; color: var(--text); line-height: 1.7; margin: 0;">I'm Johnathan Horner — AI Solutions Architect based in Brooklyn. I build production AI systems on Anthropic Claude, Amazon Bedrock, and Google Gemini for regulated industries. Every system ships with governance, compliance, and audit-ready documentation — not as a final-step retrofit, but as an architectural property from day one.</p>
+    </div>
+  </section>
 
   <!-- CERTS -->
   <div class="certs-bar">
@@ -715,7 +724,7 @@ body {
     <div class="project-card" data-vertical="finance">
       <div class="card-top">
         <span class="card-vertical finance">Financial Services</span>
-        <span class="card-compliance">SR 11-7</span>
+        <span class="card-compliance">SR 11-7 / SR 26-2</span>
       </div>
       <div class="card-title">Transaction Anomaly Detection</div>
       <p class="card-problem">Autoencoder flags suspicious transactions in real-time. When it flags one, a LangGraph investigation agent pulls customer history, checks merchant risk, and generates a natural language investigation summary. Not just a score, but an explanation.</p>
@@ -749,7 +758,7 @@ body {
         </div>
         <div class="highlight">
           <div class="highlight-label">Governance</div>
-          <div class="highlight-value">SR 11-7 compliant: model documentation, validation, drift monitoring, feedback retraining loop</div>
+          <div class="highlight-value">SR 11-7 / SR 26-2 compliant: model documentation, validation, drift monitoring, feedback retraining loop</div>
         </div>
       </div>
       <div class="card-diagram" onclick="openLightbox('/diagrams/transaction-anomaly-detection.png')">
@@ -824,6 +833,7 @@ body {
       <div class="card-title">ShootItPicks</div>
       <p class="card-problem">A live, revenue-generating NFL analytics SaaS with paying subscribers. 5-step Chain of Thought AI pipeline with MRM confidence calibration enforcing 8 guardrails before any pick reaches a user. This is a business.</p>
       <div class="card-tech">
+        <span class="tech-tag">Anthropic Claude</span>
         <span class="tech-tag">LangChain</span>
         <span class="tech-tag">Monte Carlo CVaR</span>
         <span class="tech-tag">8 Lambdas</span>
@@ -865,11 +875,12 @@ body {
     <div class="project-card" data-vertical="finance">
       <div class="card-top">
         <span class="card-vertical finance">Financial Services</span>
-        <span class="card-compliance">SR 11-7</span>
+        <span class="card-compliance">SR 11-7 / SR 26-2</span>
       </div>
       <div class="card-title">FinTech AI</div>
-      <p class="card-problem">Hedge fund intelligence platform with three LangGraph agents, Monte Carlo CVaR risk engine with fat-tail distributions, and a full SR 11-7 Model Risk Management framework: 6-model inventory, PSI drift detection, CRO report generator.</p>
+      <p class="card-problem">Hedge fund intelligence platform with three LangGraph agents, Monte Carlo CVaR risk engine with fat-tail distributions, and a full SR 11-7 / SR 26-2 Model Risk Management framework: 6-model inventory, PSI drift detection, CRO report generator.</p>
       <div class="card-tech">
+        <span class="tech-tag">Anthropic Claude</span>
         <span class="tech-tag">LangGraph</span>
         <span class="tech-tag">Monte Carlo CVaR</span>
         <span class="tech-tag">Bedrock</span>
@@ -892,7 +903,7 @@ body {
         </div>
         <div class="highlight">
           <div class="highlight-label">Governance</div>
-          <div class="highlight-value">SR 11-7: 6-model inventory, independent validation, PSI drift, immutable audit log</div>
+          <div class="highlight-value">SR 11-7 / SR 26-2: 6-model inventory, independent validation, PSI drift, immutable audit log</div>
         </div>
       </div>
       <div class="card-diagram" onclick="openLightbox('/diagrams/fintech-ai.png')">
@@ -952,6 +963,48 @@ body {
       </div>
     </div>
 
+  </section>
+
+  <!-- WRITING & THOUGHT LEADERSHIP -->
+  <section style="padding: 80px 0; border-bottom: 1px solid var(--border);">
+    <div style="text-align: center; margin-bottom: 48px;">
+      <h2 style="font-family: 'Instrument Serif', serif; font-size: 48px; font-weight: 400; color: var(--white); margin: 0 0 12px 0;">Writing & Thought Leadership</h2>
+      <p style="font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: var(--text-dim); margin: 0;">Published on LinkedIn</p>
+    </div>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px;">
+      <a href="https://linkedin.com/in/johnathan-horner" target="_blank" style="text-decoration: none; color: inherit; display: block; border: 1px solid var(--border); background: var(--surface); padding: 32px; transition: all 0.4s; position: relative; overflow: hidden;" onmouseover="this.style.borderColor='var(--border-hover)'; this.style.background='var(--surface-hover)'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 20px 60px rgba(0,0,0,0.3)';" onmouseout="this.style.borderColor='var(--border)'; this.style.background='var(--surface)'; this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+        <h3 style="font-family: 'Instrument Serif', serif; font-size: 24px; font-weight: 400; color: var(--white); margin: 0 0 16px 0; line-height: 1.3;">SR 11-7 Governance for Production AI Systems</h3>
+        <div style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; color: var(--text-dim); text-transform: uppercase;">Read on LinkedIn →</div>
+      </a>
+      
+      <a href="https://linkedin.com/in/johnathan-horner" target="_blank" style="text-decoration: none; color: inherit; display: block; border: 1px solid var(--border); background: var(--surface); padding: 32px; transition: all 0.4s; position: relative; overflow: hidden;" onmouseover="this.style.borderColor='var(--border-hover)'; this.style.background='var(--surface-hover)'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 20px 60px rgba(0,0,0,0.3)';" onmouseout="this.style.borderColor='var(--border)'; this.style.background='var(--surface)'; this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+        <h3 style="font-family: 'Instrument Serif', serif; font-size: 24px; font-weight: 400; color: var(--white); margin: 0 0 16px 0; line-height: 1.3;">PSI-Based Model Drift Detection in Practice</h3>
+        <div style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; color: var(--text-dim); text-transform: uppercase;">Read on LinkedIn →</div>
+      </a>
+      
+      <a href="https://linkedin.com/in/johnathan-horner" target="_blank" style="text-decoration: none; color: inherit; display: block; border: 1px solid var(--border); background: var(--surface); padding: 32px; transition: all 0.4s; position: relative; overflow: hidden;" onmouseover="this.style.borderColor='var(--border-hover)'; this.style.background='var(--surface-hover)'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 20px 60px rgba(0,0,0,0.3)';" onmouseout="this.style.borderColor='var(--border)'; this.style.background='var(--surface)'; this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+        <h3 style="font-family: 'Instrument Serif', serif; font-size: 24px; font-weight: 400; color: var(--white); margin: 0 0 16px 0; line-height: 1.3;">AI Transformation vs AI Experimentation</h3>
+        <div style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; color: var(--text-dim); text-transform: uppercase;">Read on LinkedIn →</div>
+      </a>
+      
+      <a href="https://linkedin.com/in/johnathan-horner" target="_blank" style="text-decoration: none; color: inherit; display: block; border: 1px solid var(--border); background: var(--surface); padding: 32px; transition: all 0.4s; position: relative; overflow: hidden;" onmouseover="this.style.borderColor='var(--border-hover)'; this.style.background='var(--surface-hover)'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 20px 60px rgba(0,0,0,0.3)';" onmouseout="this.style.borderColor='var(--border)'; this.style.background='var(--surface)'; this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+        <h3 style="font-family: 'Instrument Serif', serif; font-size: 24px; font-weight: 400; color: var(--white); margin: 0 0 16px 0; line-height: 1.3;">Multi-Agent Orchestration with LangGraph</h3>
+        <div style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; color: var(--text-dim); text-transform: uppercase;">Read on LinkedIn →</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- GET IN TOUCH -->
+  <section style="padding: 80px 0; border-bottom: 1px solid var(--border);">
+    <div style="text-align: center; max-width: 640px; margin: 0 auto;">
+      <h2 style="font-family: 'Instrument Serif', serif; font-size: 48px; font-weight: 400; color: var(--white); margin: 0 0 24px 0;">Get in touch</h2>
+      <p style="font-size: 17px; color: var(--text-muted); line-height: 1.7; margin: 0 0 36px 0;">I work with teams building production AI in regulated environments — financial services, healthcare, education, government. If that’s your space, I’d welcome the conversation.</p>
+      <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+        <a href="mailto:mrhorner819@gmail.com" style="font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.5px; color: var(--accent); text-decoration: none; padding: 12px 24px; border: 1px solid var(--accent); transition: all 0.3s;" onmouseover="this.style.background='var(--accent)'; this.style.color='var(--white)';" onmouseout="this.style.background='transparent'; this.style.color='var(--accent)';">Email</a>
+        <a href="https://linkedin.com/in/johnathan-horner" target="_blank" style="font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.5px; color: var(--accent); text-decoration: none; padding: 12px 24px; border: 1px solid var(--accent); transition: all 0.3s;" onmouseover="this.style.background='var(--accent)'; this.style.color='var(--white)';" onmouseout="this.style.background='transparent'; this.style.color='var(--accent)';">LinkedIn</a>
+      </div>
+    </div>
   </section>
 
   <!-- FOOTER -->
