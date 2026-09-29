@@ -6,14 +6,9 @@
     "auditLog": "/Users/johnathanhorner/Documents/eduai-connect/logs/.7c97aa651bb56ac6d11db5ed5cedfbb8febd4355-audit.json",
     "files": [
         {
-            "date": 1772305235818,
-            "name": "/Users/johnathanhorner/Documents/eduai-connect/logs/mcp-puppeteer-2026-02-28.log",
-            "hash": "1557cbd37046860202fffe569fc36c6328ba10b698a18634463e501b48484a2f"
-        },
-        {
-            "date": 1772477607173,
-            "name": "/Users/johnathanhorner/Documents/eduai-connect/logs/mcp-puppeteer-2026-03-02.log",
-            "hash": "3e2c1f3a65b1200003932dd1819da0371aeb0941b31e2b12b24c02a088d7cee5"
+            "date": 1774651054552,
+            "name": "/Users/johnathanhorner/Documents/eduai-connect/logs/mcp-puppeteer-2026-03-27.log",
+            "hash": "e3325c1792a47865870222fa03cfb635833313dd442f6b45cb9857bddfa04349"
         }
     ],
     "hashType": "sha256"

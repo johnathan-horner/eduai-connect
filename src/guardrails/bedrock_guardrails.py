@@ -85,7 +85,7 @@ def apply_guardrail_to_chain(guardrail_id, guardrail_version="DRAFT"):
     
     llm = ChatBedrock(
         client=bedrock_runtime,
-        model_id="anthropic.claude-3-sonnet-20240229-v1:0",
+        model_id="us.anthropic.claude-3-haiku-20240307-v1:0",
         model_kwargs={"temperature": 0, "max_tokens": 1000},
         guardrails={"guardrailIdentifier": guardrail_id, "guardrailVersion": guardrail_version}
     )

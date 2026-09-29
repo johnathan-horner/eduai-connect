@@ -2,7 +2,7 @@ from langchain_aws import BedrockEmbeddings
 from langchain_community.vectorstores import FAISS
 from document_loader import load_documents
 
-embeddings = BedrockEmbeddings(model_id="amazon.titan-embed-text-v1")
+embeddings = BedrockEmbeddings(model_id="amazon.titan-embed-text-v2:0")
 documents = load_documents()
 vector_store = FAISS.from_documents(documents, embeddings)
 # Save the vector store to disk for later use

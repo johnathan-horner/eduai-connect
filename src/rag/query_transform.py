@@ -1,5 +1,5 @@
 from langchain_core.prompts import PromptTemplate
-from langchain_aws import ChatBedrock
+from langchain_aws import ChatBedrockConverse
 import boto3
 
 # Create a prompt template that rewrites a teacher question into a search
@@ -19,10 +19,10 @@ hyde_prompt = PromptTemplate(
 region = "us-east-1"
 bedrock_runtime = boto3.client(service_name="bedrock-runtime", region_name=region)
 
-llm = ChatBedrock(
+llm = ChatBedrockConverse(
     client=bedrock_runtime,
-    model_id="anthropic.claude-3-sonnet-20240229-v1:0",
-    model_kwargs={"temperature": 0, "max_tokens": 1000},
+    model="us.anthropic.claude-3-haiku-20240307-v1:0",
+    temperature=0, max_tokens=1000,
 )
 
 
