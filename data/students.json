@@ -1,0 +1,4807 @@
+[
+  {
+    "id": 1001,
+    "name": "Sandra Lopez",
+    "sortable_name": "Lopez, Sandra",
+    "short_name": "Sandra",
+    "login_id": "sandra1001",
+    "sis_user_id": "STU1001",
+    "grade_level": 9,
+    "attendance_rate": 0.8,
+    "engagement_score": 82,
+    "enrollments": [
+      {
+        "course_id": 102,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 69.6,
+          "current_grade": "D"
+        }
+      },
+      {
+        "course_id": 101,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 68.4,
+          "current_grade": "D"
+        }
+      },
+      {
+        "course_id": 106,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 89.4,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 103,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 83.0,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 108,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 84.5,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 107,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 66.0,
+          "current_grade": "D"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1002,
+    "name": "Becky Stewart",
+    "sortable_name": "Stewart, Becky",
+    "short_name": "Becky",
+    "login_id": "becky1002",
+    "sis_user_id": "STU1002",
+    "grade_level": 11,
+    "attendance_rate": 0.79,
+    "engagement_score": 98,
+    "enrollments": [
+      {
+        "course_id": 101,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 79.8,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 105,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 74.2,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 102,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 93.7,
+          "current_grade": "A"
+        }
+      },
+      {
+        "course_id": 107,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 90.0,
+          "current_grade": "A"
+        }
+      },
+      {
+        "course_id": 104,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 70.3,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 108,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 78.9,
+          "current_grade": "C"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1003,
+    "name": "Heather Wilson",
+    "sortable_name": "Wilson, Heather",
+    "short_name": "Heather",
+    "login_id": "heather1003",
+    "sis_user_id": "STU1003",
+    "grade_level": 12,
+    "attendance_rate": 0.77,
+    "engagement_score": 68,
+    "enrollments": [
+      {
+        "course_id": 102,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 93.0,
+          "current_grade": "A"
+        }
+      },
+      {
+        "course_id": 101,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 84.9,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 104,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 91.6,
+          "current_grade": "A"
+        }
+      },
+      {
+        "course_id": 107,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 89.1,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 103,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 82.7,
+          "current_grade": "B"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1004,
+    "name": "Laurie Young",
+    "sortable_name": "Young, Laurie",
+    "short_name": "Laurie",
+    "login_id": "laurie1004",
+    "sis_user_id": "STU1004",
+    "grade_level": 11,
+    "attendance_rate": 0.79,
+    "engagement_score": 72,
+    "enrollments": [
+      {
+        "course_id": 106,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 72.5,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 105,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 74.5,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 102,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 67.6,
+          "current_grade": "D"
+        }
+      },
+      {
+        "course_id": 101,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 72.7,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 107,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 68.3,
+          "current_grade": "D"
+        }
+      },
+      {
+        "course_id": 103,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 74.2,
+          "current_grade": "C"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1005,
+    "name": "April Alvarado",
+    "sortable_name": "Alvarado, April",
+    "short_name": "April",
+    "login_id": "april1005",
+    "sis_user_id": "STU1005",
+    "grade_level": 12,
+    "attendance_rate": 0.82,
+    "engagement_score": 90,
+    "enrollments": [
+      {
+        "course_id": 105,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 85.1,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 106,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 70.6,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 107,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 89.1,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 101,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 70.4,
+          "current_grade": "C"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1006,
+    "name": "Sandra Mcmahon",
+    "sortable_name": "Mcmahon, Sandra",
+    "short_name": "Sandra",
+    "login_id": "sandra1006",
+    "sis_user_id": "STU1006",
+    "grade_level": 10,
+    "attendance_rate": 0.91,
+    "engagement_score": 75,
+    "enrollments": [
+      {
+        "course_id": 104,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 91.6,
+          "current_grade": "A"
+        }
+      },
+      {
+        "course_id": 106,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 78.2,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 103,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 67.2,
+          "current_grade": "D"
+        }
+      },
+      {
+        "course_id": 101,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 95.1,
+          "current_grade": "A"
+        }
+      },
+      {
+        "course_id": 102,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 83.7,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 105,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 88.7,
+          "current_grade": "B"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1007,
+    "name": "Joel Kelly",
+    "sortable_name": "Kelly, Joel",
+    "short_name": "Joel",
+    "login_id": "joel1007",
+    "sis_user_id": "STU1007",
+    "grade_level": 10,
+    "attendance_rate": 0.88,
+    "engagement_score": 55,
+    "enrollments": [
+      {
+        "course_id": 108,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 83.5,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 102,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 73.7,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 103,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 84.3,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 107,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 94.6,
+          "current_grade": "A"
+        }
+      },
+      {
+        "course_id": 105,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 78.2,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 106,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 72.2,
+          "current_grade": "C"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1008,
+    "name": "William Barr",
+    "sortable_name": "Barr, William",
+    "short_name": "William",
+    "login_id": "william1008",
+    "sis_user_id": "STU1008",
+    "grade_level": 12,
+    "attendance_rate": 0.88,
+    "engagement_score": 85,
+    "enrollments": [
+      {
+        "course_id": 102,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 91.1,
+          "current_grade": "A"
+        }
+      },
+      {
+        "course_id": 108,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 78.9,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 106,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 67.1,
+          "current_grade": "D"
+        }
+      },
+      {
+        "course_id": 107,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 77.6,
+          "current_grade": "C"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1009,
+    "name": "Sean Ford",
+    "sortable_name": "Ford, Sean",
+    "short_name": "Sean",
+    "login_id": "sean1009",
+    "sis_user_id": "STU1009",
+    "grade_level": 9,
+    "attendance_rate": 0.99,
+    "engagement_score": 96,
+    "enrollments": [
+      {
+        "course_id": 102,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 90.4,
+          "current_grade": "A"
+        }
+      },
+      {
+        "course_id": 106,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 76.2,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 105,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 74.7,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 103,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 70.2,
+          "current_grade": "C"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1010,
+    "name": "Madison Whitney",
+    "sortable_name": "Whitney, Madison",
+    "short_name": "Madison",
+    "login_id": "madison1010",
+    "sis_user_id": "STU1010",
+    "grade_level": 9,
+    "attendance_rate": 0.9,
+    "engagement_score": 81,
+    "enrollments": [
+      {
+        "course_id": 103,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 70.0,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 105,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 90.2,
+          "current_grade": "A"
+        }
+      },
+      {
+        "course_id": 101,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 82.8,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 108,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 90.7,
+          "current_grade": "A"
+        }
+      },
+      {
+        "course_id": 102,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 82.5,
+          "current_grade": "B"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1011,
+    "name": "Kelly Carpenter",
+    "sortable_name": "Carpenter, Kelly",
+    "short_name": "Kelly",
+    "login_id": "kelly1011",
+    "sis_user_id": "STU1011",
+    "grade_level": 12,
+    "attendance_rate": 0.95,
+    "engagement_score": 98,
+    "enrollments": [
+      {
+        "course_id": 102,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 66.9,
+          "current_grade": "D"
+        }
+      },
+      {
+        "course_id": 103,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 94.0,
+          "current_grade": "A"
+        }
+      },
+      {
+        "course_id": 107,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 96.2,
+          "current_grade": "A"
+        }
+      },
+      {
+        "course_id": 108,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 67.8,
+          "current_grade": "D"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1012,
+    "name": "Brian Harrell",
+    "sortable_name": "Harrell, Brian",
+    "short_name": "Brian",
+    "login_id": "brian1012",
+    "sis_user_id": "STU1012",
+    "grade_level": 11,
+    "attendance_rate": 0.85,
+    "engagement_score": 92,
+    "enrollments": [
+      {
+        "course_id": 103,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 82.4,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 102,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 85.0,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 106,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 96.8,
+          "current_grade": "A"
+        }
+      },
+      {
+        "course_id": 104,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 95.7,
+          "current_grade": "A"
+        }
+      },
+      {
+        "course_id": 107,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 89.9,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 105,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 87.8,
+          "current_grade": "B"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1013,
+    "name": "Emily Medina",
+    "sortable_name": "Medina, Emily",
+    "short_name": "Emily",
+    "login_id": "emily1013",
+    "sis_user_id": "STU1013",
+    "grade_level": 9,
+    "attendance_rate": 0.81,
+    "engagement_score": 52,
+    "enrollments": [
+      {
+        "course_id": 106,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 72.4,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 104,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 76.2,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 105,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 84.4,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 107,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 72.6,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 101,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 72.3,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 108,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 67.3,
+          "current_grade": "D"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1014,
+    "name": "Samuel Reyes",
+    "sortable_name": "Reyes, Samuel",
+    "short_name": "Samuel",
+    "login_id": "samuel1014",
+    "sis_user_id": "STU1014",
+    "grade_level": 12,
+    "attendance_rate": 0.95,
+    "engagement_score": 62,
+    "enrollments": [
+      {
+        "course_id": 102,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 72.1,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 105,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 69.4,
+          "current_grade": "D"
+        }
+      },
+      {
+        "course_id": 108,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 95.9,
+          "current_grade": "A"
+        }
+      },
+      {
+        "course_id": 103,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 83.8,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 104,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 80.6,
+          "current_grade": "B"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1015,
+    "name": "Jennifer Nolan",
+    "sortable_name": "Nolan, Jennifer",
+    "short_name": "Jennifer",
+    "login_id": "jennifer1015",
+    "sis_user_id": "STU1015",
+    "grade_level": 9,
+    "attendance_rate": 0.77,
+    "engagement_score": 96,
+    "enrollments": [
+      {
+        "course_id": 102,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 79.0,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 106,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 80.4,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 104,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 89.1,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 103,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 87.2,
+          "current_grade": "B"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1016,
+    "name": "Charles Dunn",
+    "sortable_name": "Dunn, Charles",
+    "short_name": "Charles",
+    "login_id": "charles1016",
+    "sis_user_id": "STU1016",
+    "grade_level": 9,
+    "attendance_rate": 0.76,
+    "engagement_score": 84,
+    "enrollments": [
+      {
+        "course_id": 102,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 69.6,
+          "current_grade": "D"
+        }
+      },
+      {
+        "course_id": 108,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 71.1,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 107,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 80.3,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 106,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 93.9,
+          "current_grade": "A"
+        }
+      },
+      {
+        "course_id": 104,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 67.5,
+          "current_grade": "D"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1017,
+    "name": "Ian Pierce",
+    "sortable_name": "Pierce, Ian",
+    "short_name": "Ian",
+    "login_id": "ian1017",
+    "sis_user_id": "STU1017",
+    "grade_level": 10,
+    "attendance_rate": 0.84,
+    "engagement_score": 74,
+    "enrollments": [
+      {
+        "course_id": 102,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 78.4,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 107,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 80.9,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 108,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 93.5,
+          "current_grade": "A"
+        }
+      },
+      {
+        "course_id": 106,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 94.8,
+          "current_grade": "A"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1018,
+    "name": "Brittany Parker",
+    "sortable_name": "Parker, Brittany",
+    "short_name": "Brittany",
+    "login_id": "brittany1018",
+    "sis_user_id": "STU1018",
+    "grade_level": 11,
+    "attendance_rate": 0.76,
+    "engagement_score": 87,
+    "enrollments": [
+      {
+        "course_id": 108,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 70.1,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 103,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 74.8,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 104,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 97.0,
+          "current_grade": "A"
+        }
+      },
+      {
+        "course_id": 105,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 84.1,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 106,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 82.9,
+          "current_grade": "B"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1019,
+    "name": "Tony Davies",
+    "sortable_name": "Davies, Tony",
+    "short_name": "Tony",
+    "login_id": "tony1019",
+    "sis_user_id": "STU1019",
+    "grade_level": 10,
+    "attendance_rate": 0.89,
+    "engagement_score": 52,
+    "enrollments": [
+      {
+        "course_id": 103,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 67.3,
+          "current_grade": "D"
+        }
+      },
+      {
+        "course_id": 101,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 67.2,
+          "current_grade": "D"
+        }
+      },
+      {
+        "course_id": 105,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 93.4,
+          "current_grade": "A"
+        }
+      },
+      {
+        "course_id": 107,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 78.3,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 102,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 96.1,
+          "current_grade": "A"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1020,
+    "name": "Alan Richardson",
+    "sortable_name": "Richardson, Alan",
+    "short_name": "Alan",
+    "login_id": "alan1020",
+    "sis_user_id": "STU1020",
+    "grade_level": 11,
+    "attendance_rate": 0.98,
+    "engagement_score": 54,
+    "enrollments": [
+      {
+        "course_id": 102,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 71.7,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 104,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 88.6,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 106,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 72.9,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 105,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 78.1,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 103,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 87.2,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 108,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 74.9,
+          "current_grade": "C"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1021,
+    "name": "Penny Moore",
+    "sortable_name": "Moore, Penny",
+    "short_name": "Penny",
+    "login_id": "penny1021",
+    "sis_user_id": "STU1021",
+    "grade_level": 9,
+    "attendance_rate": 0.97,
+    "engagement_score": 73,
+    "enrollments": [
+      {
+        "course_id": 108,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 67.4,
+          "current_grade": "D"
+        }
+      },
+      {
+        "course_id": 105,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 72.0,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 107,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 73.8,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 101,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 95.8,
+          "current_grade": "A"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1022,
+    "name": "Chris Foster",
+    "sortable_name": "Foster, Chris",
+    "short_name": "Chris",
+    "login_id": "chris1022",
+    "sis_user_id": "STU1022",
+    "grade_level": 11,
+    "attendance_rate": 0.78,
+    "engagement_score": 56,
+    "enrollments": [
+      {
+        "course_id": 103,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 87.0,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 104,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 83.3,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 105,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 95.7,
+          "current_grade": "A"
+        }
+      },
+      {
+        "course_id": 108,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 68.4,
+          "current_grade": "D"
+        }
+      },
+      {
+        "course_id": 101,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 94.0,
+          "current_grade": "A"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1023,
+    "name": "Phillip Rosales",
+    "sortable_name": "Rosales, Phillip",
+    "short_name": "Phillip",
+    "login_id": "phillip1023",
+    "sis_user_id": "STU1023",
+    "grade_level": 9,
+    "attendance_rate": 0.77,
+    "engagement_score": 77,
+    "enrollments": [
+      {
+        "course_id": 103,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 76.3,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 108,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 87.7,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 107,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 93.1,
+          "current_grade": "A"
+        }
+      },
+      {
+        "course_id": 105,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 81.7,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 102,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 73.3,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 106,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 95.0,
+          "current_grade": "A"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1024,
+    "name": "David Lewis",
+    "sortable_name": "Lewis, David",
+    "short_name": "David",
+    "login_id": "david1024",
+    "sis_user_id": "STU1024",
+    "grade_level": 10,
+    "attendance_rate": 0.89,
+    "engagement_score": 73,
+    "enrollments": [
+      {
+        "course_id": 101,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 70.3,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 108,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 79.6,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 103,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 88.3,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 102,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 83.5,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 106,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 68.7,
+          "current_grade": "D"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1025,
+    "name": "Samantha Figueroa",
+    "sortable_name": "Figueroa, Samantha",
+    "short_name": "Samantha",
+    "login_id": "samantha1025",
+    "sis_user_id": "STU1025",
+    "grade_level": 9,
+    "attendance_rate": 0.84,
+    "engagement_score": 85,
+    "enrollments": [
+      {
+        "course_id": 103,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 94.7,
+          "current_grade": "A"
+        }
+      },
+      {
+        "course_id": 104,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 91.3,
+          "current_grade": "A"
+        }
+      },
+      {
+        "course_id": 102,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 93.4,
+          "current_grade": "A"
+        }
+      },
+      {
+        "course_id": 101,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 94.7,
+          "current_grade": "A"
+        }
+      },
+      {
+        "course_id": 108,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 71.9,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 106,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 73.2,
+          "current_grade": "C"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1026,
+    "name": "Mark Simmons",
+    "sortable_name": "Simmons, Mark",
+    "short_name": "Mark",
+    "login_id": "mark1026",
+    "sis_user_id": "STU1026",
+    "grade_level": 10,
+    "attendance_rate": 0.82,
+    "engagement_score": 100,
+    "enrollments": [
+      {
+        "course_id": 103,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 65.8,
+          "current_grade": "D"
+        }
+      },
+      {
+        "course_id": 102,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 89.3,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 107,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 76.0,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 106,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 95.7,
+          "current_grade": "A"
+        }
+      },
+      {
+        "course_id": 104,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 91.5,
+          "current_grade": "A"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1027,
+    "name": "John Weeks",
+    "sortable_name": "Weeks, John",
+    "short_name": "John",
+    "login_id": "john1027",
+    "sis_user_id": "STU1027",
+    "grade_level": 10,
+    "attendance_rate": 0.85,
+    "engagement_score": 67,
+    "enrollments": [
+      {
+        "course_id": 102,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 91.9,
+          "current_grade": "A"
+        }
+      },
+      {
+        "course_id": 104,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 80.2,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 101,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 75.1,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 107,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 91.2,
+          "current_grade": "A"
+        }
+      },
+      {
+        "course_id": 108,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 72.5,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 106,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 65.8,
+          "current_grade": "D"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1028,
+    "name": "Pamela Lozano",
+    "sortable_name": "Lozano, Pamela",
+    "short_name": "Pamela",
+    "login_id": "pamela1028",
+    "sis_user_id": "STU1028",
+    "grade_level": 9,
+    "attendance_rate": 0.97,
+    "engagement_score": 66,
+    "enrollments": [
+      {
+        "course_id": 105,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 78.2,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 103,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 97.4,
+          "current_grade": "A"
+        }
+      },
+      {
+        "course_id": 106,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 82.7,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 108,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 96.0,
+          "current_grade": "A"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1029,
+    "name": "Randy Boyd",
+    "sortable_name": "Boyd, Randy",
+    "short_name": "Randy",
+    "login_id": "randy1029",
+    "sis_user_id": "STU1029",
+    "grade_level": 9,
+    "attendance_rate": 0.85,
+    "engagement_score": 86,
+    "enrollments": [
+      {
+        "course_id": 105,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 79.3,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 101,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 89.0,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 107,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 75.4,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 108,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 85.0,
+          "current_grade": "B"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1030,
+    "name": "Elizabeth Stewart",
+    "sortable_name": "Stewart, Elizabeth",
+    "short_name": "Elizabeth",
+    "login_id": "elizabeth1030",
+    "sis_user_id": "STU1030",
+    "grade_level": 10,
+    "attendance_rate": 0.84,
+    "engagement_score": 54,
+    "enrollments": [
+      {
+        "course_id": 105,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 65.1,
+          "current_grade": "D"
+        }
+      },
+      {
+        "course_id": 101,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 95.5,
+          "current_grade": "A"
+        }
+      },
+      {
+        "course_id": 106,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 82.8,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 104,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 88.7,
+          "current_grade": "B"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1031,
+    "name": "Jonathan Love",
+    "sortable_name": "Love, Jonathan",
+    "short_name": "Jonathan",
+    "login_id": "jonathan1031",
+    "sis_user_id": "STU1031",
+    "grade_level": 12,
+    "attendance_rate": 0.92,
+    "engagement_score": 61,
+    "enrollments": [
+      {
+        "course_id": 106,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 75.2,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 105,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 78.5,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 103,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 78.3,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 101,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 74.8,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 108,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 69.2,
+          "current_grade": "D"
+        }
+      },
+      {
+        "course_id": 104,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 78.9,
+          "current_grade": "C"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1032,
+    "name": "Kelly Marks",
+    "sortable_name": "Marks, Kelly",
+    "short_name": "Kelly",
+    "login_id": "kelly1032",
+    "sis_user_id": "STU1032",
+    "grade_level": 12,
+    "attendance_rate": 0.95,
+    "engagement_score": 100,
+    "enrollments": [
+      {
+        "course_id": 105,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 71.9,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 104,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 90.9,
+          "current_grade": "A"
+        }
+      },
+      {
+        "course_id": 108,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 85.0,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 101,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 75.6,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 103,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 79.6,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 102,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 87.3,
+          "current_grade": "B"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1033,
+    "name": "Charles Garner",
+    "sortable_name": "Garner, Charles",
+    "short_name": "Charles",
+    "login_id": "charles1033",
+    "sis_user_id": "STU1033",
+    "grade_level": 10,
+    "attendance_rate": 1.0,
+    "engagement_score": 89,
+    "enrollments": [
+      {
+        "course_id": 103,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 92.0,
+          "current_grade": "A"
+        }
+      },
+      {
+        "course_id": 106,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 89.8,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 101,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 87.2,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 108,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 72.4,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 105,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 71.6,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 107,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 65.8,
+          "current_grade": "D"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1034,
+    "name": "Kevin Rodgers",
+    "sortable_name": "Rodgers, Kevin",
+    "short_name": "Kevin",
+    "login_id": "kevin1034",
+    "sis_user_id": "STU1034",
+    "grade_level": 9,
+    "attendance_rate": 0.97,
+    "engagement_score": 99,
+    "enrollments": [
+      {
+        "course_id": 108,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 71.4,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 104,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 88.0,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 106,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 81.3,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 105,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 73.1,
+          "current_grade": "C"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1035,
+    "name": "Tammy Long",
+    "sortable_name": "Long, Tammy",
+    "short_name": "Tammy",
+    "login_id": "tammy1035",
+    "sis_user_id": "STU1035",
+    "grade_level": 10,
+    "attendance_rate": 0.95,
+    "engagement_score": 92,
+    "enrollments": [
+      {
+        "course_id": 107,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 80.3,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 102,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 83.4,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 108,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 95.3,
+          "current_grade": "A"
+        }
+      },
+      {
+        "course_id": 105,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 69.0,
+          "current_grade": "D"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1036,
+    "name": "James Colon",
+    "sortable_name": "Colon, James",
+    "short_name": "James",
+    "login_id": "james1036",
+    "sis_user_id": "STU1036",
+    "grade_level": 11,
+    "attendance_rate": 0.94,
+    "engagement_score": 83,
+    "enrollments": [
+      {
+        "course_id": 106,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 79.7,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 107,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 70.3,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 104,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 93.4,
+          "current_grade": "A"
+        }
+      },
+      {
+        "course_id": 105,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 79.9,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 108,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 89.8,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 103,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 92.7,
+          "current_grade": "A"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1037,
+    "name": "Timothy Davis",
+    "sortable_name": "Davis, Timothy",
+    "short_name": "Timothy",
+    "login_id": "timothy1037",
+    "sis_user_id": "STU1037",
+    "grade_level": 12,
+    "attendance_rate": 0.92,
+    "engagement_score": 95,
+    "enrollments": [
+      {
+        "course_id": 104,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 72.7,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 103,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 76.1,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 108,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 94.5,
+          "current_grade": "A"
+        }
+      },
+      {
+        "course_id": 101,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 67.7,
+          "current_grade": "D"
+        }
+      },
+      {
+        "course_id": 107,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 70.0,
+          "current_grade": "C"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1038,
+    "name": "Amanda Patterson",
+    "sortable_name": "Patterson, Amanda",
+    "short_name": "Amanda",
+    "login_id": "amanda1038",
+    "sis_user_id": "STU1038",
+    "grade_level": 9,
+    "attendance_rate": 0.96,
+    "engagement_score": 98,
+    "enrollments": [
+      {
+        "course_id": 102,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 82.9,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 104,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 78.7,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 107,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 71.8,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 103,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 78.9,
+          "current_grade": "C"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1039,
+    "name": "Ronald Smith",
+    "sortable_name": "Smith, Ronald",
+    "short_name": "Ronald",
+    "login_id": "ronald1039",
+    "sis_user_id": "STU1039",
+    "grade_level": 10,
+    "attendance_rate": 0.87,
+    "engagement_score": 67,
+    "enrollments": [
+      {
+        "course_id": 107,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 93.2,
+          "current_grade": "A"
+        }
+      },
+      {
+        "course_id": 104,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 96.5,
+          "current_grade": "A"
+        }
+      },
+      {
+        "course_id": 101,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 78.8,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 103,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 89.7,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 105,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 83.0,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 102,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 84.9,
+          "current_grade": "B"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1040,
+    "name": "Jennifer Gordon",
+    "sortable_name": "Gordon, Jennifer",
+    "short_name": "Jennifer",
+    "login_id": "jennifer1040",
+    "sis_user_id": "STU1040",
+    "grade_level": 12,
+    "attendance_rate": 0.9,
+    "engagement_score": 92,
+    "enrollments": [
+      {
+        "course_id": 108,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 88.9,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 101,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 92.7,
+          "current_grade": "A"
+        }
+      },
+      {
+        "course_id": 104,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 95.3,
+          "current_grade": "A"
+        }
+      },
+      {
+        "course_id": 103,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 97.4,
+          "current_grade": "A"
+        }
+      },
+      {
+        "course_id": 106,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 82.6,
+          "current_grade": "B"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1041,
+    "name": "Chad Cortez",
+    "sortable_name": "Cortez, Chad",
+    "short_name": "Chad",
+    "login_id": "chad1041",
+    "sis_user_id": "STU1041",
+    "grade_level": 12,
+    "attendance_rate": 0.83,
+    "engagement_score": 98,
+    "enrollments": [
+      {
+        "course_id": 102,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 93.6,
+          "current_grade": "A"
+        }
+      },
+      {
+        "course_id": 106,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 71.0,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 104,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 73.6,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 108,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 75.8,
+          "current_grade": "C"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1042,
+    "name": "Larry Roth",
+    "sortable_name": "Roth, Larry",
+    "short_name": "Larry",
+    "login_id": "larry1042",
+    "sis_user_id": "STU1042",
+    "grade_level": 9,
+    "attendance_rate": 0.95,
+    "engagement_score": 91,
+    "enrollments": [
+      {
+        "course_id": 105,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 80.5,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 107,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 89.7,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 104,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 66.7,
+          "current_grade": "D"
+        }
+      },
+      {
+        "course_id": 103,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 96.4,
+          "current_grade": "A"
+        }
+      },
+      {
+        "course_id": 101,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 72.4,
+          "current_grade": "C"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1043,
+    "name": "Jennifer Simmons",
+    "sortable_name": "Simmons, Jennifer",
+    "short_name": "Jennifer",
+    "login_id": "jennifer1043",
+    "sis_user_id": "STU1043",
+    "grade_level": 10,
+    "attendance_rate": 0.87,
+    "engagement_score": 66,
+    "enrollments": [
+      {
+        "course_id": 101,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 85.5,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 102,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 72.9,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 107,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 80.6,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 108,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 68.8,
+          "current_grade": "D"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1044,
+    "name": "Jessica Young",
+    "sortable_name": "Young, Jessica",
+    "short_name": "Jessica",
+    "login_id": "jessica1044",
+    "sis_user_id": "STU1044",
+    "grade_level": 12,
+    "attendance_rate": 0.85,
+    "engagement_score": 95,
+    "enrollments": [
+      {
+        "course_id": 103,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 96.8,
+          "current_grade": "A"
+        }
+      },
+      {
+        "course_id": 105,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 68.6,
+          "current_grade": "D"
+        }
+      },
+      {
+        "course_id": 107,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 65.8,
+          "current_grade": "D"
+        }
+      },
+      {
+        "course_id": 101,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 75.3,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 102,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 87.4,
+          "current_grade": "B"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1045,
+    "name": "Penny Baxter",
+    "sortable_name": "Baxter, Penny",
+    "short_name": "Penny",
+    "login_id": "penny1045",
+    "sis_user_id": "STU1045",
+    "grade_level": 9,
+    "attendance_rate": 0.95,
+    "engagement_score": 86,
+    "enrollments": [
+      {
+        "course_id": 102,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 68.4,
+          "current_grade": "D"
+        }
+      },
+      {
+        "course_id": 105,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 90.5,
+          "current_grade": "A"
+        }
+      },
+      {
+        "course_id": 106,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 93.1,
+          "current_grade": "A"
+        }
+      },
+      {
+        "course_id": 108,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 84.8,
+          "current_grade": "B"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1046,
+    "name": "Lori Haynes",
+    "sortable_name": "Haynes, Lori",
+    "short_name": "Lori",
+    "login_id": "lori1046",
+    "sis_user_id": "STU1046",
+    "grade_level": 12,
+    "attendance_rate": 0.78,
+    "engagement_score": 73,
+    "enrollments": [
+      {
+        "course_id": 106,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 67.3,
+          "current_grade": "D"
+        }
+      },
+      {
+        "course_id": 105,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 86.4,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 104,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 65.4,
+          "current_grade": "D"
+        }
+      },
+      {
+        "course_id": 103,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 78.9,
+          "current_grade": "C"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1047,
+    "name": "Steven Massey",
+    "sortable_name": "Massey, Steven",
+    "short_name": "Steven",
+    "login_id": "steven1047",
+    "sis_user_id": "STU1047",
+    "grade_level": 11,
+    "attendance_rate": 0.83,
+    "engagement_score": 65,
+    "enrollments": [
+      {
+        "course_id": 108,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 82.2,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 106,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 86.5,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 102,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 85.3,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 104,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 95.3,
+          "current_grade": "A"
+        }
+      },
+      {
+        "course_id": 107,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 90.6,
+          "current_grade": "A"
+        }
+      },
+      {
+        "course_id": 103,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 80.3,
+          "current_grade": "B"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1048,
+    "name": "Gary Gilbert",
+    "sortable_name": "Gilbert, Gary",
+    "short_name": "Gary",
+    "login_id": "gary1048",
+    "sis_user_id": "STU1048",
+    "grade_level": 11,
+    "attendance_rate": 0.8,
+    "engagement_score": 63,
+    "enrollments": [
+      {
+        "course_id": 105,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 83.8,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 104,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 87.1,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 102,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 76.1,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 107,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 81.3,
+          "current_grade": "B"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1049,
+    "name": "Melinda Michael",
+    "sortable_name": "Michael, Melinda",
+    "short_name": "Melinda",
+    "login_id": "melinda1049",
+    "sis_user_id": "STU1049",
+    "grade_level": 10,
+    "attendance_rate": 0.92,
+    "engagement_score": 91,
+    "enrollments": [
+      {
+        "course_id": 105,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 83.3,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 103,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 82.0,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 107,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 71.3,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 108,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 73.0,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 106,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 78.4,
+          "current_grade": "C"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1050,
+    "name": "Ryan Bridges",
+    "sortable_name": "Bridges, Ryan",
+    "short_name": "Ryan",
+    "login_id": "ryan1050",
+    "sis_user_id": "STU1050",
+    "grade_level": 11,
+    "attendance_rate": 0.84,
+    "engagement_score": 79,
+    "enrollments": [
+      {
+        "course_id": 108,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 78.3,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 104,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 73.0,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 101,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 86.9,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 106,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 77.2,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 103,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 83.3,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 105,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 76.3,
+          "current_grade": "C"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1051,
+    "name": "Michael Parker",
+    "sortable_name": "Parker, Michael",
+    "short_name": "Michael",
+    "login_id": "michael1051",
+    "sis_user_id": "STU1051",
+    "grade_level": 12,
+    "attendance_rate": 0.82,
+    "engagement_score": 87,
+    "enrollments": [
+      {
+        "course_id": 105,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 75.4,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 103,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 89.5,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 102,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 96.4,
+          "current_grade": "A"
+        }
+      },
+      {
+        "course_id": 101,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 87.8,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 106,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 71.3,
+          "current_grade": "C"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1052,
+    "name": "Kenneth Harris",
+    "sortable_name": "Harris, Kenneth",
+    "short_name": "Kenneth",
+    "login_id": "kenneth1052",
+    "sis_user_id": "STU1052",
+    "grade_level": 10,
+    "attendance_rate": 0.91,
+    "engagement_score": 98,
+    "enrollments": [
+      {
+        "course_id": 105,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 70.9,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 101,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 65.5,
+          "current_grade": "D"
+        }
+      },
+      {
+        "course_id": 102,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 82.6,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 103,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 74.1,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 106,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 97.2,
+          "current_grade": "A"
+        }
+      },
+      {
+        "course_id": 104,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 83.3,
+          "current_grade": "B"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1053,
+    "name": "Jessica Wallace",
+    "sortable_name": "Wallace, Jessica",
+    "short_name": "Jessica",
+    "login_id": "jessica1053",
+    "sis_user_id": "STU1053",
+    "grade_level": 12,
+    "attendance_rate": 0.78,
+    "engagement_score": 54,
+    "enrollments": [
+      {
+        "course_id": 102,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 80.5,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 107,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 79.5,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 101,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 71.1,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 105,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 66.7,
+          "current_grade": "D"
+        }
+      },
+      {
+        "course_id": 103,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 96.1,
+          "current_grade": "A"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1054,
+    "name": "Makayla Burch",
+    "sortable_name": "Burch, Makayla",
+    "short_name": "Makayla",
+    "login_id": "makayla1054",
+    "sis_user_id": "STU1054",
+    "grade_level": 12,
+    "attendance_rate": 0.9,
+    "engagement_score": 100,
+    "enrollments": [
+      {
+        "course_id": 108,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 69.9,
+          "current_grade": "D"
+        }
+      },
+      {
+        "course_id": 101,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 83.6,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 105,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 75.0,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 107,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 97.8,
+          "current_grade": "A"
+        }
+      },
+      {
+        "course_id": 102,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 68.9,
+          "current_grade": "D"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1055,
+    "name": "Ronald Ward",
+    "sortable_name": "Ward, Ronald",
+    "short_name": "Ronald",
+    "login_id": "ronald1055",
+    "sis_user_id": "STU1055",
+    "grade_level": 9,
+    "attendance_rate": 0.99,
+    "engagement_score": 63,
+    "enrollments": [
+      {
+        "course_id": 104,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 74.8,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 107,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 84.4,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 105,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 79.2,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 108,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 83.8,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 106,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 67.0,
+          "current_grade": "D"
+        }
+      },
+      {
+        "course_id": 102,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 96.7,
+          "current_grade": "A"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1056,
+    "name": "Nathan Anderson",
+    "sortable_name": "Anderson, Nathan",
+    "short_name": "Nathan",
+    "login_id": "nathan1056",
+    "sis_user_id": "STU1056",
+    "grade_level": 10,
+    "attendance_rate": 0.82,
+    "engagement_score": 68,
+    "enrollments": [
+      {
+        "course_id": 104,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 70.7,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 103,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 67.5,
+          "current_grade": "D"
+        }
+      },
+      {
+        "course_id": 106,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 65.1,
+          "current_grade": "D"
+        }
+      },
+      {
+        "course_id": 101,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 79.9,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 102,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 84.6,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 105,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 74.6,
+          "current_grade": "C"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1057,
+    "name": "Douglas Andrews",
+    "sortable_name": "Andrews, Douglas",
+    "short_name": "Douglas",
+    "login_id": "douglas1057",
+    "sis_user_id": "STU1057",
+    "grade_level": 11,
+    "attendance_rate": 0.96,
+    "engagement_score": 54,
+    "enrollments": [
+      {
+        "course_id": 108,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 84.5,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 101,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 91.5,
+          "current_grade": "A"
+        }
+      },
+      {
+        "course_id": 106,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 71.5,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 102,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 68.8,
+          "current_grade": "D"
+        }
+      },
+      {
+        "course_id": 103,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 72.4,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 104,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 69.9,
+          "current_grade": "D"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1058,
+    "name": "Crystal Chaney",
+    "sortable_name": "Chaney, Crystal",
+    "short_name": "Crystal",
+    "login_id": "crystal1058",
+    "sis_user_id": "STU1058",
+    "grade_level": 11,
+    "attendance_rate": 0.92,
+    "engagement_score": 67,
+    "enrollments": [
+      {
+        "course_id": 103,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 89.7,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 107,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 83.8,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 108,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 74.5,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 105,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 69.1,
+          "current_grade": "D"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1059,
+    "name": "Tracy Lopez",
+    "sortable_name": "Lopez, Tracy",
+    "short_name": "Tracy",
+    "login_id": "tracy1059",
+    "sis_user_id": "STU1059",
+    "grade_level": 9,
+    "attendance_rate": 1.0,
+    "engagement_score": 93,
+    "enrollments": [
+      {
+        "course_id": 108,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 89.2,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 104,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 84.9,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 101,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 65.9,
+          "current_grade": "D"
+        }
+      },
+      {
+        "course_id": 105,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 72.6,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 106,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 87.3,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 102,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 93.4,
+          "current_grade": "A"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1060,
+    "name": "Melissa Tucker",
+    "sortable_name": "Tucker, Melissa",
+    "short_name": "Melissa",
+    "login_id": "melissa1060",
+    "sis_user_id": "STU1060",
+    "grade_level": 9,
+    "attendance_rate": 0.87,
+    "engagement_score": 76,
+    "enrollments": [
+      {
+        "course_id": 101,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 95.2,
+          "current_grade": "A"
+        }
+      },
+      {
+        "course_id": 107,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 71.0,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 102,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 84.3,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 104,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 85.9,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 105,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 81.2,
+          "current_grade": "B"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1061,
+    "name": "Steven Diaz",
+    "sortable_name": "Diaz, Steven",
+    "short_name": "Steven",
+    "login_id": "steven1061",
+    "sis_user_id": "STU1061",
+    "grade_level": 9,
+    "attendance_rate": 0.86,
+    "engagement_score": 70,
+    "enrollments": [
+      {
+        "course_id": 106,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 78.6,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 108,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 81.4,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 101,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 86.9,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 102,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 78.2,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 103,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 90.1,
+          "current_grade": "A"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1062,
+    "name": "Claudia Vance",
+    "sortable_name": "Vance, Claudia",
+    "short_name": "Claudia",
+    "login_id": "claudia1062",
+    "sis_user_id": "STU1062",
+    "grade_level": 12,
+    "attendance_rate": 0.91,
+    "engagement_score": 98,
+    "enrollments": [
+      {
+        "course_id": 106,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 86.7,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 101,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 82.9,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 104,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 78.6,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 105,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 71.2,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 107,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 76.9,
+          "current_grade": "C"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1063,
+    "name": "Tanya Sims",
+    "sortable_name": "Sims, Tanya",
+    "short_name": "Tanya",
+    "login_id": "tanya1063",
+    "sis_user_id": "STU1063",
+    "grade_level": 10,
+    "attendance_rate": 0.93,
+    "engagement_score": 69,
+    "enrollments": [
+      {
+        "course_id": 104,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 95.6,
+          "current_grade": "A"
+        }
+      },
+      {
+        "course_id": 103,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 79.5,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 105,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 88.0,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 102,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 69.0,
+          "current_grade": "D"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1064,
+    "name": "Pamela Young",
+    "sortable_name": "Young, Pamela",
+    "short_name": "Pamela",
+    "login_id": "pamela1064",
+    "sis_user_id": "STU1064",
+    "grade_level": 11,
+    "attendance_rate": 0.85,
+    "engagement_score": 80,
+    "enrollments": [
+      {
+        "course_id": 101,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 80.2,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 105,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 68.9,
+          "current_grade": "D"
+        }
+      },
+      {
+        "course_id": 104,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 92.5,
+          "current_grade": "A"
+        }
+      },
+      {
+        "course_id": 108,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 81.4,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 102,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 88.6,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 107,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 81.8,
+          "current_grade": "B"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1065,
+    "name": "Laura Williams",
+    "sortable_name": "Williams, Laura",
+    "short_name": "Laura",
+    "login_id": "laura1065",
+    "sis_user_id": "STU1065",
+    "grade_level": 12,
+    "attendance_rate": 0.83,
+    "engagement_score": 100,
+    "enrollments": [
+      {
+        "course_id": 104,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 71.3,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 108,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 84.8,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 105,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 89.6,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 102,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 69.5,
+          "current_grade": "D"
+        }
+      },
+      {
+        "course_id": 107,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 67.3,
+          "current_grade": "D"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1066,
+    "name": "Katherine Reed",
+    "sortable_name": "Reed, Katherine",
+    "short_name": "Katherine",
+    "login_id": "katherine1066",
+    "sis_user_id": "STU1066",
+    "grade_level": 12,
+    "attendance_rate": 0.86,
+    "engagement_score": 70,
+    "enrollments": [
+      {
+        "course_id": 105,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 84.1,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 107,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 86.8,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 101,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 93.6,
+          "current_grade": "A"
+        }
+      },
+      {
+        "course_id": 103,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 79.7,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 108,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 81.0,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 104,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 76.0,
+          "current_grade": "C"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1067,
+    "name": "John Richmond",
+    "sortable_name": "Richmond, John",
+    "short_name": "John",
+    "login_id": "john1067",
+    "sis_user_id": "STU1067",
+    "grade_level": 12,
+    "attendance_rate": 0.85,
+    "engagement_score": 92,
+    "enrollments": [
+      {
+        "course_id": 104,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 93.2,
+          "current_grade": "A"
+        }
+      },
+      {
+        "course_id": 105,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 78.6,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 108,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 75.5,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 102,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 80.6,
+          "current_grade": "B"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1068,
+    "name": "Harry Phelps",
+    "sortable_name": "Phelps, Harry",
+    "short_name": "Harry",
+    "login_id": "harry1068",
+    "sis_user_id": "STU1068",
+    "grade_level": 10,
+    "attendance_rate": 0.77,
+    "engagement_score": 100,
+    "enrollments": [
+      {
+        "course_id": 103,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 93.8,
+          "current_grade": "A"
+        }
+      },
+      {
+        "course_id": 104,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 79.5,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 101,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 82.4,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 102,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 80.1,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 108,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 88.8,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 106,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 78.5,
+          "current_grade": "C"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1069,
+    "name": "Anthony Howard",
+    "sortable_name": "Howard, Anthony",
+    "short_name": "Anthony",
+    "login_id": "anthony1069",
+    "sis_user_id": "STU1069",
+    "grade_level": 12,
+    "attendance_rate": 0.97,
+    "engagement_score": 52,
+    "enrollments": [
+      {
+        "course_id": 106,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 93.1,
+          "current_grade": "A"
+        }
+      },
+      {
+        "course_id": 105,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 93.1,
+          "current_grade": "A"
+        }
+      },
+      {
+        "course_id": 108,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 93.4,
+          "current_grade": "A"
+        }
+      },
+      {
+        "course_id": 104,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 77.5,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 101,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 75.4,
+          "current_grade": "C"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1070,
+    "name": "Barbara Morgan",
+    "sortable_name": "Morgan, Barbara",
+    "short_name": "Barbara",
+    "login_id": "barbara1070",
+    "sis_user_id": "STU1070",
+    "grade_level": 11,
+    "attendance_rate": 0.98,
+    "engagement_score": 52,
+    "enrollments": [
+      {
+        "course_id": 102,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 68.0,
+          "current_grade": "D"
+        }
+      },
+      {
+        "course_id": 108,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 97.3,
+          "current_grade": "A"
+        }
+      },
+      {
+        "course_id": 106,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 90.1,
+          "current_grade": "A"
+        }
+      },
+      {
+        "course_id": 103,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 88.2,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 107,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 68.3,
+          "current_grade": "D"
+        }
+      },
+      {
+        "course_id": 105,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 70.5,
+          "current_grade": "C"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1071,
+    "name": "Thomas Novak",
+    "sortable_name": "Novak, Thomas",
+    "short_name": "Thomas",
+    "login_id": "thomas1071",
+    "sis_user_id": "STU1071",
+    "grade_level": 9,
+    "attendance_rate": 0.9,
+    "engagement_score": 74,
+    "enrollments": [
+      {
+        "course_id": 101,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 69.8,
+          "current_grade": "D"
+        }
+      },
+      {
+        "course_id": 103,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 82.5,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 107,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 83.7,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 106,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 91.2,
+          "current_grade": "A"
+        }
+      },
+      {
+        "course_id": 104,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 70.6,
+          "current_grade": "C"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1072,
+    "name": "Michael Miller",
+    "sortable_name": "Miller, Michael",
+    "short_name": "Michael",
+    "login_id": "michael1072",
+    "sis_user_id": "STU1072",
+    "grade_level": 10,
+    "attendance_rate": 0.77,
+    "engagement_score": 72,
+    "enrollments": [
+      {
+        "course_id": 104,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 86.1,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 108,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 80.2,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 105,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 87.0,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 102,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 94.7,
+          "current_grade": "A"
+        }
+      },
+      {
+        "course_id": 106,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 80.4,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 107,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 74.5,
+          "current_grade": "C"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1073,
+    "name": "Wanda Shaw",
+    "sortable_name": "Shaw, Wanda",
+    "short_name": "Wanda",
+    "login_id": "wanda1073",
+    "sis_user_id": "STU1073",
+    "grade_level": 11,
+    "attendance_rate": 0.76,
+    "engagement_score": 92,
+    "enrollments": [
+      {
+        "course_id": 105,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 71.6,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 106,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 77.7,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 104,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 80.9,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 103,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 72.8,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 107,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 83.9,
+          "current_grade": "B"
+        }
+      },
+      {
+        "course_id": 102,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 84.0,
+          "current_grade": "B"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1074,
+    "name": "Deborah Petty",
+    "sortable_name": "Petty, Deborah",
+    "short_name": "Deborah",
+    "login_id": "deborah1074",
+    "sis_user_id": "STU1074",
+    "grade_level": 10,
+    "attendance_rate": 0.91,
+    "engagement_score": 89,
+    "enrollments": [
+      {
+        "course_id": 105,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 92.5,
+          "current_grade": "A"
+        }
+      },
+      {
+        "course_id": 101,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 94.8,
+          "current_grade": "A"
+        }
+      },
+      {
+        "course_id": 108,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 90.6,
+          "current_grade": "A"
+        }
+      },
+      {
+        "course_id": 107,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 72.6,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 104,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 91.5,
+          "current_grade": "A"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1075,
+    "name": "Heather Brandt",
+    "sortable_name": "Brandt, Heather",
+    "short_name": "Heather",
+    "login_id": "heather1075",
+    "sis_user_id": "STU1075",
+    "grade_level": 11,
+    "attendance_rate": 0.94,
+    "engagement_score": 61,
+    "enrollments": [
+      {
+        "course_id": 103,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 91.0,
+          "current_grade": "A"
+        }
+      },
+      {
+        "course_id": 106,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 66.1,
+          "current_grade": "D"
+        }
+      },
+      {
+        "course_id": 101,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 77.0,
+          "current_grade": "C"
+        }
+      },
+      {
+        "course_id": 107,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 69.3,
+          "current_grade": "D"
+        }
+      },
+      {
+        "course_id": 108,
+        "role": "StudentEnrollment",
+        "type": "student",
+        "enrollment_state": "active",
+        "grades": {
+          "current_score": 95.0,
+          "current_grade": "A"
+        }
+      }
+    ]
+  }
+]

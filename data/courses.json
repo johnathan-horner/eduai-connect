@@ -1,0 +1,74 @@
+[
+  {
+    "id": 101,
+    "course_code": "MATH101",
+    "name": "Math",
+    "start_date": "2024-09-01",
+    "end_date": "2024-12-15",
+    "instructor": "Kristen Jones",
+    "number_of_students": 21
+  },
+  {
+    "id": 102,
+    "course_code": "BIO101",
+    "name": "Biology",
+    "start_date": "2024-09-01",
+    "end_date": "2024-12-15",
+    "instructor": "Edwin Robles",
+    "number_of_students": 19
+  },
+  {
+    "id": 103,
+    "course_code": "ENG101",
+    "name": "English",
+    "start_date": "2024-09-01",
+    "end_date": "2024-12-15",
+    "instructor": "Jennifer Jones",
+    "number_of_students": 32
+  },
+  {
+    "id": 104,
+    "course_code": "HIST101",
+    "name": "History",
+    "start_date": "2024-09-01",
+    "end_date": "2024-12-15",
+    "instructor": "Judy Paul",
+    "number_of_students": 26
+  },
+  {
+    "id": 105,
+    "course_code": "PHYS101",
+    "name": "Physics",
+    "start_date": "2024-09-01",
+    "end_date": "2024-12-15",
+    "instructor": "Jeffrey Sanders",
+    "number_of_students": 31
+  },
+  {
+    "id": 106,
+    "course_code": "CHEM101",
+    "name": "Chemistry",
+    "start_date": "2024-09-01",
+    "end_date": "2024-12-15",
+    "instructor": "Daniel Contreras",
+    "number_of_students": 31
+  },
+  {
+    "id": 107,
+    "course_code": "SPAN101",
+    "name": "Spanish",
+    "start_date": "2024-09-01",
+    "end_date": "2024-12-15",
+    "instructor": "Joshua Long",
+    "number_of_students": 23
+  },
+  {
+    "id": 108,
+    "course_code": "ART101",
+    "name": "Art",
+    "start_date": "2024-09-01",
+    "end_date": "2024-12-15",
+    "instructor": "Erica Colon DDS",
+    "number_of_students": 20
+  }
+]

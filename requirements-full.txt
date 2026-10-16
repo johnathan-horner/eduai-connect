@@ -1,0 +1,12 @@
+# Full install: demo dependencies plus everything the API, agents, and MCP server need.
+# Streamlit Cloud uses the smaller requirements.txt.
+-r requirements.txt
+boto3
+langchain
+langchain-aws
+langchain-community
+langgraph
+faiss-cpu
+fastapi
+uvicorn
+fastmcp
