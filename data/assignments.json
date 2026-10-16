@@ -1,0 +1,240 @@
+[
+  {
+    "id": 201,
+    "course_id": 101,
+    "name": "Algebra Homework",
+    "due_date": "2024-09-15",
+    "points_possible": 90
+  },
+  {
+    "id": 202,
+    "course_id": 101,
+    "name": "Geometry Project",
+    "due_date": "2024-10-01",
+    "points_possible": 75
+  },
+  {
+    "id": 203,
+    "course_id": 102,
+    "name": "Earth Biology Science Report",
+    "due_date": "2024-09-20",
+    "points_possible": 50
+  },
+  {
+    "id": 204,
+    "course_id": 102,
+    "name": "Biology Quiz",
+    "due_date": "2024-10-05",
+    "points_possible": 50
+  },
+  {
+    "id": 205,
+    "course_id": 103,
+    "name": "Essay on Shakespeare",
+    "due_date": "2024-09-25",
+    "points_possible": 100
+  },
+  {
+    "id": 206,
+    "course_id": 104,
+    "name": "World War II Essay",
+    "due_date": "2024-10-10",
+    "points_possible": 100
+  },
+  {
+    "id": 207,
+    "course_id": 105,
+    "name": "Physics Lab Report",
+    "due_date": "2024-10-15",
+    "points_possible": 85
+  },
+  {
+    "id": 208,
+    "course_id": 106,
+    "name": "Chemistry Lab Report",
+    "due_date": "2024-10-20",
+    "points_possible": 50
+  },
+  {
+    "id": 209,
+    "course_id": 107,
+    "name": "Spanish Conversation Practice",
+    "due_date": "2024-10-25",
+    "points_possible": 50
+  },
+  {
+    "id": 210,
+    "course_id": 108,
+    "name": "Art Portfolio Review",
+    "due_date": "2024-11-30",
+    "points_possible": 65
+  },
+  {
+    "id": 211,
+    "course_id": 101,
+    "name": "Trigonometry Quiz",
+    "due_date": "2024-11-01",
+    "points_possible": 60
+  },
+  {
+    "id": 212,
+    "course_id": 102,
+    "name": "Ecology Project",
+    "due_date": "2024-11-05",
+    "points_possible": 75
+  },
+  {
+    "id": 213,
+    "course_id": 103,
+    "name": "Poetry Analysis",
+    "due_date": "2024-11-10",
+    "points_possible": 80
+  },
+  {
+    "id": 214,
+    "course_id": 104,
+    "name": "Civil Rights Movement Essay",
+    "due_date": "2024-11-15",
+    "points_possible": 95
+  },
+  {
+    "id": 215,
+    "course_id": 105,
+    "name": "Optics Lab Report",
+    "due_date": "2024-11-20",
+    "points_possible": 55
+  },
+  {
+    "id": 216,
+    "course_id": 106,
+    "name": "Organic Chemistry Quiz",
+    "due_date": "2024-11-25",
+    "points_possible": 50
+  },
+  {
+    "id": 217,
+    "course_id": 107,
+    "name": "Spanish Culture Presentation",
+    "due_date": "2024-11-30",
+    "points_possible": 70
+  },
+  {
+    "id": 218,
+    "course_id": 108,
+    "name": "Art History Essay",
+    "due_date": "2024-12-05",
+    "points_possible": 75
+  },
+  {
+    "id": 219,
+    "course_id": 101,
+    "name": "Calculus Final Exam",
+    "due_date": "2024-12-10",
+    "points_possible": 95
+  },
+  {
+    "id": 220,
+    "course_id": 102,
+    "name": "Genetics Final Exam",
+    "due_date": "2024-12-15",
+    "points_possible": 50
+  },
+  {
+    "id": 221,
+    "course_id": 103,
+    "name": "Literature Final Exam",
+    "due_date": "2024-12-20",
+    "points_possible": 55
+  },
+  {
+    "id": 222,
+    "course_id": 104,
+    "name": "History Final Exam",
+    "due_date": "2024-12-25",
+    "points_possible": 100
+  },
+  {
+    "id": 223,
+    "course_id": 105,
+    "name": "Physics Final Exam",
+    "due_date": "2024-12-30",
+    "points_possible": 100
+  },
+  {
+    "id": 224,
+    "course_id": 106,
+    "name": "Chemistry Final Exam",
+    "due_date": "2025-01-05",
+    "points_possible": 85
+  },
+  {
+    "id": 225,
+    "course_id": 107,
+    "name": "Spanish Final Exam",
+    "due_date": "2025-01-10",
+    "points_possible": 100
+  },
+  {
+    "id": 226,
+    "course_id": 108,
+    "name": "Art Final Project",
+    "due_date": "2025-01-15",
+    "points_possible": 100
+  },
+  {
+    "id": 227,
+    "course_id": 101,
+    "name": "Statistics Project",
+    "due_date": "2024-12-01",
+    "points_possible": 80
+  },
+  {
+    "id": 228,
+    "course_id": 102,
+    "name": "Microbiology Lab Report",
+    "due_date": "2024-12-05",
+    "points_possible": 60
+  },
+  {
+    "id": 229,
+    "course_id": 103,
+    "name": "Creative Writing Assignment",
+    "due_date": "2024-12-10",
+    "points_possible": 70
+  },
+  {
+    "id": 230,
+    "course_id": 104,
+    "name": "Cold War Essay",
+    "due_date": "2024-12-15",
+    "points_possible": 85
+  },
+  {
+    "id": 231,
+    "course_id": 105,
+    "name": "Thermodynamics Quiz",
+    "due_date": "2024-12-20",
+    "points_possible": 50
+  },
+  {
+    "id": 232,
+    "course_id": 106,
+    "name": "Inorganic Chemistry Project",
+    "due_date": "2024-12-25",
+    "points_possible": 75
+  },
+  {
+    "id": 233,
+    "course_id": 107,
+    "name": "Spanish Literature Analysis",
+    "due_date": "2024-12-30",
+    "points_possible": 80
+  },
+  {
+    "id": 234,
+    "course_id": 108,
+    "name": "Modern Art Presentation",
+    "due_date": "2025-01-05",
+    "points_possible": 100
+  }
+]

@@ -1,84 +1,108 @@
-cat > README.md << 'READMEEOF'
-# AI Meeting Intelligence & Action Tracker
+# EduAI Connect
 
-AI-powered meeting assistant that automatically transcribes meetings, extracts action items, and tracks follow-through.
+**Status:** Working demo, still in development. Demo mode runs without an AWS account. Full mode needs Amazon Bedrock access. Three items in this repo belong to other projects and will move out once they have their own repos: `cdk-ai-constructs/`, `cloudspace-deploy/`, and `portfolio-index.html`.
 
+Demo (Streamlit Cloud, demo mode): https://eduai-connect-horner.streamlit.app
 
-## Problem Solved
+## What it does
 
-70% of meeting action items get forgotten. Teams waste 5+ hours/week on meeting follow-up.
+EduAI Connect helps teachers spot students who are falling behind before it is too late to help. It reads student grades, attendance, and engagement data, flags at-risk students, and suggests what to do next.
 
-## Solution
+- Flags at-risk students with a high, medium, or low risk level
+- Recommends interventions for each flagged student
+- Lets teachers ask plain-language questions about their class, with follow-up questions
+- Filters personal information with Bedrock Guardrails to support FERPA requirements
+- Uses synthetic student data only (in Canvas LMS API format), never real student records
 
-Automated system using AWS AI services that:
-- Transcribes meeting audio
-- Extracts action items with owners
-- Analyzes sentiment
-- Sends email summaries
-- Tracks completion
+How it works:
 
-## Architecture
+- A RAG pipeline turns student records into documents, embeds them with Amazon Titan Text Embeddings v2, and stores them in a FAISS index.
+- Questions are rewritten into better search queries, results are re-ranked, and Claude 3 Haiku on Amazon Bedrock writes the answer.
+- Two agents run in a LangGraph workflow: a Grading Agent reviews grade trends, then an At-Risk Agent combines grades, attendance, and engagement into a risk level.
+- A FastAPI backend exposes the features, and a Streamlit dashboard sits on top.
 
-![Architecture](architecture.png)
+API endpoints:
 
-Event-driven workflow using 8 AWS services orchestrated by Step Functions.
+| Method | Path | Purpose |
+|--------|------|---------|
+| GET | `/health` | Health check |
+| POST | `/chat` | Questions and answers about student performance |
+| POST | `/insights/grading` | Grade analysis from the Grading Agent |
+| POST | `/insights/at-risk` | At-risk detection from the At-Risk Agent |
 
-## Technology Stack
+## How to run it
 
-- AWS Transcribe - Speech-to-text conversion
-- Amazon Bedrock - Claude AI for analysis
-- AWS Comprehend - Sentiment and key phrase extraction
-- Step Functions - Workflow orchestration
-- Lambda - 4 serverless functions
-- DynamoDB - Action item persistence
-- Amazon SES - Email automation
-- API Gateway - REST API
-- S3 - Audio and results storage
-
-## Results
-
-- 90% action item completion vs 30% without tracking
-- 30-60 second processing time
-- 5 hours/week saved per employee
-- $0-5/month cost on AWS Free Tier
-
-## Business Value
-
-For 20-person team:
-- Saves 100 hours/week in meeting overhead
-- $50K+ annual value
-- 3x improvement in action completion rate
-
-## Quick Start
-
-Deploy for demo:
 ```bash
-bash setup.sh
+git clone https://github.com/johnathan-horner/eduai-connect.git
+cd eduai-connect
 ```
 
-Teardown after demo:
+### Demo mode (no AWS account needed)
+
 ```bash
-bash teardown.sh
+pip install -r requirements.txt
+streamlit run streamlit_app/streamlit_app.py
 ```
 
-## Skills Demonstrated
+### Full mode (uses Amazon Bedrock)
 
-- Event-driven serverless architecture
-- Multi-service AI integration
-- Step Functions workflow orchestration
-- Real-time audio processing
-- NoSQL database design
-- API development
+Requirements:
 
-## Author
+- Python 3.11 or newer
+- AWS CLI configured with credentials that can call Bedrock
+- Bedrock model access enabled for Claude 3 Haiku and Titan Text Embeddings v2
 
-Built as portfolio project demonstrating AWS Solutions Architect and AI integration skills.
-READMEEOF
+```bash
+pip install -r requirements-full.txt
 
-wc -l README.md
+# Generate synthetic data and build the vector index
+python3 src/etl/generate_data.py
+python3 src/rag/vector_store.py
 
-git add README.md
+# Start the API
+uvicorn src.api.main:app --reload
 
-git commit -m "Fix README with complete content"
+# In a second terminal, start the dashboard
+streamlit run streamlit_app/app.py
+```
 
-git push origin main
+Then open http://localhost:8501.
+
+On an Intel Mac running macOS 12, the newest `faiss-cpu` has no prebuilt wheel. Install `faiss-cpu==1.10.0` first.
+
+### MCP server
+
+`mcp_server.py` exposes education analytics tools to MCP clients. It is installed by `requirements-full.txt`.
+
+```bash
+python3 mcp_server.py
+```
+
+### Tests
+
+```bash
+pip install pytest flake8
+pytest
+```
+
+## What's planned
+
+- Move `cdk-ai-constructs/`, `cloudspace-deploy/`, and `portfolio-index.html` into their own repos
+- Swap FAISS for OpenSearch Serverless in production (the infrastructure stack is already designed for this)
+- Add more agents, such as attendance tracking and intervention follow-up
+- Connect to a live Canvas LMS instance instead of synthetic data
+- Pin versions in `requirements-full.txt`
+- Add an architecture diagram (the old one was an empty file)
+
+## More docs
+
+- `docs/FERPA_COMPLIANCE.md`: privacy and compliance notes
+- `AI_SYSTEM_CARD.md`: what the AI does, its limits, and how it is governed
+- `docs/decisions/`: architecture decision records
+- `CONTRIBUTING.md`: how to contribute
+
+## Privacy
+
+See `docs/FERPA_COMPLIANCE.md` for the full compliance notes. Development uses synthetic data only.
+
+Built by Johnathan Horner.
