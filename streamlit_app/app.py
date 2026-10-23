@@ -138,7 +138,7 @@ with tab2:
 
 with tab3:
     st.markdown("### ⚠️ At-Risk Student Detection")
-    st.markdown("*Powered by the At-Risk Detection Agent — flags students based on grades, attendance, and engagement*")
+    st.markdown("*Powered by the At-Risk Detection Agent: flags students based on grades, attendance, and engagement*")
     st.markdown("")
 
     risk_q = st.text_input("Ask about at-risk students:", value="Which students are at risk of failing?", key="risk_input")
@@ -210,7 +210,7 @@ with tab4:
 st.markdown("---")
 st.markdown("""
 <div style='text-align: center; color: #8892b0; padding: 20px;'>
-    <b>EduAI Connect</b> — Built with Amazon Bedrock • LangChain • LangGraph • FAISS • FastAPI<br>
+    <b>EduAI Connect</b> · Built with Amazon Bedrock • LangChain • LangGraph • FAISS • FastAPI<br>
     Synthetic data only • Reference project, not deployed to any school<br>
     <span style='color: #64ffda;'></span>
 </div>

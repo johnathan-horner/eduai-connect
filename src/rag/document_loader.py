@@ -14,20 +14,20 @@ def load_documents():
     Converts raw student JSON data into LangChain Document objects.
     Each student becomes one Document with their info as page_content
     and their ID as metadata for filtering later.
-    This is the first step in the RAG pipeline — the data ingestion layer.
+    This is the first step in the RAG pipeline: the data ingestion layer.
     """
     documents = []
 
     # Loop through every student and build a text representation
     for student in students:
-        # Build the page_content string — this is what the LLM will search through
+        # Build the page_content string: this is what the LLM will search through
         page_content = f"Student Name: {student['name']}\n"
         page_content += f"Grade Level: {student['grade_level']}\n"
         page_content += f"Attendance Rate: {student['attendance_rate']}\n"
         page_content += f"Engagement Score: {student['engagement_score']}\n"
         page_content += "Enrollments:\n"
 
-        # Add each course enrollment with grades — this lets the AI
+        # Add each course enrollment with grades: this lets the AI
         # answer questions like "who is failing Biology?"
         for enrollment in student['enrollments']:
             # Match course ID to course name from courses.json

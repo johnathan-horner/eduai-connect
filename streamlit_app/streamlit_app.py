@@ -1,5 +1,5 @@
 """
-EduAI Connect — Streamlit Cloud Entry Point
+EduAI Connect: Streamlit Cloud Entry Point
 Demo mode: no AWS credentials required.
 """
 
@@ -24,7 +24,7 @@ st.set_page_config(
 )
 
 # ─────────────────────────────────────────────
-# CSS — single inject, dark navy theme
+# CSS: single inject, dark navy theme
 # ─────────────────────────────────────────────
 
 def inject_css():

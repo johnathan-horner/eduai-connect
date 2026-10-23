@@ -47,7 +47,7 @@ retriever = vectorstore.as_retriever(search_kwargs={"k": 4})
 prompt = ChatPromptTemplate.from_template("""
 You are an education analytics assistant that helps teachers understand student performance data.
 Use the context below to answer the question. If the answer is not in the context, say you don't know.
-Use the chat history to understand follow-up questions — if the user says "her" or "their", refer to the previous conversation.
+Use the chat history to understand follow-up questions: if the user says "her" or "their", refer to the previous conversation.
 
 Chat History:
 {chat_history}
