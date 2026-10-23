@@ -1,5 +1,5 @@
 """
-EduAI Connect -- Demo Pages
+EduAI Connect: Demo Pages
 All synthetic data, no AWS credentials required.
 """
 
@@ -121,12 +121,12 @@ def _students_df() -> pd.DataFrame:
 
 
 # ─────────────────────────────────────────────
-# Page 1 -- Class Dashboard
+# Page 1: Class Dashboard
 # ─────────────────────────────────────────────
 
 def page_class_dashboard():
     st.title("📊 Class Dashboard")
-    st.caption("Section B -- Spring 2025 · 12 students · Demo Mode")
+    st.caption("Section B: Spring 2025 · 12 students · Demo Mode")
     st.divider()
 
     high   = sum(1 for s in STUDENTS if s["risk"] == "HIGH")
@@ -180,7 +180,7 @@ def page_class_dashboard():
 
 
 # ─────────────────────────────────────────────
-# Page 2 -- At-Risk Students
+# Page 2: At-Risk Students
 # ─────────────────────────────────────────────
 
 def page_at_risk():
@@ -206,7 +206,7 @@ def page_at_risk():
         cohort = [s for s in STUDENTS if s["risk"] == level]
         st.subheader(f"{header} ({len(cohort)})")
         for s in cohort:
-            with st.expander(f"{_risk_color(s['risk'])} {s['name']} -- Risk Score: {s['risk_score']}/100 · GPA: {s['gpa']} · Attendance: {s['attendance']}%"):
+            with st.expander(f"{_risk_color(s['risk'])} {s['name']}: Risk Score: {s['risk_score']}/100 · GPA: {s['gpa']} · Attendance: {s['attendance']}%"):
                 col1, col2, col3, col4 = st.columns(4)
                 col1.metric("GPA",         s["gpa"])
                 col2.metric("Attendance",  f"{s['attendance']}%")
@@ -235,7 +235,7 @@ def page_at_risk():
 
 
 # ─────────────────────────────────────────────
-# Page 3 -- Student Profiles
+# Page 3: Student Profiles
 # ─────────────────────────────────────────────
 
 def page_student_profiles():
@@ -296,7 +296,7 @@ def page_student_profiles():
 
 
 # ─────────────────────────────────────────────
-# Page 4 -- AI Chat (Demo)
+# Page 4: AI Chat (Demo)
 # ─────────────────────────────────────────────
 
 def _demo_ai_response(question: str) -> str:
@@ -360,10 +360,10 @@ def _demo_ai_response(question: str) -> str:
         medium = [s for s in STUDENTS if s["risk"] == "MEDIUM"]
         resp   = f"**At-Risk Summary**\n\n🔴 **HIGH RISK ({len(high)} students):**\n"
         for s in high:
-            resp += f"  - {s['name']} -- GPA: {s['gpa']}, Attendance: {s['attendance']}%, Missing: {s['missing_assignments']}\n"
+            resp += f"  - {s['name']}: GPA: {s['gpa']}, Attendance: {s['attendance']}%, Missing: {s['missing_assignments']}\n"
         resp += f"\n🟡 **MEDIUM RISK ({len(medium)} students):**\n"
         for s in medium:
-            resp += f"  - {s['name']} -- GPA: {s['gpa']}, Attendance: {s['attendance']}%\n"
+            resp += f"  - {s['name']}: GPA: {s['gpa']}, Attendance: {s['attendance']}%\n"
         resp += "\n**Recommendation:** Schedule immediate interventions for HIGH RISK students. Monitor MEDIUM RISK weekly."
         return resp
 
@@ -374,7 +374,7 @@ def _demo_ai_response(question: str) -> str:
         high_ct  = sum(1 for s in STUDENTS if s["risk"] == "HIGH")
         med_ct   = sum(1 for s in STUDENTS if s["risk"] == "MEDIUM")
         return (
-            f"**Class Overview -- Section B**\n\n"
+            f"**Class Overview: Section B**\n\n"
             f"- Total students: **12**\n"
             f"- Average GPA: **{avg_gpa}**\n"
             f"- Average attendance: **{avg_att}%**\n"
@@ -396,17 +396,17 @@ def _demo_ai_response(question: str) -> str:
 
     return (
         "I can answer questions about:\n\n"
-        "- **Specific students** -- e.g., *'How is Marcus doing?'*\n"
-        "- **Subjects** -- e.g., *'How is the class doing in Math?'*\n"
-        "- **Attendance** -- e.g., *'Who has low attendance?'*\n"
-        "- **At-risk students** -- e.g., *'Who needs intervention?'*\n"
-        "- **Class overview** -- e.g., *'Give me a class summary'*"
+        "- **Specific students**: e.g., *'How is Marcus doing?'*\n"
+        "- **Subjects**: e.g., *'How is the class doing in Math?'*\n"
+        "- **Attendance**: e.g., *'Who has low attendance?'*\n"
+        "- **At-risk students**: e.g., *'Who needs intervention?'*\n"
+        "- **Class overview**: e.g., *'Give me a class summary'*"
     )
 
 
 def page_ai_chat():
     st.title("💬 AI Education Assistant")
-    st.caption("Demo mode -- powered by synthetic data, no AWS required")
+    st.caption("Demo mode: powered by synthetic data, no AWS required")
     st.divider()
 
     with st.expander("💡 Try these example questions"):
@@ -438,7 +438,7 @@ def page_ai_chat():
 
 
 # ─────────────────────────────────────────────
-# Page 5 -- System Info
+# Page 5: System Info
 # ─────────────────────────────────────────────
 
 def page_system_info():
@@ -448,7 +448,7 @@ def page_system_info():
 
     st.subheader("Tech Stack")
     stack_df = pd.DataFrame([
-        {"Layer":       "LLM",              "Technology": "Amazon Bedrock -- Claude 3 Haiku",    "Purpose": "AI-powered student analysis"},
+        {"Layer":       "LLM",              "Technology": "Amazon Bedrock: Claude 3 Haiku",    "Purpose": "AI-powered student analysis"},
         {"Layer":       "Embeddings",       "Technology": "Amazon Titan Embed Text v2",          "Purpose": "Semantic search over student data"},
         {"Layer":       "Vector Store",     "Technology": "FAISS",                               "Purpose": "Fast similarity search"},
         {"Layer":       "RAG Orchestration","Technology": "LangChain + LangGraph",               "Purpose": "Multi-agent retrieval pipeline"},
@@ -476,7 +476,7 @@ def page_system_info():
 
     decisions = [
         ("Why FAISS?",       "In-memory vector search for low-latency RAG on student documents. No external vector DB dependency for local dev."),
-        ("Why LangGraph?",   "Multi-agent orchestration -- grading agent feeds into at-risk detection agent as a structured pipeline with shared state."),
+        ("Why LangGraph?",   "Multi-agent orchestration: grading agent feeds into at-risk detection agent as a structured pipeline with shared state."),
         ("Why Bedrock?",     "Native AWS integration with IAM, KMS and Guardrails, so student data can stay inside the school's AWS account. The VPC setup is not built yet."),
         ("Why Haiku?",       "Lowest-cost Claude model for high-frequency teacher queries. Sufficient capability for structured data analysis tasks."),
         ("Why FastAPI?",     "Async endpoints support concurrent Streamlit users. Clean OpenAPI docs auto-generated for integration testing."),

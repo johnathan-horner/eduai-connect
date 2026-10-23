@@ -8,7 +8,7 @@ from langchain_core.output_parsers import StrOutputParser
 
 app = FastAPI()
 
-# Bedrock setup — ONE time only
+# Bedrock setup: ONE time only
 region = "us-east-1"
 bedrock_runtime = boto3.client(service_name="bedrock-runtime", region_name=region)
 llm = ChatBedrockConverse(client=bedrock_runtime, model="us.anthropic.claude-3-haiku-20240307-v1:0", temperature=0, max_tokens=1000)

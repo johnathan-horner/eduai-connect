@@ -17,7 +17,7 @@ class EduAIStack(Stack):
         super().__init__(scope, id, **kwargs)
 
         # -----------------------------------------------
-        # KMS Key — encrypts student data for FERPA compliance
+        # KMS Key: encrypts student data for FERPA compliance
         # -----------------------------------------------
         encryption_key = kms.Key(
             self, "EduAIKey",
@@ -28,7 +28,7 @@ class EduAIStack(Stack):
         )
 
         # -----------------------------------------------
-        # S3 Bucket — stores student data, encrypted
+        # S3 Bucket: stores student data, encrypted
         # -----------------------------------------------
         student_data_bucket = s3.Bucket(
             self, "StudentDataBucket",
@@ -43,7 +43,7 @@ class EduAIStack(Stack):
         )
 
         # -----------------------------------------------
-        # CloudWatch Log Group — audit trail for FERPA compliance
+        # CloudWatch Log Group: audit trail for FERPA compliance
         # -----------------------------------------------
         log_group = logs.LogGroup(
             self, "EduAILogs",
@@ -53,7 +53,7 @@ class EduAIStack(Stack):
         )
 
         # -----------------------------------------------
-        # IAM Role — least privilege for Lambda
+        # IAM Role: least privilege for Lambda
         # -----------------------------------------------
         lambda_role = iam.Role(
             self, "DataIngestionRole",
@@ -75,7 +75,7 @@ class EduAIStack(Stack):
         log_group.grant_write(lambda_role)
 
         # -----------------------------------------------
-        # Lambda Function — data ingestion from Canvas API
+        # Lambda Function: data ingestion from Canvas API
         # -----------------------------------------------
         ingestion_lambda = _lambda.Function(
             self, "DataIngestionLambda",
@@ -93,7 +93,7 @@ class EduAIStack(Stack):
         )
 
         # -----------------------------------------------
-        # EventBridge Rule — daily data sync at 6 AM EST
+        # EventBridge Rule: daily data sync at 6 AM EST
         # -----------------------------------------------
         daily_sync_rule = events.Rule(
             self, "DailySyncRule",
@@ -107,7 +107,7 @@ class EduAIStack(Stack):
         daily_sync_rule.add_target(targets.LambdaFunction(ingestion_lambda))
 
         # -----------------------------------------------
-        # EventBridge Rule — webhook trigger for real-time grade updates
+        # EventBridge Rule: webhook trigger for real-time grade updates
         # -----------------------------------------------
         webhook_rule = events.Rule(
             self, "WebhookTriggerRule",

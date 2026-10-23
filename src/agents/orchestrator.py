@@ -23,7 +23,7 @@ vectorstore = FAISS.load_local("faiss_index", embeddings, allow_dangerous_deseri
 retriever = vectorstore.as_retriever(search_kwargs={"k": 4})
 
 # -------------------------
-# Prompts — one per agent
+# Prompts: one per agent
 # -------------------------
 grading_prompt = ChatPromptTemplate.from_template("""
 You are an education analytics assistant analyzing student grades.
@@ -63,7 +63,7 @@ grading_chain = grading_prompt | llm | StrOutputParser()
 at_risk_chain = at_risk_prompt | llm | StrOutputParser()
 
 # -------------------------
-# State — shared between both agents
+# State: shared between both agents
 # -------------------------
 class State(TypedDict):
     question: str
@@ -82,7 +82,7 @@ def grading_node(state: State) -> dict:
     return {"grading_result": result, "context": context}
 
 # -------------------------
-# Node 2: At-Risk Agent — reads grading_result from state
+# Node 2: At-Risk Agent: reads grading_result from state
 # -------------------------
 def at_risk_node(state: State) -> dict:
     result = at_risk_chain.invoke({

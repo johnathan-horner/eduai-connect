@@ -74,7 +74,7 @@ def list_guardrails():
     """List all existing guardrails."""
     response = bedrock.list_guardrails()
     for g in response["guardrails"]:
-        print(f"  {g['name']} — ID: {g['id']} — Status: {g['status']}")
+        print(f"  {g['name']}, ID: {g['id']}, Status: {g['status']}")
     return response["guardrails"]
 
 
