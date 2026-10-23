@@ -1,2 +1,2 @@
 [flake8]
-exclude = .git,__pycache__,node_modules,.venv,venv,cdk-ai-constructs,cloudspace-deploy
+exclude = .git,__pycache__,node_modules,.venv,venv,cloudspace-deploy
