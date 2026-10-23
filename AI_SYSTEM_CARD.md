@@ -25,8 +25,12 @@ review; use with real student records before the controls in `docs/FERPA_COMPLIA
 - **Agents:** a LangGraph workflow with a Grading Agent (grade trends) and an At-Risk Agent. The
   At-Risk Agent asks the model to apply three explicit criteria: grade below 70, attendance below
   0.80, engagement below 60.
-- **Demo mode** (the hosted app) does not call Bedrock. It shows a fixed sample of 12 synthetic
-  students with preset risk levels and template answers.
+- **Hosted app:** a fixed sample of 12 synthetic students with preset risk levels. Its chat calls
+  Claude Haiku 4.5 on Amazon Bedrock (`us.anthropic.claude-haiku-4-5-20251001-v1:0`) only when the
+  app has `[aws]` secrets, answers only from keyword-retrieved records, shows those records under
+  each answer, caps live requests at 10 per session and writes one audit log entry per answer.
+  Without credentials it shows the matching records and states that no AI answer was generated.
+  The Bedrock PII guardrail is not applied.
 
 ## Evaluation
 
