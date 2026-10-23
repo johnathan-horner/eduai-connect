@@ -43,18 +43,10 @@ with st.sidebar:
     st.markdown("")
     role = st.selectbox("👤 Your Role", ["Teacher", "Administrator"])
     st.markdown("---")
-    st.markdown("### 🔒 Security Status")
-    st.markdown("✅ FERPA Compliant")
-    st.markdown("✅ PII Guardrails Active")
-    st.markdown("✅ KMS Encryption On")
-    st.markdown("✅ Audit Logging Enabled")
-    st.markdown("---")
-    st.markdown("### ⚡ System Status")
-    st.markdown("🟢 Bedrock API: Online")
-    st.markdown("🟢 FAISS Index: Loaded")
-    st.markdown("🟢 Grading Agent: Ready")
-    st.markdown("🟢 At-Risk Agent: Ready")
-    st.markdown("---")
+    st.markdown("### Data and mode")
+    st.markdown("Synthetic student data only")
+    st.markdown("Demo mode: fixed sample, no AWS calls")
+    st.markdown("Privacy controls: see docs/FERPA_COMPLIANCE.md (partly built)")
     st.caption("Powered by Amazon Bedrock • LangChain • LangGraph")
 
 # Header
@@ -219,7 +211,7 @@ st.markdown("---")
 st.markdown("""
 <div style='text-align: center; color: #8892b0; padding: 20px;'>
     <b>EduAI Connect</b> — Built with Amazon Bedrock • LangChain • LangGraph • FAISS • FastAPI<br>
-    🔒 FERPA Compliant • KMS Encrypted • Guardrails Active<br>
+    Synthetic data only • Reference project, not deployed to any school<br>
     <span style='color: #64ffda;'></span>
 </div>
 """, unsafe_allow_html=True)

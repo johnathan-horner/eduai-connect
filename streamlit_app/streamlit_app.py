@@ -134,20 +134,12 @@ with st.sidebar:
     )
 
     st.markdown("---")
-    st.markdown("### 🔒 Security Status")
-    st.markdown("✅ FERPA Compliant")
-    st.markdown("✅ PII Guardrails Active")
-    st.markdown("✅ KMS Encryption On")
-    st.markdown("✅ Audit Logging Enabled")
-    st.markdown("---")
-    st.markdown("### ⚡ System Status")
-    st.markdown("🟢 Bedrock API: Configured")
-    st.markdown("🟢 FAISS Index: Loaded")
-    st.markdown("🟢 Grading Agent: Ready")
-    st.markdown("🟢 At-Risk Agent: Ready")
-    st.markdown("---")
+    st.markdown("### Data and mode")
+    st.markdown("Synthetic student data only")
+    st.markdown("Demo mode: fixed sample, no AWS calls")
+    st.markdown("Privacy controls: see docs/FERPA_COMPLIANCE.md (partly built)")
     st.caption("Demo Mode · No AWS required")
-    st.caption("Powered by Amazon Bedrock · LangChain · LangGraph")
+    st.caption("Full mode uses Amazon Bedrock, LangChain and LangGraph")
 
 # ─────────────────────────────────────────────
 # Page Router

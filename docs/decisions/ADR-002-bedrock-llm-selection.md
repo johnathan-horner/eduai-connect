@@ -21,7 +21,7 @@ We chose Amazon Bedrock with Claude 3 Sonnet as our primary LLM for educational 
 - **FERPA Compliance**: AWS infrastructure with educational data protection guarantees
 - **Reasoning Quality**: Excellent performance on complex educational analysis tasks
 - **Cost Efficiency**: Competitive pricing with pay-per-use model for educational workloads
-- **AWS Integration**: Seamless integration with existing AWS educational infrastructure
+- **AWS Integration**: Works with IAM, KMS and the rest of an AWS account a school might already use
 - **Guardrails Support**: Built-in PII filtering and content moderation for student data
 
 ### Negative

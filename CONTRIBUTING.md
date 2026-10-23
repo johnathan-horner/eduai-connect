@@ -12,7 +12,7 @@
 ### Architecture Principles
 - **FERPA First**: All development must maintain student privacy and FERPA compliance
 - **Multi-Agent Design**: Use specialized agents for distinct educational functions
-- **RAG-Enhanced**: Leverage retrieval-augmented generation for educational content
+- **RAG-Enhanced**: Use retrieval-augmented generation for educational content
 - **Human-in-the-Loop**: Always require educator oversight for AI recommendations
 
 ### Educational Domain Expertise

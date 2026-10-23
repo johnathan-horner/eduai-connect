@@ -460,19 +460,16 @@ def page_system_info():
     st.dataframe(stack_df, use_container_width=True, hide_index=True)
 
     st.divider()
-    st.subheader("🔒 FERPA Compliance Controls")
-
-    c1, c2 = st.columns(2)
-    with c1:
-        st.success("[OK] PII Guardrails Active")
-        st.success("[OK] KMS Encryption Enabled")
-        st.success("[OK] Audit Logging On")
-        st.success("[OK] Role-Based Access Control")
-    with c2:
-        st.success("[OK] Bedrock Guardrails Configured")
-        st.success("[OK] SSN / PII Blocking")
-        st.success("[OK] Data Anonymization Enabled")
-        st.success("[OK] FERPA Compliant Architecture")
+    st.subheader("Privacy controls: what exists today")
+    st.dataframe(pd.DataFrame([
+        {"Control": "Synthetic data only", "Status": "Built"},
+        {"Control": "API input validation (Pydantic)", "Status": "Built"},
+        {"Control": "KMS-encrypted S3 bucket", "Status": "Defined in CDK, not deployed"},
+        {"Control": "Bedrock Guardrail for PII", "Status": "Script exists, not applied to the chat chain"},
+        {"Control": "Role-based access", "Status": "Not built (the role selector does not filter data)"},
+        {"Control": "Audit logging (CloudTrail, app log)", "Status": "Not built"},
+    ]), hide_index=True)
+    st.caption("This demo is not FERPA compliant and has never handled real student records.")
 
     st.divider()
     st.subheader("Architecture Decisions")
@@ -480,10 +477,10 @@ def page_system_info():
     decisions = [
         ("Why FAISS?",       "In-memory vector search for low-latency RAG on student documents. No external vector DB dependency for local dev."),
         ("Why LangGraph?",   "Multi-agent orchestration -- grading agent feeds into at-risk detection agent as a structured pipeline with shared state."),
-        ("Why Bedrock?",     "Native AWS integration with IAM, KMS, and Guardrails. Keeps student data within the AWS VPC boundary for FERPA compliance."),
+        ("Why Bedrock?",     "Native AWS integration with IAM, KMS and Guardrails, so student data can stay inside the school's AWS account. The VPC setup is not built yet."),
         ("Why Haiku?",       "Lowest-cost Claude model for high-frequency teacher queries. Sufficient capability for structured data analysis tasks."),
         ("Why FastAPI?",     "Async endpoints support concurrent Streamlit users. Clean OpenAPI docs auto-generated for integration testing."),
-        ("Guardrails Role",  "Blocks SSN, anonymizes names/emails in LLM output. Prevents accidental PII leakage in AI-generated responses."),
+        ("Guardrails Role",  "Planned: block SSNs and mask names and emails in model output. A script creates the guardrail; it is not yet applied to the chat chain."),
     ]
     for title, detail in decisions:
         with st.expander(f"- {title}"):
@@ -494,6 +491,6 @@ def page_system_info():
     st.info(
         "**This deployment runs in demo mode.**\n\n"
         "No AWS credentials or Bedrock API calls are made. All student data is synthetic. "
-        "The production system connects to Amazon Bedrock (Claude 3 Haiku via cross-region inference profile) "
-        "and a live FAISS index built from Canvas LMS data."
+        "Full mode (run locally with AWS credentials) calls Claude 3 Haiku on Amazon Bedrock and a FAISS "
+        "index built from the same synthetic Canvas-format data. It has not been deployed."
     )
