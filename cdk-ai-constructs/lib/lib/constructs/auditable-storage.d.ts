@@ -6,7 +6,7 @@ import { Construct } from 'constructs';
 /**
  * Compliance modes supported by AuditableStorage
  */
-export type ComplianceMode = 'HIPAA' | 'FERPA' | 'FEDRAMP' | 'SR11-7';
+export type ComplianceMode = 'HIPAA' | 'FERPA' | 'SR11-7';
 /**
  * Properties for AuditableStorage construct
  */

@@ -18,7 +18,7 @@ We chose Streamlit as our primary dashboard framework for the educator interface
 
 ### Positive
 - **Rapid Development**: Quick iteration and deployment of educational dashboard features
-- **Python Integration**: Seamless connection with AI models and educational data processing
+- **Python Integration**: Calls the AI models and data code directly from Python
 - **Interactive Analytics**: Real-time visualizations of student performance and risk indicators
 - **Educational Accessibility**: User-friendly interface designed for educator workflows
 - **Cost Efficiency**: Open-source solution reducing licensing costs for schools

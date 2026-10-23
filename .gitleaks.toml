@@ -1,0 +1,7 @@
+[extend]
+useDefault = true
+
+# Placeholder tokens in an old README that was once part of this repo (for example "Bearer YOUR_JWT_TOKEN").
+[allowlist]
+description = "documentation placeholders"
+regexes = ['''YOUR_JWT_TOKEN''']

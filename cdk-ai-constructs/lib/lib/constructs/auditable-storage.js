@@ -168,8 +168,6 @@ class AuditableStorage extends constructs_1.Construct {
                 return 2555; // 7 years
             case 'FERPA':
                 return 1825; // 5 years
-            case 'FEDRAMP':
-                return 2555; // 7 years
             case 'SR11-7':
                 return 2555; // 7 years (Federal banking regulation)
             default:

@@ -7,7 +7,7 @@ import { Construct } from 'constructs';
 /**
  * Compliance modes supported by ModelCard
  */
-export type ModelCardComplianceMode = 'HIPAA' | 'FERPA' | 'FEDRAMP' | 'SR11-7';
+export type ModelCardComplianceMode = 'HIPAA' | 'FERPA' | 'SR11-7';
 /**
  * Evaluation metric for model performance
  */

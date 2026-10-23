@@ -8,7 +8,7 @@ import { Construct } from 'constructs';
 /**
  * Compliance modes supported by AuditableStorage
  */
-export type ComplianceMode = 'HIPAA' | 'FERPA' | 'FEDRAMP' | 'SR11-7';
+export type ComplianceMode = 'HIPAA' | 'FERPA' | 'SR11-7';
 
 /**
  * Properties for AuditableStorage construct
@@ -240,8 +240,6 @@ export class AuditableStorage extends Construct {
         return 2555; // 7 years
       case 'FERPA':
         return 1825; // 5 years
-      case 'FEDRAMP':
-        return 2555; // 7 years
       case 'SR11-7':
         return 2555; // 7 years (Federal banking regulation)
       default:

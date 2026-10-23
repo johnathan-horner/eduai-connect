@@ -237,7 +237,10 @@ body {
 .project-card[data-vertical="finance"]::before { background: var(--green); }
 .project-card[data-vertical="healthcare"]::before { background: var(--red); }
 .project-card[data-vertical="education"]::before { background: var(--purple); }
-.project-card[data-vertical="government"]::before { background: var(--amber); }
+.project-card[data-vertical="legal"]::before { background: var(--amber); }
+.project-card[data-vertical="sports"]::before { background: var(--green); }
+.project-card[data-vertical="contact"]::before { background: var(--text-dim); }
+.project-card[data-vertical="tools"]::before { background: var(--text-dim); }
 
 .card-top {
   display: flex;
@@ -260,7 +263,10 @@ body {
 .card-vertical.finance { color: var(--green); border-color: var(--green); }
 .card-vertical.healthcare { color: var(--red); border-color: var(--red); }
 .card-vertical.education { color: var(--purple); border-color: var(--purple); }
-.card-vertical.government { color: var(--amber); border-color: var(--amber); }
+.card-vertical.legal { color: var(--amber); border-color: var(--amber); }
+.card-vertical.sports { color: var(--green); border-color: var(--green); }
+.card-vertical.contact { color: var(--text-dim); border-color: var(--text-dim); }
+.card-vertical.tools { color: var(--text-dim); border-color: var(--text-dim); }
 
 .card-compliance {
   font-family: 'DM Mono', monospace;
@@ -538,10 +544,10 @@ body {
       <div><div class="stat-num">4</div><div class="stat-label">Compliance Frameworks</div></div>
     </div>
 
-    <div class="compliance-caption" style="margin-top: 16px; font-family: 'DM Mono', monospace; font-size: 12px; color: #7c8aa5; letter-spacing: 0.5px; text-align: center;">HIPAA · FedRAMP · FERPA · SR 11-7 / SR 26-2</div>
+    <div class="compliance-caption" style="margin-top: 16px; font-family: 'DM Mono', monospace; font-size: 12px; color: #7c8aa5; letter-spacing: 0.5px; text-align: center;">HIPAA · FERPA · COPPA · SR 26-2 (formerly SR 11-7)</div>
 
     <div class="hero-links">
-      <a href="https://linkedin.com/in/johnathan-horner" target="_blank">LinkedIn</a>
+      <a href="https://www.linkedin.com/in/johnathan-horner-99b37782" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       <a href="https://github.com/johnathan-horner" target="_blank">GitHub</a>
       <a href="https://resume.johnathancloudspace.com" target="_blank">Resume</a>
       <a href="mailto:mrhorner819@gmail.com">Contact</a>
@@ -550,13 +556,13 @@ body {
 
   <!-- CAPABILITY BADGE ROW -->
   <div class="capability-badges">
-    <div class="capability-text">Every system includes: <span class="badge">MCP (Model Context Protocol) Integration</span> | <span class="badge">CI/CD Pipeline</span> | <span class="badge">OpenAPI Docs</span> | <span class="badge">Model Card</span> | <span class="badge">Architecture Decision Records</span></div>
+    <div class="capability-text">Each project README lists: <span class="badge">Status</span> | <span class="badge">Measured results and how they were measured</span> | <span class="badge">Limits</span> | <span class="badge">Tests in CI</span></div>
   </div>
 
   <!-- ABOUT -->
   <section style="padding: 48px 0; border-bottom: 1px solid var(--border);">
     <div style="max-width: 640px; margin: 0 auto; text-align: center;">
-      <p style="font-size: 17px; color: var(--text); line-height: 1.7; margin: 0;">I'm Johnathan Horner — AI Solutions Architect based in Brooklyn. I build production AI systems on Anthropic Claude, Amazon Bedrock, and Google Gemini for regulated industries. Every system ships with governance, compliance, and audit-ready documentation — not as a final-step retrofit, but as an architectural property from day one.</p>
+      <p style="font-size: 17px; color: var(--text); line-height: 1.7; margin: 0;">I'm Johnathan Horner, an AI solutions architect in Brooklyn with 10 years in IT, cloud and AI, including 7 years on AWS. I find where AI pays off, design secure and cost-aware AWS architecture around it, and document it so teams can run it. ShootItPicks is the live product of my company, Shoot It Analytics LLC. The other projects here are independent reference projects built with public or synthetic data, each with its status, measured results and limits in its README.</p>
     </div>
   </section>
 
@@ -574,149 +580,57 @@ body {
     <button class="vert-btn" onclick="filterCards('finance')">Financial Services</button>
     <button class="vert-btn" onclick="filterCards('healthcare')">Healthcare</button>
     <button class="vert-btn" onclick="filterCards('education')">Education</button>
-    <button class="vert-btn" onclick="filterCards('government')">Government &amp; Legal</button>
+    <button class="vert-btn" onclick="filterCards('legal')">Legal</button>
+    <button class="vert-btn" onclick="filterCards('sports')">Sports Analytics</button>
+    <button class="vert-btn" onclick="filterCards('contact')">Contact Center</button>
+    <button class="vert-btn" onclick="filterCards('tools')">Open Source</button>
   </div>
 
   <!-- PROJECTS -->
   <section class="projects">
 
-    <!-- 1. ConnectIQ -->
-    <div class="project-card" data-vertical="finance">
-      <div class="card-top">
-        <span class="card-vertical finance">Amazon Connect</span>
-        <span class="card-compliance">Bedrock | Multi-Tenant</span>
-      </div>
-      <div class="card-title">ConnectIQ — AI-Powered Call Center SaaS</div>
-      <p class="card-problem">B2B SaaS replacing traditional receptionists with AI voice agents. Post-call summarization, intelligent routing, escalation prediction, and sentiment analysis. Multi-tenant architecture with Stripe billing.</p>
-      <div class="card-tech">
-        <span class="tech-tag">Amazon Connect</span>
-        <span class="tech-tag">Lex</span>
-        <span class="tech-tag">Bedrock</span>
-        <span class="tech-tag">Lambda</span>
-        <span class="tech-tag">DynamoDB</span>
-        <span class="tech-tag">Cognito</span>
-        <span class="tech-tag">Stripe</span>
-        <span class="tech-tag">CDK</span>
-        <span class="tech-tag capability-tag">MCP Server</span>
-        <span class="tech-tag capability-tag">CI/CD</span>
-        <span class="tech-tag capability-tag">OpenAPI</span>
-        <span class="tech-tag capability-tag">Model Card</span>
-        <span class="tech-tag capability-tag">ADRs</span>
-      </div>
-      <div class="card-highlights">
-        <div class="highlight">
-          <div class="highlight-label">ML Pattern</div>
-          <div class="highlight-value">Voice-to-text with AI routing, sentiment analysis, escalation prediction</div>
-        </div>
-        <div class="highlight">
-          <div class="highlight-label">RAG Pattern</div>
-          <div class="highlight-value">Agentic RAG — Lex intent + Bedrock routing with knowledge base retrieval</div>
-        </div>
-        <div class="highlight">
-          <div class="highlight-label">Architecture</div>
-          <div class="highlight-value">Amazon Connect → Lex → Lambda → Bedrock → DynamoDB → Stripe billing</div>
-        </div>
-        <div class="highlight">
-          <div class="highlight-label">Business</div>
-          <div class="highlight-value">Multi-tenant B2B SaaS with per-seat billing and enterprise features</div>
-        </div>
-      </div>
-      <div class="card-links">
-        <span style="display: inline-block; padding: 8px 16px; color: #6b7a94; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.5px; border: 1px solid #1a2540;">Coming Soon</span>
-        <a class="card-link secondary" href="https://github.com/johnathan-horner/connectiq" target="_blank">GitHub</a>
-      </div>
-    </div>
-
-    <!-- 2. CDK AI Constructs -->
-    <div class="project-card" data-vertical="finance">
-      <div class="card-top">
-        <span class="card-vertical finance">Open Source</span>
-        <span class="card-compliance">npm | TypeScript</span>
-      </div>
-      <div class="card-title">@johnathan-horner/cdk-ai-constructs</div>
-      <p class="card-problem">Reusable AWS CDK construct library powering all eight AI systems. Eight production constructs including Bedrock agents, SageMaker serverless endpoints, multi-tenant auth, auditable storage, Stripe billing, and model cards.</p>
-      <div class="card-tech">
-        <span class="tech-tag">CDK</span>
-        <span class="tech-tag">TypeScript</span>
-        <span class="tech-tag">Bedrock</span>
-        <span class="tech-tag">SageMaker</span>
-        <span class="tech-tag">Multi-tenant</span>
-        <span class="tech-tag">npm</span>
-        <span class="tech-tag capability-tag">MCP Server</span>
-        <span class="tech-tag capability-tag">CI/CD</span>
-        <span class="tech-tag capability-tag">OpenAPI</span>
-        <span class="tech-tag capability-tag">Model Card</span>
-        <span class="tech-tag capability-tag">ADRs</span>
-      </div>
-      <div class="card-highlights">
-        <div class="highlight">
-          <div class="highlight-label">Pattern</div>
-          <div class="highlight-value">Reusable CDK constructs for AI infrastructure: agents, endpoints, auth, billing</div>
-        </div>
-        <div class="highlight">
-          <div class="highlight-label">Architecture</div>
-          <div class="highlight-value">TypeScript CDK L3 constructs for common AI patterns</div>
-        </div>
-        <div class="highlight">
-          <div class="highlight-label">Impact</div>
-          <div class="highlight-value">Powers all eight AI systems with consistent patterns and best practices</div>
-        </div>
-      </div>
-      <div class="card-links">
-        <a class="card-link" href="https://www.npmjs.com/package/@johnathan-horner/cdk-ai-constructs" target="_blank">npm Package</a>
-        <a class="card-link secondary" href="https://github.com/johnathan-horner/cdk-ai-constructs" target="_blank">GitHub</a>
-      </div>
-    </div>
-
-    <!-- 3. Medical Image Triage -->
+    <!-- 1. Medical Image Triage -->
     <div class="project-card" data-vertical="healthcare">
       <div class="card-top">
         <span class="card-vertical healthcare">Healthcare</span>
-        <span class="card-compliance">HIPAA</span>
+        <span class="card-compliance">Decision support only</span>
       </div>
-      <div class="card-title">Medical Image Triage System</div>
-      <p class="card-problem">CNN classifier that triages medical images by confidence level, routing to the right physician queue with a full HIPAA-compliant audit trail. The model is 20% of the story. The production system around it is 80%.</p>
+      <div class="card-title">Medical Image Triage</div>
+      <p class="card-problem">Fine-tuned image model that scores chest X-rays, auto-triages confident cases and sends unsure ones to a human review queue. A Bedrock LLM writes a short summary from the model output only. Every result is labeled decision support only, not a diagnosis. Public research data; never used with patients.</p>
       <div class="card-tech">
-        <span class="tech-tag">TensorFlow</span>
-        <span class="tech-tag">EfficientNetB0</span>
-        <span class="tech-tag">SageMaker</span>
-        <span class="tech-tag">Lambda</span>
-        <span class="tech-tag">DynamoDB</span>
-        <span class="tech-tag">SNS</span>
-        <span class="tech-tag">Cognito</span>
-        <span class="tech-tag">KMS</span>
-        <span class="tech-tag capability-tag">MCP Server</span>
-        <span class="tech-tag capability-tag">CI/CD</span>
-        <span class="tech-tag capability-tag">OpenAPI</span>
+        <span class="tech-tag">PyTorch</span>
+        <span class="tech-tag">ResNet18</span>
+        <span class="tech-tag">PneumoniaMNIST</span>
+        <span class="tech-tag">Amazon Bedrock</span>
+        <span class="tech-tag">Claude</span>
+        <span class="tech-tag">SQLite</span>
+        <span class="tech-tag">Streamlit</span>
         <span class="tech-tag capability-tag">Model Card</span>
-        <span class="tech-tag capability-tag">ADRs</span>
+        <span class="tech-tag capability-tag">CI/CD</span>
+        <span class="tech-tag capability-tag">Audit Log</span>
       </div>
       <div class="card-highlights">
         <div class="highlight">
-          <div class="highlight-label">ML Pattern</div>
-          <div class="highlight-value">Computer Vision, CNN transfer learning with confidence-based triage routing</div>
+          <div class="highlight-label">Measured</div>
+          <div class="highlight-value">Test split: 92.1% accuracy, 99.5% pneumonia recall, 79.9% specificity</div>
         </div>
         <div class="highlight">
-          <div class="highlight-label">RAG Pattern</div>
-          <div class="highlight-value">Multimodal RAG — vision model with confidence-based routing</div>
+          <div class="highlight-label">Routing</div>
+          <div class="highlight-value">76.9% auto-triaged at 97.9% accuracy with no missed pneumonia; the rest go to a person</div>
         </div>
         <div class="highlight">
-          <div class="highlight-label">Architecture</div>
-          <div class="highlight-value">S3 ingest → Lambda → SageMaker endpoint → SNS routing → DynamoDB audit trail</div>
+          <div class="highlight-label">Guardrails</div>
+          <div class="highlight-value">LLM sees only model numbers, template fallback, append-only audit log per case</div>
         </div>
         <div class="highlight">
-          <div class="highlight-label">Governance</div>
-          <div class="highlight-value">No raw image retention post-classification, KMS encryption, Cognito RBAC, drift monitoring</div>
+          <div class="highlight-label">Cost</div>
+          <div class="highlight-value">Trained on a laptop CPU; about $0.0015 per LLM summary</div>
         </div>
-      </div>
-      <div class="card-diagram" onclick="openLightbox('/diagrams/medical-image-triage.png')">
-        <img src="https://portfolio.johnathancloudspace.com/diagrams/medical-image-triage.png" alt="Medical Image Triage AWS Architecture" >
-        <span class="diagram-label">Click to expand</span>
       </div>
       <div class="card-links">
+        <span class="card-status" style="display: inline-block; padding: 8px 16px; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.5px; color: #fbbf24; border: 1px solid #fbbf24;">In progress</span>
         <a class="card-link" href="https://www.notion.so/Medical-Image-Triage-System-36525c039699807ba3a2d28494b33711" target="_blank" rel="noopener noreferrer">Case Study</a>
-        <a class="card-link" href="https://medical-image-triage-horner.streamlit.app" target="_blank">Live Demo</a>
-        <a class="card-link secondary" href="https://github.com/johnathan-horner/medical-image-triage" target="_blank">GitHub</a>
+        <a class="card-link secondary" href="https://github.com/johnathan-horner/medical-image-triage" target="_blank" rel="noopener noreferrer">GitHub</a>
       </div>
     </div>
 
@@ -724,111 +638,188 @@ body {
     <div class="project-card" data-vertical="finance">
       <div class="card-top">
         <span class="card-vertical finance">Financial Services</span>
-        <span class="card-compliance">SR 11-7 / SR 26-2</span>
+        <span class="card-compliance">Synthetic data</span>
       </div>
       <div class="card-title">Transaction Anomaly Detection</div>
-      <p class="card-problem">Autoencoder flags suspicious transactions in real-time. When it flags one, a LangGraph investigation agent pulls customer history, checks merchant risk, and generates a natural language investigation summary. Not just a score, but an explanation.</p>
+      <p class="card-problem">Flags unusual card transactions with an Isolation Forest model plus five plain rules, gives every flag a score and a plain-language reason, holds confident flags and sends lower-confidence ones to an analyst queue. Every score and decision goes to an audit log.</p>
       <div class="card-tech">
-        <span class="tech-tag">PyTorch</span>
-        <span class="tech-tag">LangGraph</span>
-        <span class="tech-tag">LangChain</span>
-        <span class="tech-tag">Bedrock Claude</span>
-        <span class="tech-tag">Kinesis</span>
-        <span class="tech-tag">ECS Fargate</span>
-        <span class="tech-tag">SageMaker</span>
-        <span class="tech-tag">DynamoDB</span>
+        <span class="tech-tag">scikit-learn</span>
+        <span class="tech-tag">Isolation Forest</span>
+        <span class="tech-tag">FastMCP</span>
+        <span class="tech-tag">SQLite</span>
+        <span class="tech-tag">Streamlit</span>
         <span class="tech-tag capability-tag">MCP Server</span>
         <span class="tech-tag capability-tag">CI/CD</span>
-        <span class="tech-tag capability-tag">OpenAPI</span>
-        <span class="tech-tag capability-tag">Model Card</span>
-        <span class="tech-tag capability-tag">ADRs</span>
+        <span class="tech-tag capability-tag">Audit Log</span>
       </div>
       <div class="card-highlights">
         <div class="highlight">
-          <div class="highlight-label">ML Pattern</div>
-          <div class="highlight-value">Autoencoder anomaly detection + agentic investigation with feature-level explainability</div>
+          <div class="highlight-label">Measured</div>
+          <div class="highlight-value">Later test period: hold lane 95.4% precise, 81.1% of anomalies flagged overall</div>
         </div>
         <div class="highlight">
-          <div class="highlight-label">RAG Pattern</div>
-          <div class="highlight-value">Agentic RAG — 4-node LangGraph investigation loop</div>
+          <div class="highlight-label">Design</div>
+          <div class="highlight-value">Model and rules calibrated on validation and combined into one score</div>
         </div>
         <div class="highlight">
-          <div class="highlight-label">Architecture</div>
-          <div class="highlight-value">Kinesis → Lambda scoring → SQS → ECS Fargate (LangGraph) → SNS fraud alerts</div>
+          <div class="highlight-label">MCP</div>
+          <div class="highlight-value">6 tools backed by the detector; no model calls; same request, same score</div>
         </div>
         <div class="highlight">
-          <div class="highlight-label">Governance</div>
-          <div class="highlight-value">SR 11-7 / SR 26-2 compliant: model documentation, validation, drift monitoring, feedback retraining loop</div>
+          <div class="highlight-label">Data</div>
+          <div class="highlight-value">328,448 synthetic transactions with labeled fraud patterns and hard negatives</div>
         </div>
-      </div>
-      <div class="card-diagram" onclick="openLightbox('/diagrams/transaction-anomaly-detection.png')">
-        <img src="https://portfolio.johnathancloudspace.com/diagrams/transaction-anomaly-detection.png" alt="Transaction Anomaly Detection AWS Architecture" >
-        <span class="diagram-label">Click to expand</span>
       </div>
       <div class="card-links">
+        <span class="card-status" style="display: inline-block; padding: 8px 16px; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.5px; color: #fbbf24; border: 1px solid #fbbf24;">In progress</span>
         <a class="card-link" href="https://www.notion.so/Transaction-Anomaly-Detection-36525c039699802f8305c1bff0a6eb48" target="_blank" rel="noopener noreferrer">Case Study</a>
-        <a class="card-link" href="https://transaction-anomaly-horner.streamlit.app" target="_blank">Live Demo</a>
-        <a class="card-link secondary" href="https://github.com/johnathan-horner/financial-anomaly-detection" target="_blank">GitHub</a>
+        <a class="card-link secondary" href="https://github.com/johnathan-horner/financial-anomaly-detection" target="_blank" rel="noopener noreferrer">GitHub</a>
       </div>
     </div>
 
-    <!-- 3. Legal Doc Classification -->
-    <div class="project-card" data-vertical="government">
+    <!-- 3. Legal Document Classification -->
+    <div class="project-card" data-vertical="legal">
       <div class="card-top">
-        <span class="card-vertical government">Government &amp; Legal</span>
-        <span class="card-compliance">FedRAMP</span>
+        <span class="card-vertical legal">Legal</span>
+        <span class="card-compliance">Public data</span>
       </div>
-      <div class="card-title">Legal Document Classification &amp; Risk Scoring</div>
-      <p class="card-problem">A multi-agent system that classifies legal documents, extracts and scores high-risk clauses, cross-references regulations, and generates plain-English attorney briefings. Parallel agent execution cuts processing time in half.</p>
+      <div class="card-title">Legal Document Type Classifier</div>
+      <p class="card-problem">Sorts legal documents into 8 types (contracts, court opinions, rules, notices, presidential documents) with a confidence score, sends low-confidence documents to review, and logs every decision.</p>
       <div class="card-tech">
-        <span class="tech-tag">PyTorch</span>
-        <span class="tech-tag">DistilBERT</span>
-        <span class="tech-tag">LangGraph</span>
-        <span class="tech-tag">LangChain</span>
-        <span class="tech-tag">Bedrock Claude</span>
-        <span class="tech-tag">Textract</span>
-        <span class="tech-tag">ECS Fargate</span>
-        <span class="tech-tag">SageMaker</span>
-        <span class="tech-tag capability-tag">MCP Server</span>
+        <span class="tech-tag">scikit-learn</span>
+        <span class="tech-tag">TF-IDF</span>
+        <span class="tech-tag">Logistic Regression</span>
+        <span class="tech-tag">Federal Register API</span>
+        <span class="tech-tag">Streamlit</span>
         <span class="tech-tag capability-tag">CI/CD</span>
-        <span class="tech-tag capability-tag">OpenAPI</span>
-        <span class="tech-tag capability-tag">Model Card</span>
-        <span class="tech-tag capability-tag">ADRs</span>
+        <span class="tech-tag capability-tag">Audit Log</span>
       </div>
       <div class="card-highlights">
         <div class="highlight">
-          <div class="highlight-label">ML Pattern</div>
-          <div class="highlight-value">Agentic RAG: DistilBERT planner + 3 parallel LangGraph agents (fan-out/fan-in) + risk scoring reasoner</div>
+          <div class="highlight-label">Measured</div>
+          <div class="highlight-value">432 held-out documents: 90.7% accuracy, macro F1 0.905, per-class results in the repo</div>
         </div>
         <div class="highlight">
-          <div class="highlight-label">RAG Pattern</div>
-          <div class="highlight-value">Corrective RAG — DistilBERT grader validates before LLM reasoning</div>
+          <div class="highlight-label">Routing</div>
+          <div class="highlight-value">84.5% auto-routed at 96.2% accuracy; the rest go to review</div>
         </div>
         <div class="highlight">
-          <div class="highlight-label">Architecture</div>
-          <div class="highlight-value">S3 → Textract → SageMaker → ECS (LangGraph fan-out/fan-in) → SQS attorney queues</div>
+          <div class="highlight-label">Data</div>
+          <div class="highlight-value">2,000 public documents; text that states the type outright is removed before training</div>
         </div>
         <div class="highlight">
-          <div class="highlight-label">Governance</div>
-          <div class="highlight-value">FedRAMP-aware: KMS encryption, CloudTrail audit, Cognito RBAC, 7-year retention</div>
+          <div class="highlight-label">Cost</div>
+          <div class="highlight-value">Trains in under a minute on a laptop CPU</div>
         </div>
-      </div>
-      <div class="card-diagram" onclick="openLightbox('/diagrams/legal-doc-classification.png')">
-        <img src="https://portfolio.johnathancloudspace.com/diagrams/legal-doc-classification.png" alt="Legal Doc Classification AWS Architecture" >
-        <span class="diagram-label">Click to expand</span>
       </div>
       <div class="card-links">
+        <span class="card-status" style="display: inline-block; padding: 8px 16px; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.5px; color: #fbbf24; border: 1px solid #fbbf24;">In progress</span>
         <a class="card-link" href="https://www.notion.so/Legal-Doc-36525c039699806289e9d21ef63e9519" target="_blank" rel="noopener noreferrer">Case Study</a>
-        <a class="card-link" href="https://legal-doc-classification-horner.streamlit.app" target="_blank">Live Demo</a>
-        <a class="card-link secondary" href="https://github.com/johnathan-horner/legal-document-classifier" target="_blank">GitHub</a>
+        <a class="card-link secondary" href="https://github.com/johnathan-horner/legal-document-classifier" target="_blank" rel="noopener noreferrer">GitHub</a>
       </div>
     </div>
 
-    <!-- 4. ShootItPicks -->
+    <!-- 4. FinTech AI -->
     <div class="project-card" data-vertical="finance">
       <div class="card-top">
         <span class="card-vertical finance">Financial Services</span>
-        <span class="card-compliance">MRM, 8 Guardrails</span>
+        <span class="card-compliance">SR 26-2 (formerly SR 11-7)</span>
+      </div>
+      <div class="card-title">FinTech AI</div>
+      <p class="card-problem">Portfolio analysis assistant with three LangGraph agents (market, risk, portfolio), a Monte Carlo CVaR risk engine and model risk controls in code: a 6-model inventory, held-out validation gates, PSI drift detection and a CRO report. Synthetic portfolio data.</p>
+      <div class="card-tech">
+        <span class="tech-tag">Anthropic Claude</span>
+        <span class="tech-tag">Amazon Bedrock</span>
+        <span class="tech-tag">Google Gemini</span>
+        <span class="tech-tag">LangGraph</span>
+        <span class="tech-tag">FAISS</span>
+        <span class="tech-tag">Monte Carlo CVaR</span>
+        <span class="tech-tag">Streamlit</span>
+        <span class="tech-tag capability-tag">MCP Server</span>
+        <span class="tech-tag capability-tag">CI/CD</span>
+        <span class="tech-tag capability-tag">OpenAPI</span>
+        <span class="tech-tag capability-tag">Model Card</span>
+        <span class="tech-tag capability-tag">ADRs</span>
+      </div>
+      <div class="card-highlights">
+        <div class="highlight">
+          <div class="highlight-label">Measured</div>
+          <div class="highlight-value">Held-out RAG: 22 of 23 passed, 95.2% exact-fact accuracy</div>
+        </div>
+        <div class="highlight">
+          <div class="highlight-label">Risk Engine</div>
+          <div class="highlight-value">10,000 Monte Carlo simulations, fat-tail mixture distribution, 5 historical stress scenarios</div>
+        </div>
+        <div class="highlight">
+          <div class="highlight-label">Backtest</div>
+          <div class="highlight-value">VaR over 254 days in the Basel green zone, Kupiec p-value 0.72 to 0.78</div>
+        </div>
+        <div class="highlight">
+          <div class="highlight-label">Governance</div>
+          <div class="highlight-value">Approval gate per model and prompt version, independent grader, audit traces</div>
+        </div>
+      </div>
+      <div class="card-diagram" onclick="openLightbox('/diagrams/fintech-ai.png')">
+        <img src="https://portfolio.johnathancloudspace.com/diagrams/fintech-ai.png" alt="FinTech AI target AWS architecture" >
+        <span class="diagram-label">Target AWS architecture (defined in CDK, not deployed). Click to expand</span>
+      </div>
+      <div class="card-links">
+        <span class="card-status" style="display: inline-block; padding: 8px 16px; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.5px; color: #4ade80; border: 1px solid #4ade80;">Live</span>
+        <a class="card-link" href="https://www.notion.so/FinTech-AI-36525c039699800b8aaee5c1a0b02f59" target="_blank" rel="noopener noreferrer">Case Study</a>
+        <a class="card-link" href="https://fintech-ai-horner.streamlit.app" target="_blank" rel="noopener noreferrer">Live Demo</a>
+        <a class="card-link secondary" href="https://github.com/johnathan-horner/fintech-ai" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </div>
+
+    <!-- 5. EduAI Connect -->
+    <div class="project-card" data-vertical="education">
+      <div class="card-top">
+        <span class="card-vertical education">Education</span>
+        <span class="card-compliance">Synthetic data</span>
+      </div>
+      <div class="card-title">EduAI Connect</div>
+      <p class="card-problem">Retrieval and two LangGraph agents that answer a teacher's questions about grades, attendance and engagement and flag students who may be falling behind, using explicit criteria. Synthetic student data only; privacy controls are partly built.</p>
+      <div class="card-tech">
+        <span class="tech-tag">Amazon Bedrock</span>
+        <span class="tech-tag">Claude 3 Haiku</span>
+        <span class="tech-tag">Titan Embeddings</span>
+        <span class="tech-tag">LangGraph</span>
+        <span class="tech-tag">FAISS</span>
+        <span class="tech-tag">HyDE</span>
+        <span class="tech-tag">FastAPI</span>
+        <span class="tech-tag capability-tag">MCP Server</span>
+        <span class="tech-tag capability-tag">CI/CD</span>
+      </div>
+      <div class="card-highlights">
+        <div class="highlight">
+          <div class="highlight-label">Pattern</div>
+          <div class="highlight-value">Agentic RAG with query rewriting and LLM re-ranking</div>
+        </div>
+        <div class="highlight">
+          <div class="highlight-label">Criteria</div>
+          <div class="highlight-value">Grade below 70, attendance below 0.80, engagement below 60</div>
+        </div>
+        <div class="highlight">
+          <div class="highlight-label">Measured</div>
+          <div class="highlight-value">Accuracy not measured yet; 11 automated tests</div>
+        </div>
+        <div class="highlight">
+          <div class="highlight-label">Next</div>
+          <div class="highlight-value">Apply Bedrock Guardrails to every call, add auth and audit logging</div>
+        </div>
+      </div>
+      <div class="card-links">
+        <span class="card-status" style="display: inline-block; padding: 8px 16px; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.5px; color: #fbbf24; border: 1px solid #fbbf24;">In progress</span>
+        <a class="card-link" href="https://www.notion.so/EduAI-Connect-36525c039699801c807cc71c5223f406" target="_blank" rel="noopener noreferrer">Case Study</a>
+        <a class="card-link secondary" href="https://github.com/johnathan-horner/eduai-connect" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </div>
+
+    <!-- 6. ShootItPicks -->
+    <div class="project-card" data-vertical="sports">
+      <div class="card-top">
+        <span class="card-vertical sports">Sports Analytics</span>
+        <span class="card-compliance">8 Guardrails</span>
       </div>
       <div class="card-title">ShootItPicks</div>
       <p class="card-problem">A live, revenue-generating NFL analytics SaaS with paying subscribers. 5-step Chain of Thought AI pipeline with MRM confidence calibration enforcing 8 guardrails before any pick reaches a user. This is a business.</p>
@@ -851,7 +842,7 @@ body {
         </div>
         <div class="highlight">
           <div class="highlight-label">RAG Pattern</div>
-          <div class="highlight-value">Hybrid RAG — dense + sparse retrieval with 5-step Chain of Thought</div>
+          <div class="highlight-value">Hybrid RAG: dense + sparse retrieval with 5-step Chain of Thought</div>
         </div>
         <div class="highlight">
           <div class="highlight-label">Architecture</div>
@@ -867,99 +858,79 @@ body {
         <span class="diagram-label">Click to expand</span>
       </div>
       <div class="card-links">
-        <a class="card-link" href="https://shootitpicks.com" target="_blank">Live Product</a>
+        <span class="card-status" style="display: inline-block; padding: 8px 16px; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.5px; color: #4ade80; border: 1px solid #4ade80;">Live</span>
+        <a class="card-link" href="https://shootitpicks.com" target="_blank" rel="noopener noreferrer">Live Product</a>
       </div>
     </div>
 
-    <!-- 5. FinTech AI -->
-    <div class="project-card" data-vertical="finance">
+    <!-- 7. ConnectIQ -->
+    <div class="project-card" data-vertical="contact">
       <div class="card-top">
-        <span class="card-vertical finance">Financial Services</span>
-        <span class="card-compliance">SR 11-7 / SR 26-2</span>
+        <span class="card-vertical contact">Contact Center</span>
+        <span class="card-compliance">Architecture design</span>
       </div>
-      <div class="card-title">FinTech AI</div>
-      <p class="card-problem">Hedge fund intelligence platform with three LangGraph agents, Monte Carlo CVaR risk engine with fat-tail distributions, and a full SR 11-7 / SR 26-2 Model Risk Management framework: 6-model inventory, PSI drift detection, CRO report generator.</p>
+      <div class="card-title">ConnectIQ: AI Call Center Design</div>
+      <p class="card-problem">Design for a multi-tenant AI call center on Amazon Connect, Lex and Bedrock covering 14 languages across 3 per-seat pricing tiers, with escalation prediction that routes high-risk callers to human agents.</p>
       <div class="card-tech">
-        <span class="tech-tag">Anthropic Claude</span>
-        <span class="tech-tag">LangGraph</span>
-        <span class="tech-tag">Monte Carlo CVaR</span>
+        <span class="tech-tag">Amazon Connect</span>
+        <span class="tech-tag">Lex</span>
         <span class="tech-tag">Bedrock</span>
-        <span class="tech-tag">Titan Embeddings</span>
-        <span class="tech-tag">FAISS</span>
-        <span class="tech-tag">Streamlit</span>
+        <span class="tech-tag">Lambda</span>
+        <span class="tech-tag">React</span>
       </div>
       <div class="card-highlights">
         <div class="highlight">
-          <div class="highlight-label">ML Pattern</div>
-          <div class="highlight-value">Agentic RAG: 3 LangGraph agents with shared state (market analysis → risk assessment → portfolio mgmt)</div>
-        </div>
-        <div class="highlight">
-          <div class="highlight-label">RAG Pattern</div>
-          <div class="highlight-value">Agentic RAG — Planner/Risk/Recommender agents with tool use</div>
-        </div>
-        <div class="highlight">
-          <div class="highlight-label">Risk Engine</div>
-          <div class="highlight-value">10,000 Monte Carlo simulations, fat-tail mixture distribution, 5 historical stress scenarios</div>
-        </div>
-        <div class="highlight">
-          <div class="highlight-label">Governance</div>
-          <div class="highlight-value">SR 11-7 / SR 26-2: 6-model inventory, independent validation, PSI drift, immutable audit log</div>
-        </div>
-      </div>
-      <div class="card-diagram" onclick="openLightbox('/diagrams/fintech-ai.png')">
-        <img src="https://portfolio.johnathancloudspace.com/diagrams/fintech-ai.png" alt="FinTech AI AWS Architecture" >
-        <span class="diagram-label">Click to expand</span>
-      </div>
-      <div class="card-links">
-        <a class="card-link" href="https://www.notion.so/FinTech-AI-36525c039699800b8aaee5c1a0b02f59" target="_blank" rel="noopener noreferrer">Case Study</a>
-        <a class="card-link" href="https://fintech-ai-horner.streamlit.app" target="_blank">Live Demo</a>
-        <a class="card-link secondary" href="https://github.com/johnathan-horner/fintech-ai" target="_blank">GitHub</a>
-      </div>
-    </div>
-
-    <!-- 6. EduAI Connect -->
-    <div class="project-card" data-vertical="education">
-      <div class="card-top">
-        <span class="card-vertical education">Education</span>
-        <span class="card-compliance">FERPA</span>
-      </div>
-      <div class="card-title">EduAI Connect</div>
-      <p class="card-problem">FERPA-compliant education AI that helps teachers proactively identify at-risk students. Multi-agent RAG on Amazon Bedrock with LangGraph orchestration and HyDE query transformation for improved retrieval quality.</p>
-      <div class="card-tech">
-        <span class="tech-tag">Amazon Bedrock</span>
-        <span class="tech-tag">Claude 3 Sonnet</span>
-        <span class="tech-tag">Titan Embeddings</span>
-        <span class="tech-tag">LangGraph</span>
-        <span class="tech-tag">FAISS</span>
-        <span class="tech-tag">HyDE</span>
-        <span class="tech-tag">CDK</span>
-      </div>
-      <div class="card-highlights">
-        <div class="highlight">
-          <div class="highlight-label">ML Pattern</div>
-          <div class="highlight-value">Agentic RAG with HyDE query transformation and LLM-based re-ranking</div>
-        </div>
-        <div class="highlight">
-          <div class="highlight-label">RAG Pattern</div>
-          <div class="highlight-value">Agentic RAG — multi-agent LangGraph with HyDE query transformation</div>
+          <div class="highlight-label">Pattern</div>
+          <div class="highlight-value">Voice intent detection with AI routing and escalation prediction</div>
         </div>
         <div class="highlight">
           <div class="highlight-label">Architecture</div>
-          <div class="highlight-value">Bedrock agents, FAISS vector store, LangGraph StateGraph, S3, Lambda, API Gateway</div>
+          <div class="highlight-value">Amazon Connect, Lex, Lambda agents, Bedrock</div>
         </div>
         <div class="highlight">
-          <div class="highlight-label">Governance</div>
-          <div class="highlight-value">FERPA: Bedrock Guardrails PII filtering, KMS CMK encryption, least-privilege IAM</div>
+          <div class="highlight-label">Status</div>
+          <div class="highlight-value">Design and early Lambda and dashboard code; not deployed</div>
         </div>
       </div>
-      <div class="card-diagram" onclick="openLightbox('/diagrams/eduai-connect.png')">
-        <img src="https://portfolio.johnathancloudspace.com/diagrams/eduai-connect.png" alt="EduAI Connect AWS Architecture" >
-        <span class="diagram-label">Click to expand</span>
+      <div class="card-links">
+        <span class="card-status" style="display: inline-block; padding: 8px 16px; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.5px; color: #6b7a94; border: 1px solid #1a2540;">Coming soon</span>
+      </div>
+    </div>
+
+    <!-- 8. CDK AI Constructs -->
+    <div class="project-card" data-vertical="tools">
+      <div class="card-top">
+        <span class="card-vertical tools">Open Source</span>
+        <span class="card-compliance">TypeScript</span>
+      </div>
+      <div class="card-title">cdk-ai-constructs</div>
+      <p class="card-problem">TypeScript AWS CDK library with 9 constructs for AI infrastructure: Bedrock access, SageMaker serverless endpoints, multi-tenant Cognito auth, auditable S3 storage, event pipelines, model cards, Streamlit on Fargate and Stripe billing. Not yet used by the other projects.</p>
+      <div class="card-tech">
+        <span class="tech-tag">AWS CDK</span>
+        <span class="tech-tag">TypeScript</span>
+        <span class="tech-tag">Bedrock</span>
+        <span class="tech-tag">SageMaker</span>
+        <span class="tech-tag">Cognito</span>
+        <span class="tech-tag">Jest</span>
+        <span class="tech-tag capability-tag">CI/CD</span>
+      </div>
+      <div class="card-highlights">
+        <div class="highlight">
+          <div class="highlight-label">Measured</div>
+          <div class="highlight-value">147 Jest tests and 8 Python handler tests pass; all 9 constructs synthesize</div>
+        </div>
+        <div class="highlight">
+          <div class="highlight-label">Status</div>
+          <div class="highlight-value">Version 2.0.0 fixes the published 1.0.0, which cannot be imported; not yet published</div>
+        </div>
+        <div class="highlight">
+          <div class="highlight-label">Limit</div>
+          <div class="highlight-value">Tested by synthesis only; not deployed to a live AWS account</div>
+        </div>
       </div>
       <div class="card-links">
-        <a class="card-link" href="https://www.notion.so/EduAI-Connect-36525c039699801c807cc71c5223f406" target="_blank" rel="noopener noreferrer">Case Study</a>
-        <a class="card-link" href="https://eduai-connect-horner.streamlit.app" target="_blank">Live Demo</a>
-        <a class="card-link secondary" href="https://github.com/johnathan-horner/eduai-connect" target="_blank">GitHub</a>
+        <span class="card-status" style="display: inline-block; padding: 8px 16px; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.5px; color: #fbbf24; border: 1px solid #fbbf24;">In progress</span>
+        <a class="card-link secondary" href="https://github.com/johnathan-horner/cdk-ai-constructs" target="_blank" rel="noopener noreferrer">GitHub</a>
       </div>
     </div>
 
@@ -973,43 +944,36 @@ body {
     </div>
     
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px;">
-      <a href="https://linkedin.com/in/johnathan-horner" target="_blank" style="text-decoration: none; color: inherit; display: block; border: 1px solid var(--border); background: var(--surface); padding: 32px; transition: all 0.4s; position: relative; overflow: hidden;" onmouseover="this.style.borderColor='var(--border-hover)'; this.style.background='var(--surface-hover)'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 20px 60px rgba(0,0,0,0.3)';" onmouseout="this.style.borderColor='var(--border)'; this.style.background='var(--surface)'; this.style.transform='translateY(0)'; this.style.boxShadow='none';">
-        <h3 style="font-family: 'Instrument Serif', serif; font-size: 24px; font-weight: 400; color: var(--white); margin: 0 0 16px 0; line-height: 1.3;">SR 11-7 Governance for Production AI Systems</h3>
+      <a href="https://www.linkedin.com/posts/johnathan-horner-99b37782_fintech-modelriskmanagement-sr117-activity-7441141015031332864-0MYC" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: block; border: 1px solid var(--border); background: var(--surface); padding: 32px; transition: all 0.4s; position: relative; overflow: hidden;" onmouseover="this.style.borderColor='var(--border-hover)'; this.style.background='var(--surface-hover)'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 20px 60px rgba(0,0,0,0.3)';" onmouseout="this.style.borderColor='var(--border)'; this.style.background='var(--surface)'; this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+        <h3 style="font-family: 'Instrument Serif', serif; font-size: 24px; font-weight: 400; color: var(--white); margin: 0 0 16px 0; line-height: 1.3;">Why FinTech AI Needs SR 11-7 Governance</h3>
+        <p style="font-size: 15px; color: var(--text-muted); line-height: 1.6; margin: 0 0 20px 0;">Bringing Federal Reserve model risk management discipline to hedge fund AI from day one: independent validation, continuous monitoring, documented limitations.</p>
         <div style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; color: var(--text-dim); text-transform: uppercase;">Read on LinkedIn →</div>
       </a>
       
-      <a href="https://linkedin.com/in/johnathan-horner" target="_blank" style="text-decoration: none; color: inherit; display: block; border: 1px solid var(--border); background: var(--surface); padding: 32px; transition: all 0.4s; position: relative; overflow: hidden;" onmouseover="this.style.borderColor='var(--border-hover)'; this.style.background='var(--surface-hover)'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 20px 60px rgba(0,0,0,0.3)';" onmouseout="this.style.borderColor='var(--border)'; this.style.background='var(--surface)'; this.style.transform='translateY(0)'; this.style.boxShadow='none';">
-        <h3 style="font-family: 'Instrument Serif', serif; font-size: 24px; font-weight: 400; color: var(--white); margin: 0 0 16px 0; line-height: 1.3;">PSI-Based Model Drift Detection in Practice</h3>
+      <a href="https://www.linkedin.com/posts/johnathan-horner-99b37782_mrm-airiskmanagement-montecarlo-activity-7440387700899250176-QGt0" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: block; border: 1px solid var(--border); background: var(--surface); padding: 32px; transition: all 0.4s; position: relative; overflow: hidden;" onmouseover="this.style.borderColor='var(--border-hover)'; this.style.background='var(--surface-hover)'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 20px 60px rgba(0,0,0,0.3)';" onmouseout="this.style.borderColor='var(--border)'; this.style.background='var(--surface)'; this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+        <h3 style="font-family: 'Instrument Serif', serif; font-size: 24px; font-weight: 400; color: var(--white); margin: 0 0 16px 0; line-height: 1.3;">Model Risk Management with Monte Carlo Methods</h3>
+        <p style="font-size: 15px; color: var(--text-muted); line-height: 1.6; margin: 0 0 20px 0;">How MRM, CVaR, and Monte Carlo simulation work together to govern AI systems that influence capital allocation decisions.</p>
         <div style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; color: var(--text-dim); text-transform: uppercase;">Read on LinkedIn →</div>
       </a>
       
-      <a href="https://linkedin.com/in/johnathan-horner" target="_blank" style="text-decoration: none; color: inherit; display: block; border: 1px solid var(--border); background: var(--surface); padding: 32px; transition: all 0.4s; position: relative; overflow: hidden;" onmouseover="this.style.borderColor='var(--border-hover)'; this.style.background='var(--surface-hover)'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 20px 60px rgba(0,0,0,0.3)';" onmouseout="this.style.borderColor='var(--border)'; this.style.background='var(--surface)'; this.style.transform='translateY(0)'; this.style.boxShadow='none';">
-        <h3 style="font-family: 'Instrument Serif', serif; font-size: 24px; font-weight: 400; color: var(--white); margin: 0 0 16px 0; line-height: 1.3;">AI Transformation vs AI Experimentation</h3>
-        <div style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; color: var(--text-dim); text-transform: uppercase;">Read on LinkedIn →</div>
-      </a>
-      
-      <a href="https://linkedin.com/in/johnathan-horner" target="_blank" style="text-decoration: none; color: inherit; display: block; border: 1px solid var(--border); background: var(--surface); padding: 32px; transition: all 0.4s; position: relative; overflow: hidden;" onmouseover="this.style.borderColor='var(--border-hover)'; this.style.background='var(--surface-hover)'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 20px 60px rgba(0,0,0,0.3)';" onmouseout="this.style.borderColor='var(--border)'; this.style.background='var(--surface)'; this.style.transform='translateY(0)'; this.style.boxShadow='none';">
-        <h3 style="font-family: 'Instrument Serif', serif; font-size: 24px; font-weight: 400; color: var(--white); margin: 0 0 16px 0; line-height: 1.3;">Multi-Agent Orchestration with LangGraph</h3>
-        <div style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; color: var(--text-dim); text-transform: uppercase;">Read on LinkedIn →</div>
-      </a>
-    </div>
+      </div>
   </section>
 
   <!-- GET IN TOUCH -->
   <section style="padding: 80px 0; border-bottom: 1px solid var(--border);">
     <div style="text-align: center; max-width: 640px; margin: 0 auto;">
       <h2 style="font-family: 'Instrument Serif', serif; font-size: 48px; font-weight: 400; color: var(--white); margin: 0 0 24px 0;">Get in touch</h2>
-      <p style="font-size: 17px; color: var(--text-muted); line-height: 1.7; margin: 0 0 36px 0;">I work with teams building production AI in regulated environments — financial services, healthcare, education, government. If that’s your space, I’d welcome the conversation.</p>
+      <p style="font-size: 17px; color: var(--text-muted); line-height: 1.7; margin: 0 0 36px 0;">If you are working on AI in a regulated setting and want to compare notes, I'd like to hear from you.</p>
       <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
         <a href="mailto:mrhorner819@gmail.com" style="font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.5px; color: var(--accent); text-decoration: none; padding: 12px 24px; border: 1px solid var(--accent); transition: all 0.3s;" onmouseover="this.style.background='var(--accent)'; this.style.color='var(--white)';" onmouseout="this.style.background='transparent'; this.style.color='var(--accent)';">Email</a>
-        <a href="https://linkedin.com/in/johnathan-horner" target="_blank" style="font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.5px; color: var(--accent); text-decoration: none; padding: 12px 24px; border: 1px solid var(--accent); transition: all 0.3s;" onmouseover="this.style.background='var(--accent)'; this.style.color='var(--white)';" onmouseout="this.style.background='transparent'; this.style.color='var(--accent)';">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/johnathan-horner-99b37782" target="_blank" rel="noopener noreferrer" style="font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.5px; color: var(--accent); text-decoration: none; padding: 12px 24px; border: 1px solid var(--accent); transition: all 0.3s;" onmouseover="this.style.background='var(--accent)'; this.style.color='var(--white)';" onmouseout="this.style.background='transparent'; this.style.color='var(--accent)';">LinkedIn</a>
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer class="footer">
-    <p class="footer-text">Built by Johnathan Horner &nbsp;·&nbsp; <a href="https://linkedin.com/in/johnathan-horner" target="_blank">LinkedIn</a> &nbsp;·&nbsp; <a href="https://github.com/johnathan-horner" target="_blank">GitHub</a> &nbsp;·&nbsp; Brooklyn, NY</p>
+    <p class="footer-text">Built by Johnathan Horner &nbsp;·&nbsp; <a href="https://www.linkedin.com/in/johnathan-horner-99b37782" target="_blank" rel="noopener noreferrer">LinkedIn</a> &nbsp;·&nbsp; <a href="https://github.com/johnathan-horner" target="_blank" rel="noopener noreferrer">GitHub</a> &nbsp;·&nbsp; Brooklyn, NY</p>
   </footer>
 
 </div>
