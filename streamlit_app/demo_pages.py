@@ -1,12 +1,21 @@
 """
 EduAI Connect: Demo Pages
-All synthetic data, no AWS credentials required.
+All synthetic data. Only the AI chat page calls AWS, and only when [aws] secrets are set.
 """
 
 import streamlit as st
 import pandas as pd
 import numpy as np
 import random
+
+from live_chat import (
+    MAX_LIVE_REQUESTS_PER_SESSION,
+    MODEL_NAME,
+    answer_question,
+    aws_settings,
+    record_id,
+    requests_used,
+)
 
 # ─────────────────────────────────────────────
 # Synthetic Dataset
@@ -296,145 +305,87 @@ def page_student_profiles():
 
 
 # ─────────────────────────────────────────────
-# Page 4: AI Chat (Demo)
+# Page 4: AI Chat (grounded in the student records)
 # ─────────────────────────────────────────────
 
-def _demo_ai_response(question: str) -> str:
-    q = question.lower()
+def _sources_df(records: list) -> pd.DataFrame:
+    return pd.DataFrame([{
+        "ID": record_id(s), "Name": s["name"], "Grade": s["grade"], "GPA": s["gpa"],
+        "Attendance %": s["attendance"], "Missing": s["missing_assignments"],
+        "Risk": f"{_risk_color(s['risk'])} {s['risk']}", "Risk Score": s["risk_score"],
+    } for s in records])
 
-    # Student name lookup
-    for student in STUDENTS:
-        first = student["name"].split()[0].lower()
-        last  = student["name"].split()[-1].lower()
-        if first in q or last in q:
-            s = student
-            failing = [c for c, g in s["grades"].items() if g < 70]
-            top     = max(s["grades"], key=s["grades"].get)
-            bottom  = min(s["grades"], key=s["grades"].get)
-            resp = (
-                f"**{s['name']}** (Grade {s['grade']})\n\n"
-                f"- GPA: {s['gpa']} | Attendance: {s['attendance']}% | Missing assignments: {s['missing_assignments']}\n"
-                f"- Risk level: {_risk_color(s['risk'])} **{s['risk']}** (score: {s['risk_score']}/100)\n"
-                f"- Strongest subject: **{top}** ({s['grades'][top]})\n"
-                f"- Weakest subject: **{bottom}** ({s['grades'][bottom]})\n"
-            )
-            if failing:
-                resp += f"- Currently failing: **{', '.join(failing)}**\n"
-                resp += "\n⚠️ This student needs academic support in the subjects listed above."
-            else:
-                resp += "\n[OK] This student is passing all courses."
-            return resp
 
-    # Subject queries
-    for course in COURSES:
-        if course.lower() in q:
-            scores   = [(s["name"], s["grades"][course]) for s in STUDENTS]
-            scores.sort(key=lambda x: x[1])
-            avg      = round(sum(s[1] for s in scores) / len(scores), 1)
-            failing  = [(n, g) for n, g in scores if g < 70]
-            top3     = scores[-3:][::-1]
-            resp     = f"**{course} Class Overview**\n\n- Class average: **{avg}** ({_grade_label(int(avg))})\n"
-            resp    += f"- Students failing: **{len(failing)}**\n\n"
-            resp    += "**Top performers:**\n"
-            for name, grade in top3:
-                resp += f"  - {name}: {grade}\n"
-            if failing:
-                resp += "\n**Students needing support:**\n"
-                for name, grade in failing:
-                    resp += f"  - {name}: {grade} ({_grade_label(grade)})\n"
-            return resp
+def _badge(result: dict) -> str:
+    if result["mode"] == "live":
+        return f"Live AI · Amazon Bedrock · {MODEL_NAME}"
+    if result["mode"] == "error":
+        return f"No AI answer: {result['reason']}"
+    return f"Demo mode: {result['reason']}"
 
-    # Attendance queries
-    if any(word in q for word in ["attendance", "absent", "missing class"]):
-        low_att = sorted([s for s in STUDENTS if s["attendance"] < 85], key=lambda x: x["attendance"])
-        if low_att:
-            resp = f"**{len(low_att)} students have attendance below 85%:**\n\n"
-            for s in low_att:
-                resp += f"- {s['name']}: {s['attendance']}% ({_risk_color(s['risk'])} {s['risk']})\n"
-            return resp
-        return "All students currently have attendance above 85%. Great work!"
 
-    # At-risk queries
-    if any(word in q for word in ["risk", "failing", "struggling", "help", "intervention"]):
-        high   = [s for s in STUDENTS if s["risk"] == "HIGH"]
-        medium = [s for s in STUDENTS if s["risk"] == "MEDIUM"]
-        resp   = f"**At-Risk Summary**\n\n🔴 **HIGH RISK ({len(high)} students):**\n"
-        for s in high:
-            resp += f"  - {s['name']}: GPA: {s['gpa']}, Attendance: {s['attendance']}%, Missing: {s['missing_assignments']}\n"
-        resp += f"\n🟡 **MEDIUM RISK ({len(medium)} students):**\n"
-        for s in medium:
-            resp += f"  - {s['name']}: GPA: {s['gpa']}, Attendance: {s['attendance']}%\n"
-        resp += "\n**Recommendation:** Schedule immediate interventions for HIGH RISK students. Monitor MEDIUM RISK weekly."
-        return resp
-
-    # Class overview
-    if any(word in q for word in ["class", "overview", "summary", "performance", "how is"]):
-        avg_gpa  = round(sum(s["gpa"] for s in STUDENTS) / len(STUDENTS), 2)
-        avg_att  = round(sum(s["attendance"] for s in STUDENTS) / len(STUDENTS), 1)
-        high_ct  = sum(1 for s in STUDENTS if s["risk"] == "HIGH")
-        med_ct   = sum(1 for s in STUDENTS if s["risk"] == "MEDIUM")
-        return (
-            f"**Class Overview: Section B**\n\n"
-            f"- Total students: **12**\n"
-            f"- Average GPA: **{avg_gpa}**\n"
-            f"- Average attendance: **{avg_att}%**\n"
-            f"- 🔴 High risk: **{high_ct}** | 🟡 Medium risk: **{med_ct}** | 🟢 Low risk: **{12 - high_ct - med_ct}**\n\n"
-            f"The class is performing at a **C+ average**. Immediate attention is needed for the {high_ct} high-risk students."
-        )
-
-    # GPA / grades general
-    if any(word in q for word in ["gpa", "grade", "grades", "score"]):
-        top    = max(STUDENTS, key=lambda s: s["gpa"])
-        bottom = min(STUDENTS, key=lambda s: s["gpa"])
-        return (
-            f"**GPA Overview**\n\n"
-            f"- Class average GPA: **{round(sum(s['gpa'] for s in STUDENTS) / len(STUDENTS), 2)}**\n"
-            f"- Highest GPA: **{top['name']}** ({top['gpa']})\n"
-            f"- Lowest GPA: **{bottom['name']}** ({bottom['gpa']})\n\n"
-            f"Use the **Student Profiles** page for a detailed per-student breakdown."
-        )
-
-    return (
-        "I can answer questions about:\n\n"
-        "- **Specific students**: e.g., *'How is Marcus doing?'*\n"
-        "- **Subjects**: e.g., *'How is the class doing in Math?'*\n"
-        "- **Attendance**: e.g., *'Who has low attendance?'*\n"
-        "- **At-risk students**: e.g., *'Who needs intervention?'*\n"
-        "- **Class overview**: e.g., *'Give me a class summary'*"
-    )
+def _render_turn(result: dict) -> None:
+    if result["mode"] == "live":
+        st.success(_badge(result))
+        st.markdown(result["answer"])
+        note = f"{result['input_tokens']} input / {result['output_tokens']} output tokens, " \
+               f"about USD {result['cost_usd']:.4f}"
+        if result["citations_valid"] is False:
+            note += " · warning: the answer cites a record that was not retrieved"
+        st.caption(note)
+    else:
+        st.warning(_badge(result))
+        st.markdown("No AI answer was generated. These are the student records that match the question.")
+    st.caption(f"Source records ({len(result['records'])}, {result['chosen_by']}) · audit entry "
+               f"{result.get('audit_id') or 'not written'}")
+    st.dataframe(_sources_df(result["records"]), hide_index=True, use_container_width=True)
 
 
 def page_ai_chat():
-    st.title("💬 AI Education Assistant")
-    st.caption("Demo mode: powered by synthetic data, no AWS required")
+    st.title("💬 Ask About the Class")
+    settings = aws_settings()
+    used = requests_used(st.session_state)
+    if settings:
+        st.caption(f"Live AI: {MODEL_NAME} on Amazon Bedrock, answering only from the synthetic student "
+                   f"records shown under each answer · {used}/{MAX_LIVE_REQUESTS_PER_SESSION} live requests "
+                   f"used this session")
+    else:
+        st.warning("Demo mode: no AWS credentials are set for this app, so no AI answers are generated. "
+                   "Each question shows the matching student records only.")
     st.divider()
 
     with st.expander("💡 Try these example questions"):
         st.markdown(
             "- How is Marcus doing?\n"
-            "- Who is at risk?\n"
-            "- How is the class performing in Math?\n"
+            "- Who is most at risk, and why?\n"
             "- Which students have low attendance?\n"
-            "- Give me a class overview\n"
-            "- Tell me about Fatima"
+            "- How is the class doing in Math?\n"
+            "- Compare Fatima and Tyler"
         )
 
-    if "demo_chat_history" not in st.session_state:
-        st.session_state.demo_chat_history = []
-
-    for msg in st.session_state.demo_chat_history:
-        with st.chat_message(msg["role"], avatar="🧑‍🏫" if msg["role"] == "user" else "🤖"):
-            st.markdown(msg["content"])
+    history = st.session_state.setdefault("chat_turns", [])
+    for turn in history:
+        with st.chat_message("user", avatar="🧑‍🏫"):
+            st.markdown(turn["question"])
+        with st.chat_message("assistant", avatar="🤖" if turn["mode"] == "live" else "📋"):
+            _render_turn(turn)
 
     question = st.chat_input("Ask about students, grades, attendance, risk levels...")
     if question:
-        st.session_state.demo_chat_history.append({"role": "user", "content": question})
         with st.chat_message("user", avatar="🧑‍🏫"):
             st.markdown(question)
-        with st.chat_message("assistant", avatar="🤖"):
-            answer = _demo_ai_response(question)
-            st.markdown(answer)
-            st.session_state.demo_chat_history.append({"role": "assistant", "content": answer})
+        with st.spinner("Retrieving records" + (" and asking Claude..." if settings else "...")):
+            result = answer_question(question, STUDENTS, st.session_state, settings=settings)
+        history.append(result)
+        with st.chat_message("assistant", avatar="🤖" if result["mode"] == "live" else "📋"):
+            _render_turn(result)
+
+    audit = st.session_state.get("chat_audit", [])
+    if audit:
+        with st.expander(f"Audit log for this session ({len(audit)} entries)"):
+            st.dataframe(pd.DataFrame(audit)[["audit_id", "time_utc", "mode", "model_id", "question", "record_ids",
+                                              "cited_ids", "input_tokens", "output_tokens", "cost_usd", "latency_ms"]],
+                         hide_index=True, use_container_width=True)
 
 
 # ─────────────────────────────────────────────
@@ -448,14 +399,13 @@ def page_system_info():
 
     st.subheader("Tech Stack")
     stack_df = pd.DataFrame([
-        {"Layer":       "LLM",              "Technology": "Amazon Bedrock: Claude 3 Haiku",    "Purpose": "AI-powered student analysis"},
-        {"Layer":       "Embeddings",       "Technology": "Amazon Titan Embed Text v2",          "Purpose": "Semantic search over student data"},
-        {"Layer":       "Vector Store",     "Technology": "FAISS",                               "Purpose": "Fast similarity search"},
-        {"Layer":       "RAG Orchestration","Technology": "LangChain + LangGraph",               "Purpose": "Multi-agent retrieval pipeline"},
-        {"Layer":       "API",              "Technology": "FastAPI + Uvicorn",                   "Purpose": "Backend REST endpoints"},
-        {"Layer":       "Frontend",         "Technology": "Streamlit",                           "Purpose": "Interactive teacher dashboard"},
-        {"Layer":       "Infrastructure",   "Technology": "AWS CDK + Terraform",                 "Purpose": "Cloud infrastructure as code"},
-        {"Layer":       "Data Source",      "Technology": "Canvas LMS API (synthetic)",          "Purpose": "Student records and grades"},
+        {"Where": "This app", "Layer": "LLM", "Technology": "Claude Haiku 4.5 on Amazon Bedrock (Converse API)", "Purpose": "Answers chat questions from the retrieved records only"},
+        {"Where": "This app", "Layer": "Retrieval", "Technology": "Keyword match over the 12 synthetic records", "Purpose": "Picks the records sent to the model and shown as sources"},
+        {"Where": "This app", "Layer": "Audit log", "Technology": "JSON Lines file, one entry per answer", "Purpose": "Question, records used, model, tokens, cost"},
+        {"Where": "This app", "Layer": "Frontend", "Technology": "Streamlit", "Purpose": "Teacher dashboard and chat"},
+        {"Where": "Repo, local only", "Layer": "RAG pipeline", "Technology": "LangChain + LangGraph, FAISS, Titan Embed Text v2", "Purpose": "Multi-agent retrieval (not deployed)"},
+        {"Where": "Repo, local only", "Layer": "API", "Technology": "FastAPI + Uvicorn", "Purpose": "REST endpoints (not deployed)"},
+        {"Where": "Repo, local only", "Layer": "Infrastructure", "Technology": "AWS CDK + Terraform", "Purpose": "Infrastructure as code (not deployed)"},
     ])
     st.dataframe(stack_df, use_container_width=True, hide_index=True)
 
@@ -465,9 +415,11 @@ def page_system_info():
         {"Control": "Synthetic data only", "Status": "Built"},
         {"Control": "API input validation (Pydantic)", "Status": "Built"},
         {"Control": "KMS-encrypted S3 bucket", "Status": "Defined in CDK, not deployed"},
-        {"Control": "Bedrock Guardrail for PII", "Status": "Script exists, not applied to the chat chain"},
+        {"Control": "Bedrock Guardrail for PII", "Status": "Not applied. A script can create one; the chat does not use it"},
         {"Control": "Role-based access", "Status": "Not built (the role selector does not filter data)"},
-        {"Control": "Audit logging (CloudTrail, app log)", "Status": "Not built"},
+        {"Control": "Chat audit log", "Status": "Built: one entry per answer (resets when the hosted app restarts)"},
+        {"Control": "Live AI session cap", "Status": "Built: 10 live requests per browser session"},
+        {"Control": "CloudTrail audit logging", "Status": "Not built"},
     ]), hide_index=True)
     st.caption("This demo is not FERPA compliant and has never handled real student records.")
 
@@ -477,20 +429,20 @@ def page_system_info():
     decisions = [
         ("Why FAISS?",       "In-memory vector search for low-latency RAG on student documents. No external vector DB dependency for local dev."),
         ("Why LangGraph?",   "Multi-agent orchestration: grading agent feeds into at-risk detection agent as a structured pipeline with shared state."),
-        ("Why Bedrock?",     "Native AWS integration with IAM, KMS and Guardrails, so student data can stay inside the school's AWS account. The VPC setup is not built yet."),
-        ("Why Haiku?",       "Lowest-cost Claude model for high-frequency teacher queries. Sufficient capability for structured data analysis tasks."),
+        ("Why Bedrock?",     "Native AWS integration with IAM and KMS, so student data could stay inside a school's AWS account. This app's key may only call Claude Haiku 4.5."),
+        ("Why Haiku 4.5?",   "Low cost per question and enough for answering from a handful of structured records. Each answer costs well under a cent."),
         ("Why FastAPI?",     "Async endpoints support concurrent Streamlit users. Clean OpenAPI docs auto-generated for integration testing."),
-        ("Guardrails Role",  "Planned: block SSNs and mask names and emails in model output. A script creates the guardrail; it is not yet applied to the chat chain."),
+        ("Guardrails",       "Not applied. Planned for real data: block SSNs and mask names and emails in model output. The demo uses synthetic records only."),
     ]
     for title, detail in decisions:
         with st.expander(f"- {title}"):
             st.write(detail)
 
     st.divider()
-    st.subheader("Demo Mode Status")
-    st.info(
-        "**This deployment runs in demo mode.**\n\n"
-        "No AWS credentials or Bedrock API calls are made. All student data is synthetic. "
-        "Full mode (run locally with AWS credentials) calls Claude 3 Haiku on Amazon Bedrock and a FAISS "
-        "index built from the same synthetic Canvas-format data. It has not been deployed."
-    )
+    st.subheader("AI Chat Status")
+    if aws_settings():
+        st.success(f"Live: the chat calls {MODEL_NAME} on Amazon Bedrock, at most "
+                   f"{MAX_LIVE_REQUESTS_PER_SESSION} times per browser session. All student data is synthetic.")
+    else:
+        st.info("Demo mode: no AWS credentials are set, so the chat shows matching records and no AI answers. "
+                "All student data is synthetic.")

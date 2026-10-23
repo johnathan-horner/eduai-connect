@@ -1,6 +1,6 @@
 """
 EduAI Connect: Streamlit Cloud Entry Point
-Demo mode: no AWS credentials required.
+The AI chat calls Amazon Bedrock only when [aws] secrets are set; otherwise it runs in demo mode.
 """
 
 import streamlit as st
@@ -11,6 +11,7 @@ from demo_pages import (
     page_ai_chat,
     page_system_info,
 )
+from live_chat import aws_settings
 
 # ─────────────────────────────────────────────
 # Page Config
@@ -136,10 +137,10 @@ with st.sidebar:
     st.markdown("---")
     st.markdown("### Data and mode")
     st.markdown("Synthetic student data only")
-    st.markdown("Demo mode: fixed sample, no AWS calls")
+    st.markdown("AI chat: live, Claude Haiku 4.5 on Bedrock" if aws_settings()
+                else "AI chat: demo mode, no AWS credentials")
     st.markdown("Privacy controls: see docs/FERPA_COMPLIANCE.md (partly built)")
-    st.caption("Demo Mode · No AWS required")
-    st.caption("Full mode uses Amazon Bedrock, LangChain and LangGraph")
+    st.caption("The dashboard pages make no AWS calls")
 
 # ─────────────────────────────────────────────
 # Page Router
