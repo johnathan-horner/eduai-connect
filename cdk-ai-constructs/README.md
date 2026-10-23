@@ -14,7 +14,7 @@ Built by [Johnathan Horner](https://portfolio.johnathancloudspace.com) to accele
 🏢 **Multi-Tenant**: Built-in tenant isolation and subscription management
 💳 **Stripe Integration**: Complete billing infrastructure with webhook handling
 📊 **Observability**: Comprehensive CloudWatch monitoring and alerting
-🎯 **Compliance Ready**: HIPAA, FERPA, FedRAMP, SR11-7 compliance modes
+🎯 **Compliance Ready**: HIPAA, FERPA, SR11-7 retention presets
 
 ## Installation
 
@@ -191,7 +191,6 @@ The `AuditableStorage` construct supports various compliance frameworks:
 |------|------------------|----------|
 | **HIPAA** | 7 years (2555 days) | Healthcare data |
 | **FERPA** | 5 years (1825 days) | Educational records |
-| **FEDRAMP** | 7 years (2555 days) | Federal systems |
 | **SR11-7** | 7 years (2555 days) | Banking regulations |
 
 ```typescript
