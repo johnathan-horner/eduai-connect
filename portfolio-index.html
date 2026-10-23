@@ -663,7 +663,7 @@ body {
         </div>
         <div class="highlight">
           <div class="highlight-label">MCP</div>
-          <div class="highlight-value">6 tools backed by the detector; no model calls; same request, same score</div>
+          <div class="highlight-value">6 read-only tools backed by the detector; no model calls; same request, same answer</div>
         </div>
         <div class="highlight">
           <div class="highlight-label">Data</div>
@@ -778,10 +778,10 @@ body {
         <span class="card-compliance">Synthetic data</span>
       </div>
       <div class="card-title">EduAI Connect</div>
-      <p class="card-problem">Retrieval and two LangGraph agents that answer a teacher's questions about grades, attendance and engagement and flag students who may be falling behind, using explicit criteria. Synthetic student data only; privacy controls are partly built.</p>
+      <p class="card-problem">Helps a teacher spot students who may be falling behind. The public demo's chat answers questions with Claude Haiku 4.5 on Bedrock, using only the synthetic student records it retrieves and showing them under each answer. The repo also holds a local LangGraph pipeline with two agents and explicit criteria. Privacy controls are partly built.</p>
       <div class="card-tech">
         <span class="tech-tag">Amazon Bedrock</span>
-        <span class="tech-tag">Claude 3 Haiku</span>
+        <span class="tech-tag">Claude Haiku 4.5</span>
         <span class="tech-tag">Titan Embeddings</span>
         <span class="tech-tag">LangGraph</span>
         <span class="tech-tag">FAISS</span>
@@ -801,11 +801,11 @@ body {
         </div>
         <div class="highlight">
           <div class="highlight-label">Measured</div>
-          <div class="highlight-value">Accuracy not measured yet; 11 automated tests</div>
+          <div class="highlight-value">24 automated tests; in 3 live chat questions every answer cited only retrieved records, and 1 overstated a fact; accuracy not measured</div>
         </div>
         <div class="highlight">
           <div class="highlight-label">Next</div>
-          <div class="highlight-value">Apply Bedrock Guardrails to every call, add auth and audit logging</div>
+          <div class="highlight-value">Apply the Bedrock PII guardrail to every call and add sign-in</div>
         </div>
       </div>
       <div class="card-links">
