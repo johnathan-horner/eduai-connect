@@ -37,7 +37,7 @@ next, by asking plain-language questions about grades, attendance and engagement
 
 All student data is synthetic, in Canvas LMS API format. No real student records have been used.
 
-## Why I built this
+## Case study
 
 **The problem.** Teachers often learn that a student is struggling only after a failed test or
 report card, when it is late to help. The signals are usually already in the school's systems
