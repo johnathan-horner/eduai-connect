@@ -1,3 +1,5 @@
+Superseded: describes an earlier design. See README for the current architecture.
+
 # ADR-003: LangGraph Multi-Agent Orchestration for Educational Analysis
 
 ## Status: Accepted

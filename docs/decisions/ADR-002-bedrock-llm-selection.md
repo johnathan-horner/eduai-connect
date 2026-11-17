@@ -1,3 +1,5 @@
+Superseded: describes an earlier design. See README for the current architecture.
+
 # ADR-002: Amazon Bedrock Claude 3 Sonnet for Educational AI
 
 ## Status: Accepted

@@ -1,3 +1,5 @@
+Superseded: describes an earlier design. See README for the current architecture.
+
 # ADR-005: Streamlit Educational Dashboard for Educator Interface
 
 ## Status: Accepted
