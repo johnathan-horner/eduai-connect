@@ -6,15 +6,15 @@
 <link rel="icon" type="image/png" href="/portfolio/favicon.png" />
 <link rel="icon" type="image/x-icon" href="/portfolio/favicon.ico" />
 <title>Johnathan Horner | AI Systems Portfolio</title>
-<meta name="description" content="Eight production AI systems across finance, healthcare, education, and government. Built by Johnathan Horner, AI Solutions Architect.">
+<meta name="description" content="AI projects by Johnathan Horner, Shoot It Analytics LLC: one live product, five live reference apps in finance, healthcare, education and legal, a contact-center architecture design and an AWS CDK library. Each with its architecture, results and limits.">
 <meta property="og:title" content="Johnathan Horner | AI Systems Portfolio" />
-<meta property="og:description" content="Eight production AI systems across finance, healthcare, education, and government. Built on AWS." />
+<meta property="og:description" content="AI projects by Johnathan Horner, Shoot It Analytics LLC: one live product, five live reference apps in finance, healthcare, education and legal, a contact-center architecture design and an AWS CDK library. Each with its architecture, results and limits." />
 <meta property="og:image" content="https://portfolio.johnathancloudspace.com/portfolio/og-image.png" />
 <meta property="og:url" content="https://portfolio.johnathancloudspace.com" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Johnathan Horner | AI Systems Portfolio" />
-<meta name="twitter:description" content="Eight production AI systems across finance, healthcare, education, and government. Built on AWS." />
+<meta name="twitter:description" content="AI projects by Johnathan Horner, Shoot It Analytics LLC: one live product, five live reference apps in finance, healthcare, education and legal, a contact-center architecture design and an AWS CDK library. Each with its architecture, results and limits." />
 <meta name="twitter:image" content="https://portfolio.johnathancloudspace.com/portfolio/og-image.png" />
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -524,6 +524,88 @@ body {
   .card-highlights { grid-template-columns: 1fr; }
   .card-top { flex-direction: column; }
 }
+
+/* ── CASE STUDY ── */
+.case-study {
+  margin-top: 24px;
+  border-top: 1px solid var(--border);
+}
+
+.case-study summary {
+  list-style: none;
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 20px;
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  color: var(--accent);
+  padding: 8px 16px;
+  border: 1px solid var(--accent);
+  transition: all 0.3s;
+}
+
+.case-study summary::-webkit-details-marker { display: none; }
+.case-study summary::before { content: '+ Read the '; }
+.case-study[open] summary::before { content: '- Hide the '; }
+.case-study summary:hover { background: var(--accent); color: var(--white); }
+
+.cs-section { margin-top: 28px; max-width: 760px; }
+
+.cs-section h4 {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 10px;
+}
+
+.cs-section p, .cs-section li {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--text);
+  overflow-wrap: anywhere;
+}
+
+.cs-section ol, .cs-section ul { padding-left: 20px; }
+.cs-section li { margin-bottom: 10px; }
+.cs-section li strong { color: var(--white); font-weight: 600; }
+.cs-section .card-diagram { margin-top: 16px; }
+
+/* Diagrams are a preview in the card; tap opens the full 300 DPI image */
+.card-diagram img { max-height: 560px; }
+
+.cs-link { color: var(--accent); text-decoration: none; }
+.cs-link:hover { text-decoration: underline; }
+
+.lightbox-full {
+  position: absolute;
+  top: 20px;
+  left: 28px;
+  font-family: 'DM Mono', monospace;
+  font-size: 14px;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  padding: 6px 14px;
+  text-decoration: none;
+}
+
+.lightbox-full:hover { color: var(--white); border-color: var(--white); }
+
+/* Phones have no hover: always show the tap hint */
+@media (hover: none) {
+  .diagram-label { opacity: 1; }
+}
+
+@media (max-width: 640px) {
+  .lightbox { padding: 64px 12px 24px; }
+  .lightbox-close, .lightbox-full { top: 14px; font-size: 12px; }
+  .lightbox-full { left: 12px; }
+  .lightbox-close { right: 12px; }
+  .cs-section p, .cs-section li { font-size: 15px; }
+}
 </style>
 </head>
 <body>
@@ -535,16 +617,16 @@ body {
   <section class="hero">
     <div class="hero-tag">AI Systems Portfolio</div>
     <h1>I build AI systems<br><em>Built for Compliance</em></h1>
-    <p class="hero-sub">One live product and five reference AI platforms across finance, healthcare, legal and education, plus an open-source AWS CDK library.</p>
+    <p class="hero-sub">One live product and five live reference AI apps across finance, healthcare, education and legal, plus a contact-center architecture design and an open-source AWS CDK library. Each one has a case study with its architecture, real results and limits.</p>
 
     <div class="hero-stats">
       <div><div class="stat-num">1</div><div class="stat-label">Live Product</div></div>
-      <div><div class="stat-num">5</div><div class="stat-label">Reference Platforms</div></div>
+      <div><div class="stat-num">5</div><div class="stat-label">Live Reference Apps</div></div>
       <div><div class="stat-num">4</div><div class="stat-label">AWS Certifications</div></div>
-      <div><div class="stat-num">4</div><div class="stat-label">Compliance Frameworks</div></div>
+      <div><div class="stat-num">8</div><div class="stat-label">Case Studies</div></div>
     </div>
 
-    <div class="compliance-caption" style="margin-top: 16px; font-family: 'DM Mono', monospace; font-size: 12px; color: #7c8aa5; letter-spacing: 0.5px; text-align: center;">HIPAA · SR 26-2 (formerly SR 11-7) · FERPA · COPPA</div>
+    <div class="compliance-caption" style="margin-top: 16px; font-family: 'DM Mono', monospace; font-size: 12px; color: #7c8aa5; letter-spacing: 0.5px; text-align: center;">Compliance work where a project applies it: SR 26-2 (formerly SR 11-7) in FinTech AI · FERPA (partly built) in EduAI Connect</div>
 
     <div class="hero-links">
       <a href="https://www.linkedin.com/in/johnathan-horner-99b37782" target="_blank" rel="noopener noreferrer">LinkedIn</a>
@@ -589,20 +671,229 @@ body {
   <!-- PROJECTS -->
   <section class="projects">
 
-    <!-- 1. Medical Image Triage -->
-    <div class="project-card" data-vertical="healthcare">
+    <!-- 1. ShootItPicks -->
+    <div class="project-card" data-vertical="sports" id="shootitpicks">
+      <div class="card-top">
+        <span class="card-vertical sports">Sports Analytics</span>
+        <span class="card-compliance">21+ · Analytics only</span>
+      </div>
+      <div class="card-title">ShootItPicks</div>
+      <p class="card-problem">An NFL player-prop research site: odds from several sportsbooks side by side, the site&#x27;s own probability next to each price, and an AI chat that answers only from the site&#x27;s data. It takes no bets and never tells anyone to bet.</p>
+      <div class="card-tech">
+        <span class="tech-tag">Statistical models</span>
+        <span class="tech-tag">Market calibration</span>
+        <span class="tech-tag">Tool-grounded chat</span>
+        <span class="tech-tag">Cross-vendor graders</span>
+        <span class="tech-tag">Stripe billing</span>
+        <span class="tech-tag capability-tag">CI/CD</span>
+      </div>
+      <div class="card-highlights">
+        <div class="highlight">
+          <div class="highlight-label">Backtest</div>
+          <div class="highlight-value">Defense adjustment on 47,299 predictions: Brier 0.20097 to 0.20063; shipped on 6 of 7 markets</div>
+        </div>
+        <div class="highlight">
+          <div class="highlight-label">Chat gate</div>
+          <div class="highlight-value">112-question eval: quality 90%+, every category 75%+, zero hard-rule breaks before any model change</div>
+        </div>
+        <div class="highlight">
+          <div class="highlight-label">Tests</div>
+          <div class="highlight-value">1,249 backend and 96 frontend tests run in CI on every pull request</div>
+        </div>
+        <div class="highlight">
+          <div class="highlight-label">Safety</div>
+          <div class="highlight-value">21+, 1-800-GAMBLER, never tells anyone to bet; money-at-risk questions get numbers only</div>
+        </div>
+      </div>
+      <div class="card-links">
+        <span class="card-status" style="display: inline-block; padding: 8px 16px; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.5px; color: #4ade80; border: 1px solid #4ade80;">Live</span>
+        <a class="card-link" href="https://shootitpicks.com" target="_blank" rel="noopener noreferrer">Live product</a>
+      </div>
+      <details class="case-study" id="shootitpicks-case-study">
+        <summary>case study</summary>
+        <div class="cs-section">
+          <h4>The problem</h4>
+          <p>Prop bettors compare prices across several sportsbooks and lean on gut feel or tips nobody checks. Most tools show a number without saying where it came from or how often numbers like it turned out right.</p>
+        </div>
+        <div class="cs-section">
+          <h4>Why I built it</h4>
+          <p>I wanted to run a real product where every probability is logged before kickoff and settled after, and where an AI chat can explain a bet without inventing a number or telling anyone what to bet.</p>
+        </div>
+        <div class="cs-section">
+          <h4>Key decisions</h4>
+          <ol>
+            <li><strong>Statistical models make the probabilities; the language model only explains.</strong> Earlier LLM-generated confidence scores were deleted because nothing backed them. The tradeoff is fewer eye-catching outputs, in exchange for probabilities that can be checked against results.</li>
+            <li><strong>Pull every shown number toward the market.</strong> Settled results showed the sportsbooks&#x27; prices were closer to what happened than the raw model. Each probability is now pulled toward the book&#x27;s no-vig price, refit weekly per market and blended with a prior so two noisy weeks can&#x27;t swing it. Picks look less exciting, and they are more honest.</li>
+            <li><strong>Every number in a chat answer must come from the data.</strong> A number check allows one rewrite, then falls back to a plain answer built from the data. Better a dull answer than a confident wrong fact; the eval gate allows at most 2% of answers to fall back.</li>
+            <li><strong>Graders come from a different vendor than the model that answered.</strong> A model never grades its own work. Claim and verdict checks use the other vendor&#x27;s model, and money-at-risk questions fail closed if the grader is down. The cost is extra latency, spend and a dependency on two vendors&#x27; rate limits.</li>
+          </ol>
+        </div>
+        <div class="cs-section">
+          <h4>Architecture</h4>
+          <p>Board picks come from statistical models. Each probability is calibrated against the market, logged before the game and settled after, and ranking rules keep picks with thin data, long odds or suspect gaps off the featured list with the reason shown. The chat first fetches the data it needs through tools on the server; betting questions then run a five-step chain (player performance, matchup and situation in parallel, then line value, then the answer), and every answer passes number, claim, voice and verdict checks before it is shown with a Sources line underneath.</p>
+        </div>
+        <div class="cs-section">
+          <h4>Governance and safety</h4>
+          <ul>
+            <li>21+ and 1-800-GAMBLER across the site and chat; the site never tells anyone to bet, and the free plan gets no verdict.</li>
+            <li>Questions that mention money at risk get a fixed warning written by code, plain numbers only and no lean.</li>
+            <li>Number check on every chat answer, a cross-vendor claim check on paid plans, and a cross-vendor verdict check.</li>
+            <li>Ranking rules with eight reason codes (no recent games, low usage, Doubtful, long shot, suspect gap and others) keep weak picks unranked, with the reason attached.</li>
+            <li>Every board prediction is logged before kickoff and settled after; one log line per chat answer, with no user ID.</li>
+            <li>Tokens and emails are kept out of logs (tested), sign-up IPs are stored only as a keyed hash, and users can download their data.</li>
+            <li>Not built yet: a hard age check (age is self-attested through the Terms), automated data deletion, and human review before an answer is shown.</li>
+          </ul>
+        </div>
+        <div class="cs-section">
+          <h4>Results</h4>
+          <ul>
+            <li>Defense-vs-position backtest on 47,299 predictions: Brier score 0.20097 to 0.20063 and calibration error 0.0118 to 0.0108. It ships on 6 of 7 markets and is left off rushing yards, where it made things worse.</li>
+            <li>112-question chat eval across 17 categories gates every model change: quality 90% or better, every category 75% or better, at most 2% fallback answers, zero hard-rule breaks.</li>
+            <li>1,249 backend tests and 96 frontend tests run in CI on every pull request, plus a phone end-to-end check.</li>
+          </ul>
+        </div>
+        <div class="cs-section">
+          <h4>Limits</h4>
+          <p>Projections are somewhat overconfident on narrow ranges, parlay legs are treated as independent, and calibration rests on a few weeks of settled results. It is analytics, not betting advice.</p>
+        </div>
+        <div class="cs-section">
+          <h4>What I&#x27;d add next</h4>
+          <p>Add a hard age check and automated data deletion, model projection error and same-game correlation, and publish calibration on a full season of settled picks.</p>
+        </div>
+        <div class="cs-section">
+          <h4>Links</h4>
+          <p class="cs-links"><a class="cs-link" href="https://shootitpicks.com" target="_blank" rel="noopener noreferrer">Live product</a></p>
+        </div>
+      </details>
+    </div>
+
+    <!-- 2. FinTech AI -->
+    <div class="project-card" data-vertical="finance" id="fintech-ai">
+      <div class="card-top">
+        <span class="card-vertical finance">Financial Services</span>
+        <span class="card-compliance">SR 26-2 (formerly SR 11-7)</span>
+      </div>
+      <div class="card-title">FinTech AI</div>
+      <p class="card-problem">Portfolio analysis assistant over a synthetic fund: three LangGraph agents and a RAG chat, where only model and prompt versions that passed a held-out evaluation may answer, and every answer is graded by a different model and traced.</p>
+      <div class="card-tech">
+        <span class="tech-tag">Amazon Bedrock</span>
+        <span class="tech-tag">Claude Haiku 4.5</span>
+        <span class="tech-tag">Google Gemini</span>
+        <span class="tech-tag">LangGraph</span>
+        <span class="tech-tag">FAISS</span>
+        <span class="tech-tag">HyDE</span>
+        <span class="tech-tag">Monte Carlo CVaR</span>
+        <span class="tech-tag">AWS CDK</span>
+        <span class="tech-tag">Streamlit</span>
+        <span class="tech-tag capability-tag">MCP Server</span>
+        <span class="tech-tag capability-tag">CI/CD</span>
+        <span class="tech-tag capability-tag">Model Inventory</span>
+      </div>
+      <div class="card-highlights">
+        <div class="highlight">
+          <div class="highlight-label">Measured</div>
+          <div class="highlight-value">Held-out RAG chat: 23 of 23 passed on Claude Haiku 4.5, exact-fact accuracy 100%</div>
+        </div>
+        <div class="highlight">
+          <div class="highlight-label">Agents</div>
+          <div class="highlight-value">Held-out sets: market 10/10, risk 9/10, portfolio 10/10, orchestrator 9/10</div>
+        </div>
+        <div class="highlight">
+          <div class="highlight-label">Risk engine</div>
+          <div class="highlight-value">99% VaR backtest over 254 days in the Basel green zone, Kupiec p-value 0.72 to 0.78</div>
+        </div>
+        <div class="highlight">
+          <div class="highlight-label">Governance</div>
+          <div class="highlight-value">Approval gate per exact model and prompt hash, independent grader, trace per answer</div>
+        </div>
+      </div>
+      <div class="card-diagram" role="button" tabindex="0" onclick="openLightbox('/diagrams/2026-11/fintech-ai-architecture.png')" onkeydown="if(event.key==='Enter')openLightbox('/diagrams/2026-11/fintech-ai-architecture.png')">
+        <img src="/diagrams/2026-11/fintech-ai-architecture-web.png" alt="FinTech AI architecture: What runs today" loading="lazy">
+        <span class="diagram-label">What runs today. Tap to enlarge</span>
+      </div>
+      <div class="card-links">
+        <span class="card-status" style="display: inline-block; padding: 8px 16px; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.5px; color: #4ade80; border: 1px solid #4ade80;">Live</span>
+        <a class="card-link" href="https://fintech-ai-horner.streamlit.app" target="_blank" rel="noopener noreferrer">Live app</a>
+        <a class="card-link secondary" href="https://github.com/johnathan-horner/fintech-ai" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a class="card-link secondary" href="https://portfolio.johnathancloudspace.com/diagrams/2026-11/fintech-ai-architecture.png" target="_blank" rel="noopener noreferrer">Diagram</a>
+        <a class="card-link secondary" href="https://portfolio.johnathancloudspace.com/diagrams/2026-11/fintech-ai-production-design.png" target="_blank" rel="noopener noreferrer">Production design</a>
+      </div>
+      <details class="case-study" id="fintech-ai-case-study">
+        <summary>case study</summary>
+        <div class="cs-section">
+          <h4>The problem</h4>
+          <p>Banks that put language models near investment decisions have to manage them as models under SR 26-2 (formerly SR 11-7): an inventory, independent validation, ongoing monitoring and a record of what each model said. Most AI assistants skip all of that.</p>
+        </div>
+        <div class="cs-section">
+          <h4>Why I built it</h4>
+          <p>I wanted to see whether those controls could live in the code rather than in a policy document: numbers computed before the model sees them, only validated model and prompt versions allowed to answer, and every answer graded and traced.</p>
+        </div>
+        <div class="cs-section">
+          <h4>Key decisions</h4>
+          <ol>
+            <li><strong>An approval gate keyed to the exact model and prompt hash.</strong> Each LLM component may call a provider only if the held-out evaluation recorded an approval for that provider, model ID and prompt version hash, and only the evaluation harness writes approvals. Any prompt or model change blocks live use until a new held-out run approves it; meanwhile the app falls back.</li>
+            <li><strong>Code computes every number; the model only explains.</strong> Monte Carlo CVaR (10,000 seeded runs), VaR, stress tests and PSI drift are computed first, and the agents are told to use only those numbers. Earlier failures came from the model doing its own arithmetic. The agents can only discuss what the engine computed.</li>
+            <li><strong>Bedrock first, Gemini as fallback, and a grader that is always a different model.</strong> Claude Haiku 4.5 answers through the US cross-Region inference profile, Gemini takes over on any Bedrock error, and demo mode is last. Every output gets an LLM grade from a different model plus a deterministic number check. The cost is two vendors and two prompt sets to validate, and Gemini is always needed for embeddings.</li>
+            <li><strong>Production stack in CDK, synthesized in CI, not deployed.</strong> Bedrock Guardrails, KMS, CloudTrail with 7-year retention, API Gateway and Lambda are defined and checked by cdk synth on every push, with no AWS spend. Those controls are designed, not exercised, and the CDK Lambda does not yet carry the approval gate, RAG or grader.</li>
+          </ol>
+        </div>
+        <div class="cs-section">
+          <h4>Architecture</h4>
+          <p>A chat question passes a topic filter, then the RAG chain writes a hypothetical answer (HyDE), searches the committed FAISS index with it and the raw question, re-ranks to the top 4 with a local cross-encoder, and asks the approval gate which provider may answer: Claude Haiku 4.5 on Amazon Bedrock, then Gemini, then demo mode. A different model grades the answer, a number check runs, and a trace record is shown under it. The second diagram is the production design in the repo&#x27;s CDK code, synthesized in CI and not deployed.</p>
+          <div class="card-diagram" role="button" tabindex="0" onclick="openLightbox('/diagrams/2026-11/fintech-ai-production-design.png')" onkeydown="if(event.key==='Enter')openLightbox('/diagrams/2026-11/fintech-ai-production-design.png')">
+            <img src="/diagrams/2026-11/fintech-ai-production-design-web.png" alt="FinTech AI architecture: Production design (not deployed)" loading="lazy">
+            <span class="diagram-label">Production design (not deployed). Tap to enlarge</span>
+          </div>
+        </div>
+        <div class="cs-section">
+          <h4>Governance and safety</h4>
+          <ul>
+            <li>Approval gate: only APPROVED or CONDITIONAL records for the exact provider, model ID and prompt hash may answer; approvals are written only by the held-out evaluation harness.</li>
+            <li>Model inventory of 6 models (MRM-001 to MRM-006) with risk tier, lifecycle stage and validation status.</li>
+            <li>Independent grader on every live output (always a different model) plus a check that every number rounds from a source number; marked UNGRADED if no other model is available.</li>
+            <li>A trace record per output: provider, model, prompt versions, index hash, sources, grade, approval status and latency.</li>
+            <li>A topic filter refuses insider-trading and market-manipulation questions, a PII regex redacts every output, live use is capped at 10 requests per session, and every output names the provider and model that answered.</li>
+            <li>Not in the running app: Bedrock Guardrails, KMS and CloudTrail (defined in CDK only), human review, and a durable audit log (traces are kept in memory).</li>
+          </ul>
+        </div>
+        <div class="cs-section">
+          <h4>Results</h4>
+          <ul>
+            <li>Held-out RAG chat (MRM-001), latest run on 2026-11-11: 23 of 23 passed on Claude Haiku 4.5 with 100% exact-fact accuracy, for $0.067 of Bedrock calls; the Gemini fallback also passed 23 of 23. On a 23-item set, one item is about 4 points.</li>
+            <li>Agents on held-out sets with Claude Haiku 4.5: market 10/10, risk 9/10, portfolio 10/10, orchestrator 9/10, all approved.</li>
+            <li>99% VaR backtest over 254 test days: 2 to 3 exceptions, Kupiec p-value 0.72 to 0.78, Basel green zone.</li>
+            <li>118 automated tests in CI, plus cdk synth of the production stack.</li>
+          </ul>
+        </div>
+        <div class="cs-section">
+          <h4>Limits</h4>
+          <p>Synthetic portfolio and market data, small held-out sets (23 chat items, 10 per agent), not reviewed by an independent validation team or a regulator, and not investment advice.</p>
+        </div>
+        <div class="cs-section">
+          <h4>What I&#x27;d do in a real deployment</h4>
+          <p>Deploy the CDK stack with the approval gate, RAG and grader inside the Lambda, apply Bedrock Guardrails to every call, keep traces in a durable audit store, use the bank&#x27;s own market data, and have an independent validation team review it before anyone relies on it.</p>
+        </div>
+        <div class="cs-section">
+          <h4>Links</h4>
+          <p class="cs-links"><a class="cs-link" href="https://fintech-ai-horner.streamlit.app" target="_blank" rel="noopener noreferrer">Live app</a> · <a class="cs-link" href="https://github.com/johnathan-horner/fintech-ai" target="_blank" rel="noopener noreferrer">GitHub</a> · <a class="cs-link" href="https://portfolio.johnathancloudspace.com/diagrams/2026-11/fintech-ai-architecture.png" target="_blank" rel="noopener noreferrer">Diagram</a> · <a class="cs-link" href="https://portfolio.johnathancloudspace.com/diagrams/2026-11/fintech-ai-production-design.png" target="_blank" rel="noopener noreferrer">Production design</a></p>
+        </div>
+      </details>
+    </div>
+
+    <!-- 3. Medical Image Triage -->
+    <div class="project-card" data-vertical="healthcare" id="medical-image-triage">
       <div class="card-top">
         <span class="card-vertical healthcare">Healthcare</span>
         <span class="card-compliance">Decision support only</span>
       </div>
       <div class="card-title">Medical Image Triage</div>
-      <p class="card-problem">Fine-tuned image model that scores chest X-rays, auto-triages confident cases and sends unsure ones to a human review queue. A Bedrock LLM writes a short summary from the model output only. Every result is labeled decision support only, not a diagnosis. Public research data; never used with patients.</p>
+      <p class="card-problem">Scores chest X-rays with a small image model, auto-triages the cases it is sure about, sends the rest to a person, and logs every step. A Bedrock LLM writes a short note from the model&#x27;s output only, never from the image.</p>
       <div class="card-tech">
         <span class="tech-tag">PyTorch</span>
         <span class="tech-tag">ResNet18</span>
         <span class="tech-tag">PneumoniaMNIST</span>
         <span class="tech-tag">Amazon Bedrock</span>
-        <span class="tech-tag">Claude</span>
+        <span class="tech-tag">Claude Haiku 4.5</span>
         <span class="tech-tag">SQLite</span>
         <span class="tech-tag">Streamlit</span>
         <span class="tech-tag capability-tag">Model Card</span>
@@ -620,29 +911,300 @@ body {
         </div>
         <div class="highlight">
           <div class="highlight-label">Guardrails</div>
-          <div class="highlight-value">LLM sees only model numbers, template fallback, append-only audit log per case</div>
+          <div class="highlight-value">LLM sees six output fields, never the image; template fallback; 10 calls per session</div>
         </div>
         <div class="highlight">
           <div class="highlight-label">Cost</div>
-          <div class="highlight-value">Trained on a laptop CPU; about $0.0015 per LLM summary</div>
+          <div class="highlight-value">Trained on a laptop CPU; one live summary: 157 in / 49 out tokens, about $0.0004</div>
         </div>
+      </div>
+      <div class="card-diagram" role="button" tabindex="0" onclick="openLightbox('/diagrams/2026-11/medical-image-triage-architecture.png')" onkeydown="if(event.key==='Enter')openLightbox('/diagrams/2026-11/medical-image-triage-architecture.png')">
+        <img src="/diagrams/2026-11/medical-image-triage-architecture-web.png" alt="Medical Image Triage architecture: What runs today" loading="lazy">
+        <span class="diagram-label">What runs today. Tap to enlarge</span>
       </div>
       <div class="card-links">
         <span class="card-status" style="display: inline-block; padding: 8px 16px; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.5px; color: #4ade80; border: 1px solid #4ade80;">Live</span>
-        <a class="card-link" href="https://github.com/johnathan-horner/medical-image-triage#case-study" target="_blank" rel="noopener noreferrer">Case Study</a>
-        <a class="card-link" href="https://medical-image-triage-horner.streamlit.app" target="_blank" rel="noopener noreferrer">Live Demo</a>
+        <a class="card-link" href="https://medical-image-triage-horner.streamlit.app" target="_blank" rel="noopener noreferrer">Live app</a>
         <a class="card-link secondary" href="https://github.com/johnathan-horner/medical-image-triage" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a class="card-link secondary" href="https://portfolio.johnathancloudspace.com/diagrams/2026-11/medical-image-triage-architecture.png" target="_blank" rel="noopener noreferrer">Diagram</a>
       </div>
+      <details class="case-study" id="medical-image-triage-case-study">
+        <summary>case study</summary>
+        <div class="cs-section">
+          <h4>The problem</h4>
+          <p>Radiology worklists mix urgent and routine chest X-rays. A triage aid is only useful if it knows which cases it can sort on its own and which ones need a person, and if it leaves a record of every decision.</p>
+        </div>
+        <div class="cs-section">
+          <h4>Why I built it</h4>
+          <p>I wanted to see whether a small image model trained on a laptop CPU could split X-rays into a confident lane with no missed pneumonia and a review lane for people, and whether an LLM could add a readable note without ever seeing the image.</p>
+        </div>
+        <div class="cs-section">
+          <h4>Key decisions</h4>
+          <ol>
+            <li><strong>Pick the routing threshold on half of the test split and report on the other half.</strong> The validation split is easier than test: a threshold picked there auto-triaged 98% of cases at only 92.8% accuracy. Tuning on half the test set gives honest routing numbers, at the cost of resting them on 312 images.</li>
+            <li><strong>The LLM sees six numbers, never the image.</strong> Claude Haiku 4.5 gets the label, probability, confidence, threshold, route and model version and writes two sentences. A fixed template takes over on any error, refusal, missing key or after 10 calls per session. The note adds wording, not information, which is the point: the LLM is not allowed to make clinical claims.</li>
+            <li><strong>A small ResNet18 at 64x64, trained on CPU, with the weights in the repo.</strong> The app, tests and CI run with no GPU and no dataset download. The tradeoff is low resolution and pediatric data from one center.</li>
+            <li><strong>An append-only audit log in SQLite.</strong> Every prediction and every reviewer decision is a new row, and a case&#x27;s state is its latest row. It is simple to inspect and test. It is also one file shared by all visitors, with no sign-in, and not durable on the free host.</li>
+          </ol>
+        </div>
+        <div class="cs-section">
+          <h4>Architecture</h4>
+          <p>A visitor picks or uploads an X-ray in the Streamlit app. The ResNet18 model scores it, the router compares its confidence with 0.9903 and either auto-triages the case or puts it in the review queue, and each step is written to the audit log. The summary step sends only the six output fields to Claude Haiku 4.5 on Amazon Bedrock through the US cross-Region inference profile, or uses the fixed template.</p>
+        </div>
+        <div class="cs-section">
+          <h4>Governance and safety</h4>
+          <ul>
+            <li>Confidence gate: anything below 0.9903 confidence goes to a human review queue, where a reviewer confirms or overrides.</li>
+            <li>Append-only audit log of every prediction and review, viewable and downloadable as CSV.</li>
+            <li>The LLM gets six output fields and never the image; its instructions forbid findings, diagnoses and treatment advice.</li>
+            <li>Template fallback on any error or refusal, and a cap of 10 LLM calls per browser session.</li>
+            <li>Every result carries &quot;Decision support only, not a diagnosis&quot;; tokens and estimated cost are logged per call.</li>
+            <li>Secrets come only from the host&#x27;s secret store, and CI scans the full git history for leaked keys.</li>
+          </ul>
+        </div>
+        <div class="cs-section">
+          <h4>Results</h4>
+          <ul>
+            <li>PneumoniaMNIST test split, 624 images: 92.1% accuracy, 99.5% pneumonia recall, 79.9% specificity, ROC AUC 0.982.</li>
+            <li>Routing, on the half of the test split not used to pick the threshold (312 images): 76.9% auto-triaged at 97.9% accuracy with zero missed pneumonia; 23.1% go to review.</li>
+            <li>Live check on 2026-11-16: one Bedrock summary, 157 input and 49 output tokens, about $0.0004.</li>
+            <li>23 automated tests in CI.</li>
+          </ul>
+        </div>
+        <div class="cs-section">
+          <h4>Limits</h4>
+          <p>Built on public research data (PneumoniaMNIST: pediatric X-rays from one center at 64x64), never used with patients, not a medical device and not reviewed by a regulator. Specificity is 79.9%, so some normal X-rays get flagged.</p>
+        </div>
+        <div class="cs-section">
+          <h4>What I&#x27;d do in a real deployment</h4>
+          <p>Train and validate on full-resolution images from the target hospitals with subgroup checks, run it in the hospital&#x27;s own AWS account with sign-in, a durable audit store and role-based review, and go through clinical validation and regulatory review before any clinical use.</p>
+        </div>
+        <div class="cs-section">
+          <h4>Links</h4>
+          <p class="cs-links"><a class="cs-link" href="https://medical-image-triage-horner.streamlit.app" target="_blank" rel="noopener noreferrer">Live app</a> · <a class="cs-link" href="https://github.com/johnathan-horner/medical-image-triage" target="_blank" rel="noopener noreferrer">GitHub</a> · <a class="cs-link" href="https://portfolio.johnathancloudspace.com/diagrams/2026-11/medical-image-triage-architecture.png" target="_blank" rel="noopener noreferrer">Diagram</a></p>
+        </div>
+      </details>
     </div>
 
-    <!-- 2. Transaction Anomaly Detection -->
-    <div class="project-card" data-vertical="finance">
+    <!-- 4. EduAI Connect -->
+    <div class="project-card" data-vertical="education" id="eduai-connect">
+      <div class="card-top">
+        <span class="card-vertical education">Education</span>
+        <span class="card-compliance">FERPA: partly built</span>
+      </div>
+      <div class="card-title">EduAI Connect</div>
+      <p class="card-problem">Lets a teacher ask plain questions about a class and get an answer from Claude Haiku 4.5 on Bedrock that uses only the student records it retrieved, with those records shown under the answer.</p>
+      <div class="card-tech">
+        <span class="tech-tag">Amazon Bedrock</span>
+        <span class="tech-tag">Claude Haiku 4.5</span>
+        <span class="tech-tag">Streamlit</span>
+        <span class="tech-tag">LangGraph</span>
+        <span class="tech-tag">FAISS</span>
+        <span class="tech-tag">FastAPI</span>
+        <span class="tech-tag">AWS CDK</span>
+        <span class="tech-tag capability-tag">CI/CD</span>
+        <span class="tech-tag capability-tag">Audit Log</span>
+      </div>
+      <div class="card-highlights">
+        <div class="highlight">
+          <div class="highlight-label">Grounding</div>
+          <div class="highlight-value">Answers only from retrieved records; records shown under every answer; cited IDs checked</div>
+        </div>
+        <div class="highlight">
+          <div class="highlight-label">Fail closed</div>
+          <div class="highlight-value">No key, cap reached or any error: records only, never a generated guess</div>
+        </div>
+        <div class="highlight">
+          <div class="highlight-label">Tests</div>
+          <div class="highlight-value">24 automated tests pass in CI, with Bedrock faked so tests make no live calls</div>
+        </div>
+        <div class="highlight">
+          <div class="highlight-label">Not measured</div>
+          <div class="highlight-value">Accuracy and hallucination rate have not been measured yet</div>
+        </div>
+      </div>
+      <div class="card-diagram" role="button" tabindex="0" onclick="openLightbox('/diagrams/2026-11/eduai-connect-architecture.png')" onkeydown="if(event.key==='Enter')openLightbox('/diagrams/2026-11/eduai-connect-architecture.png')">
+        <img src="/diagrams/2026-11/eduai-connect-architecture-web.png" alt="EduAI Connect architecture: What runs today" loading="lazy">
+        <span class="diagram-label">What runs today. Tap to enlarge</span>
+      </div>
+      <div class="card-links">
+        <span class="card-status" style="display: inline-block; padding: 8px 16px; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.5px; color: #4ade80; border: 1px solid #4ade80;">Live</span>
+        <a class="card-link" href="https://eduai-connect-horner.streamlit.app" target="_blank" rel="noopener noreferrer">Live app</a>
+        <a class="card-link secondary" href="https://github.com/johnathan-horner/eduai-connect" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a class="card-link secondary" href="https://portfolio.johnathancloudspace.com/diagrams/2026-11/eduai-connect-architecture.png" target="_blank" rel="noopener noreferrer">Diagram</a>
+        <a class="card-link secondary" href="https://portfolio.johnathancloudspace.com/diagrams/2026-11/eduai-connect-production-design.png" target="_blank" rel="noopener noreferrer">Production design</a>
+      </div>
+      <details class="case-study" id="eduai-connect-case-study">
+        <summary>case study</summary>
+        <div class="cs-section">
+          <h4>The problem</h4>
+          <p>Teachers have grades, attendance and engagement data spread across systems and little time to read it. A student who is slipping often gets noticed late, after the pattern is already obvious.</p>
+        </div>
+        <div class="cs-section">
+          <h4>Why I built it</h4>
+          <p>I wanted to see whether a chat answer about students can be something a teacher can check: built only from the records it retrieved, showing those records, and refusing to guess when something fails. I also wanted to map what a FERPA-aware version would need in the school&#x27;s own AWS account.</p>
+        </div>
+        <div class="cs-section">
+          <h4>Key decisions</h4>
+          <ol>
+            <li><strong>Two tiers: a light hosted app and a local RAG and agents stack.</strong> The hosted chat finds records by keyword and makes one Bedrock call; LangGraph, FAISS and FastAPI stay local. There is no semantic search online, but the hosted app installs in seconds and makes exactly one model call per question.</li>
+            <li><strong>Show the sources and check the citations instead of trusting the answer.</strong> Every answer lists the records sent to the model, and any student ID it cites that was not retrieved is flagged. IDs are checked, facts are not, so a teacher still has to read.</li>
+            <li><strong>Fail closed.</strong> With no key, the cap reached or any error, the app shows the matching records and says no AI answer was generated. A broken key means no answers at all rather than a made-up one.</li>
+            <li><strong>Small, capped model use.</strong> Claude Haiku 4.5 through the US inference profile, 400 output tokens, temperature 0, 10 live calls per browser session and the cost shown per answer. Cheap and predictable, with less depth than a larger model.</li>
+          </ol>
+        </div>
+        <div class="cs-section">
+          <h4>Architecture</h4>
+          <p>The teacher&#x27;s question goes to the grounded chat, which picks matching records by keyword (named students, or the whole class sorted by topic) and sends only those records and the question to Claude Haiku 4.5 on Amazon Bedrock. The answer comes back with the records underneath, a citation check and one audit log line. The second diagram is the production design in the repo&#x27;s CDK code (KMS-encrypted S3, an EventBridge-triggered ingestion Lambda, CloudWatch logs); it was never deployed and is not complete.</p>
+          <div class="card-diagram" role="button" tabindex="0" onclick="openLightbox('/diagrams/2026-11/eduai-connect-production-design.png')" onkeydown="if(event.key==='Enter')openLightbox('/diagrams/2026-11/eduai-connect-production-design.png')">
+            <img src="/diagrams/2026-11/eduai-connect-production-design-web.png" alt="EduAI Connect architecture: Production design (not deployed)" loading="lazy">
+            <span class="diagram-label">Production design (not deployed). Tap to enlarge</span>
+          </div>
+        </div>
+        <div class="cs-section">
+          <h4>Governance and safety</h4>
+          <ul>
+            <li>Answers may use only the retrieved records and must cite record IDs; the records are shown under every answer.</li>
+            <li>A citation check flags any student ID the answer cites that was not retrieved.</li>
+            <li>Fail closed: no key, cap reached or any error shows records only, never generated text.</li>
+            <li>10 live calls per browser session; credentials only from the host&#x27;s secret store.</li>
+            <li>One audit log line per answer; on the free host it is wiped when the app restarts.</li>
+            <li>The app states it is not FERPA compliant. Built: synthetic data only, the audit log, the session cap. Not built: sign-in, a PII guardrail on each call, CloudTrail, retention rules.</li>
+          </ul>
+        </div>
+        <div class="cs-section">
+          <h4>Results</h4>
+          <ul>
+            <li>24 automated tests pass in CI, including 13 for the grounded chat run against a fake Bedrock client.</li>
+            <li>Accuracy, false positives and hallucination rate have not been measured; there is no labelled evaluation set yet.</li>
+          </ul>
+        </div>
+        <div class="cs-section">
+          <h4>Limits</h4>
+          <p>Synthetic data only: 12 student records in the hosted app with preset risk levels. Not FERPA compliant and not reviewed by any school, district or regulator.</p>
+        </div>
+        <div class="cs-section">
+          <h4>What I&#x27;d do in a real deployment</h4>
+          <p>Run it in the school&#x27;s AWS account behind sign-in with role-based access, apply a Bedrock PII guardrail to every call, keep the audit log in encrypted durable storage without full student text, and measure accuracy on a labelled set before a teacher relies on it.</p>
+        </div>
+        <div class="cs-section">
+          <h4>Links</h4>
+          <p class="cs-links"><a class="cs-link" href="https://eduai-connect-horner.streamlit.app" target="_blank" rel="noopener noreferrer">Live app</a> · <a class="cs-link" href="https://github.com/johnathan-horner/eduai-connect" target="_blank" rel="noopener noreferrer">GitHub</a> · <a class="cs-link" href="https://portfolio.johnathancloudspace.com/diagrams/2026-11/eduai-connect-architecture.png" target="_blank" rel="noopener noreferrer">Diagram</a> · <a class="cs-link" href="https://portfolio.johnathancloudspace.com/diagrams/2026-11/eduai-connect-production-design.png" target="_blank" rel="noopener noreferrer">Production design</a></p>
+        </div>
+      </details>
+    </div>
+
+    <!-- 5. Legal Document Type Classifier -->
+    <div class="project-card" data-vertical="legal" id="legal-document-classifier">
+      <div class="card-top">
+        <span class="card-vertical legal">Legal</span>
+        <span class="card-compliance">Public data</span>
+      </div>
+      <div class="card-title">Legal Document Type Classifier</div>
+      <p class="card-problem">Sorts legal documents into 8 types (contracts, court opinions, rules, notices, presidential documents) with a confidence score, sends unsure ones to a person, and logs every decision without storing the text.</p>
+      <div class="card-tech">
+        <span class="tech-tag">scikit-learn</span>
+        <span class="tech-tag">TF-IDF</span>
+        <span class="tech-tag">Logistic Regression</span>
+        <span class="tech-tag">Federal Register API</span>
+        <span class="tech-tag">SQLite</span>
+        <span class="tech-tag">Streamlit</span>
+        <span class="tech-tag capability-tag">CI/CD</span>
+        <span class="tech-tag capability-tag">Audit Log</span>
+      </div>
+      <div class="card-highlights">
+        <div class="highlight">
+          <div class="highlight-label">Measured</div>
+          <div class="highlight-value">432 held-out documents: 90.7% accuracy, macro F1 0.905</div>
+        </div>
+        <div class="highlight">
+          <div class="highlight-label">Routing</div>
+          <div class="highlight-value">84.5% auto-routed at 96.2% accuracy; the rest go to a person</div>
+        </div>
+        <div class="highlight">
+          <div class="highlight-label">Data</div>
+          <div class="highlight-value">2,000 public documents; text that states the type outright is removed before training</div>
+        </div>
+        <div class="highlight">
+          <div class="highlight-label">Cost</div>
+          <div class="highlight-value">Trains in 43 seconds on a laptop CPU; no model calls at runtime</div>
+        </div>
+      </div>
+      <div class="card-diagram" role="button" tabindex="0" onclick="openLightbox('/diagrams/2026-11/legal-document-classifier-architecture.png')" onkeydown="if(event.key==='Enter')openLightbox('/diagrams/2026-11/legal-document-classifier-architecture.png')">
+        <img src="/diagrams/2026-11/legal-document-classifier-architecture-web.png" alt="Legal Document Type Classifier architecture: What runs today (no AWS at runtime)" loading="lazy">
+        <span class="diagram-label">What runs today (no AWS at runtime). Tap to enlarge</span>
+      </div>
+      <div class="card-links">
+        <span class="card-status" style="display: inline-block; padding: 8px 16px; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.5px; color: #4ade80; border: 1px solid #4ade80;">Live</span>
+        <a class="card-link" href="https://legal-document-classifier.streamlit.app" target="_blank" rel="noopener noreferrer">Live app</a>
+        <a class="card-link secondary" href="https://github.com/johnathan-horner/legal-document-classifier" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a class="card-link secondary" href="https://portfolio.johnathancloudspace.com/diagrams/2026-11/legal-document-classifier-architecture.png" target="_blank" rel="noopener noreferrer">Diagram</a>
+      </div>
+      <details class="case-study" id="legal-document-classifier-case-study">
+        <summary>case study</summary>
+        <div class="cs-section">
+          <h4>The problem</h4>
+          <p>Legal and compliance teams sort incoming documents by type before anyone reads them for substance. It is slow, repetitive work, and a wrong label sends a document to the wrong queue.</p>
+        </div>
+        <div class="cs-section">
+          <h4>Why I built it</h4>
+          <p>I wanted to see how far a small, cheap classifier trained on public documents could go, and whether its own confidence could separate the documents it gets right from the ones a person should check, measured on agencies and courts it never saw in training.</p>
+        </div>
+        <div class="cs-section">
+          <h4>Key decisions</h4>
+          <ol>
+            <li><strong>TF-IDF and logistic regression instead of an LLM.</strong> It trains in 43 seconds on a laptop CPU, costs nothing per document and shows the terms behind each prediction. It is weaker on documents that differ only in meaning: agency notices are right 56% of the time.</li>
+            <li><strong>Strip the giveaways before training.</strong> Headers and phrases that state the type outright are replaced with [TYPE], and tests check none remain. Scores are lower than on uncleaned text, but they measure substance, not headers.</li>
+            <li><strong>Hold out whole agencies and courts.</strong> For rules, notices and opinions the split is grouped by agency or court, so templated documents from one source can&#x27;t land in both train and test. Contracts and the three presidential types come from one source each, so they are split per document.</li>
+            <li><strong>Pick the review threshold on validation and use test once.</strong> The threshold is the lowest confidence that gave 98% accuracy on auto-routed validation documents. On test the auto lane reached 96.2%, short of that target, and the README says so.</li>
+          </ol>
+        </div>
+        <div class="cs-section">
+          <h4>Architecture</h4>
+          <p>A person pastes text, uploads a .txt or .pdf, or picks a held-out example. The classifier reads the first 6,000 characters and returns a type, a confidence, the top 3 types and the terms behind the call; documents at 0.513 confidence or above go to auto, the rest to the review queue, and every step goes to an append-only SQLite log that stores a SHA-256 of the text. Data collection and training run offline and the model file is committed, so nothing calls out at runtime and no AWS is involved.</p>
+        </div>
+        <div class="cs-section">
+          <h4>Governance and safety</h4>
+          <ul>
+            <li>Confidence routing: below 0.513 a document goes to a review queue where a person confirms or corrects the type.</li>
+            <li>Append-only audit log of every classification and review, with a SHA-256 of the text and never the text itself (tested).</li>
+            <li>Leakage guard: tests check no type-announcing text survives cleaning.</li>
+            <li>Out-of-domain test: unrelated text (a recipe) must fall below the threshold.</li>
+            <li>Labelled in the app as a routing aid for document intake, not legal advice; CI scans git history for secrets.</li>
+          </ul>
+        </div>
+        <div class="cs-section">
+          <h4>Results</h4>
+          <ul>
+            <li>432 held-out documents: 90.7% accuracy, macro F1 0.905.</li>
+            <li>Routing on test: 84.5% auto-routed at 96.2% accuracy; the 15.5% sent to review were right 61.2% of the time, which is why a person checks them.</li>
+            <li>Per class: contracts, court opinions and executive orders 100%; agency notices 56%, the weakest class.</li>
+            <li>13 automated tests in CI.</li>
+          </ul>
+        </div>
+        <div class="cs-section">
+          <h4>Limits</h4>
+          <p>Built on public documents only (Federal Register, Caselaw Access Project, CUAD), 8 types, first 6,000 characters; not legal advice and not reviewed by any regulator.</p>
+        </div>
+        <div class="cs-section">
+          <h4>What I&#x27;d do in a real deployment</h4>
+          <p>Train on the team&#x27;s own intake types with reviewer corrections fed back as labels, compare against a small fine-tuned transformer, and run it behind sign-in with a durable audit store.</p>
+        </div>
+        <div class="cs-section">
+          <h4>Links</h4>
+          <p class="cs-links"><a class="cs-link" href="https://legal-document-classifier.streamlit.app" target="_blank" rel="noopener noreferrer">Live app</a> · <a class="cs-link" href="https://github.com/johnathan-horner/legal-document-classifier" target="_blank" rel="noopener noreferrer">GitHub</a> · <a class="cs-link" href="https://portfolio.johnathancloudspace.com/diagrams/2026-11/legal-document-classifier-architecture.png" target="_blank" rel="noopener noreferrer">Diagram</a></p>
+        </div>
+      </details>
+    </div>
+
+    <!-- 6. Transaction Anomaly Detection -->
+    <div class="project-card" data-vertical="finance" id="financial-anomaly-detection">
       <div class="card-top">
         <span class="card-vertical finance">Financial Services</span>
         <span class="card-compliance">Synthetic data</span>
       </div>
       <div class="card-title">Transaction Anomaly Detection</div>
-      <p class="card-problem">Flags unusual card transactions with an Isolation Forest model plus five plain rules, gives every flag a score and a plain-language reason, holds confident flags and sends lower-confidence ones to an analyst queue. Every score and decision goes to an audit log.</p>
+      <p class="card-problem">Scores card transactions against each customer&#x27;s own history with an Isolation Forest and five plain rules, gives every flag a reason a person can read, and splits flags into a hold lane and an analyst review queue.</p>
       <div class="card-tech">
         <span class="tech-tag">scikit-learn</span>
         <span class="tech-tag">Isolation Forest</span>
@@ -656,7 +1218,7 @@ body {
       <div class="card-highlights">
         <div class="highlight">
           <div class="highlight-label">Measured</div>
-          <div class="highlight-value">Later test period: hold lane 95.4% precise, 81.1% of anomalies flagged overall</div>
+          <div class="highlight-value">Later test period: hold lane 95.4% precise; 81.1% of anomalies flagged overall</div>
         </div>
         <div class="highlight">
           <div class="highlight-label">Design</div>
@@ -664,259 +1226,196 @@ body {
         </div>
         <div class="highlight">
           <div class="highlight-label">MCP</div>
-          <div class="highlight-value">6 read-only tools backed by the detector; no model calls; same request, same answer</div>
+          <div class="highlight-value">6 read-only tools over the same detector; scoring there never logs or changes state</div>
         </div>
         <div class="highlight">
           <div class="highlight-label">Data</div>
-          <div class="highlight-value">328,448 synthetic transactions with labeled fraud patterns and hard negatives</div>
+          <div class="highlight-value">328,448 synthetic transactions with labelled fraud patterns and hard negatives</div>
         </div>
+      </div>
+      <div class="card-diagram" role="button" tabindex="0" onclick="openLightbox('/diagrams/2026-11/financial-anomaly-detection-architecture.png')" onkeydown="if(event.key==='Enter')openLightbox('/diagrams/2026-11/financial-anomaly-detection-architecture.png')">
+        <img src="/diagrams/2026-11/financial-anomaly-detection-architecture-web.png" alt="Transaction Anomaly Detection architecture: What runs today (no AWS at runtime)" loading="lazy">
+        <span class="diagram-label">What runs today (no AWS at runtime). Tap to enlarge</span>
       </div>
       <div class="card-links">
         <span class="card-status" style="display: inline-block; padding: 8px 16px; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.5px; color: #4ade80; border: 1px solid #4ade80;">Live</span>
-        <a class="card-link" href="https://github.com/johnathan-horner/financial-anomaly-detection#case-study" target="_blank" rel="noopener noreferrer">Case Study</a>
-        <a class="card-link" href="https://financial-anomaly-detection.streamlit.app" target="_blank" rel="noopener noreferrer">Live Demo</a>
+        <a class="card-link" href="https://financial-anomaly-detection.streamlit.app" target="_blank" rel="noopener noreferrer">Live app</a>
         <a class="card-link secondary" href="https://github.com/johnathan-horner/financial-anomaly-detection" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a class="card-link secondary" href="https://portfolio.johnathancloudspace.com/diagrams/2026-11/financial-anomaly-detection-architecture.png" target="_blank" rel="noopener noreferrer">Diagram</a>
       </div>
+      <details class="case-study" id="financial-anomaly-detection-case-study">
+        <summary>case study</summary>
+        <div class="cs-section">
+          <h4>The problem</h4>
+          <p>Card fraud teams work from alert queues. Rules are easy to explain but narrow, models catch more but are hard to explain, and both produce more alerts than a team can read.</p>
+        </div>
+        <div class="cs-section">
+          <h4>Why I built it</h4>
+          <p>I wanted to see whether a small, explainable detector could split alerts into a high-precision lane that is safe to act on and a lower-confidence lane for people, with a reason on every alert, measured on a later period it was not tuned on.</p>
+        </div>
+        <div class="cs-section">
+          <h4>Key decisions</h4>
+          <ol>
+            <li><strong>Isolation Forest plus five plain rules, not a supervised model or an LLM.</strong> It needs no fraud labels to train, runs on a CPU, and each rule gives a sentence a person can read. Labels are still needed to calibrate and evaluate, and precision at the flag threshold is lower than rules alone.</li>
+            <li><strong>Calibrate both signals and combine them into one score.</strong> The model&#x27;s percentile goes through isotonic calibration and each rule is weighted by its measured precision on validation; the two are combined as 1 - product(1 - p). Before calibration the rules added nothing.</li>
+            <li><strong>Split by time.</strong> Train on days 0 to 53, pick thresholds on days 54 to 71, test once on days 72 to 89: the way a detector meets new data in production.</li>
+            <li><strong>Two thresholds and three lanes, set from operational targets.</strong> The flag threshold keeps 80% recall and the hold threshold needs 95% precision. The cost is a review lane that is only 24.5% precise, about 62 alerts a day per 2,000 customers.</li>
+          </ol>
+        </div>
+        <div class="cs-section">
+          <h4>Architecture</h4>
+          <p>The Streamlit app builds past-only features from the customer&#x27;s own history, runs the Isolation Forest and the five rules, and combines them into one calibrated score that routes the transaction to clear, review or hold. Scores and analyst decisions go to an append-only SQLite audit log. A read-only FastMCP server gives an AI assistant the same detector over stdio; it runs locally, is not hosted, and nothing here uses AWS.</p>
+        </div>
+        <div class="cs-section">
+          <h4>Governance and safety</h4>
+          <ul>
+            <li>Every flag carries a plain-language reason (tested).</li>
+            <li>Review queue where an analyst confirms fraud or marks the transaction legitimate; only those two actions are accepted.</li>
+            <li>Append-only audit log of every score and analyst decision (tested).</li>
+            <li>Features use only earlier transactions, so nothing leaks from the future (tested).</li>
+            <li>The MCP server is read-only: its scoring neither logs nor changes customer history.</li>
+            <li>Labelled in the app as decision support for an analyst, not a fraud determination; &quot;hold&quot; is a label and nothing is blocked.</li>
+          </ul>
+        </div>
+        <div class="cs-section">
+          <h4>Results</h4>
+          <ul>
+            <li>Test period (days 72 to 89, 1,318 anomalies): the hold lane is 95.4% precise and catches 60.3% of anomalies.</li>
+            <li>Overall 81.1% of anomalies flagged at 54.8% precision, 13.7 false positives per 1,000 normal transactions.</li>
+            <li>By pattern: impossible travel 100%, card testing 87.5%, velocity bursts 71.7%.</li>
+            <li>23 automated tests in CI, including all six MCP tools.</li>
+          </ul>
+        </div>
+        <div class="cs-section">
+          <h4>Limits</h4>
+          <p>Synthetic data only (328,448 generated transactions); the night rule is flattered because synthetic customers never shop between 1 and 5 am. Not a fraud decision system and not reviewed by a regulator.</p>
+        </div>
+        <div class="cs-section">
+          <h4>What I&#x27;d do in a real deployment</h4>
+          <p>Train and calibrate on the bank&#x27;s own labelled history, feed analyst decisions back as labels, add merchant-level features and drift monitoring, and get model risk review before any automated hold.</p>
+        </div>
+        <div class="cs-section">
+          <h4>Links</h4>
+          <p class="cs-links"><a class="cs-link" href="https://financial-anomaly-detection.streamlit.app" target="_blank" rel="noopener noreferrer">Live app</a> · <a class="cs-link" href="https://github.com/johnathan-horner/financial-anomaly-detection" target="_blank" rel="noopener noreferrer">GitHub</a> · <a class="cs-link" href="https://portfolio.johnathancloudspace.com/diagrams/2026-11/financial-anomaly-detection-architecture.png" target="_blank" rel="noopener noreferrer">Diagram</a></p>
+        </div>
+      </details>
     </div>
 
-    <!-- 3. Legal Document Classification -->
-    <div class="project-card" data-vertical="legal">
-      <div class="card-top">
-        <span class="card-vertical legal">Legal</span>
-        <span class="card-compliance">Public data</span>
-      </div>
-      <div class="card-title">Legal Document Type Classifier</div>
-      <p class="card-problem">Sorts legal documents into 8 types (contracts, court opinions, rules, notices, presidential documents) with a confidence score, sends low-confidence documents to review, and logs every decision.</p>
-      <div class="card-tech">
-        <span class="tech-tag">scikit-learn</span>
-        <span class="tech-tag">TF-IDF</span>
-        <span class="tech-tag">Logistic Regression</span>
-        <span class="tech-tag">Federal Register API</span>
-        <span class="tech-tag">Streamlit</span>
-        <span class="tech-tag capability-tag">CI/CD</span>
-        <span class="tech-tag capability-tag">Audit Log</span>
-      </div>
-      <div class="card-highlights">
-        <div class="highlight">
-          <div class="highlight-label">Measured</div>
-          <div class="highlight-value">432 held-out documents: 90.7% accuracy, macro F1 0.905, per-class results in the repo</div>
-        </div>
-        <div class="highlight">
-          <div class="highlight-label">Routing</div>
-          <div class="highlight-value">84.5% auto-routed at 96.2% accuracy; the rest go to review</div>
-        </div>
-        <div class="highlight">
-          <div class="highlight-label">Data</div>
-          <div class="highlight-value">2,000 public documents; text that states the type outright is removed before training</div>
-        </div>
-        <div class="highlight">
-          <div class="highlight-label">Cost</div>
-          <div class="highlight-value">Trains in under a minute on a laptop CPU</div>
-        </div>
-      </div>
-      <div class="card-links">
-        <span class="card-status" style="display: inline-block; padding: 8px 16px; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.5px; color: #4ade80; border: 1px solid #4ade80;">Live</span>
-        <a class="card-link" href="https://github.com/johnathan-horner/legal-document-classifier#case-study" target="_blank" rel="noopener noreferrer">Case Study</a>
-        <a class="card-link" href="https://legal-document-classifier.streamlit.app" target="_blank" rel="noopener noreferrer">Live Demo</a>
-        <a class="card-link secondary" href="https://github.com/johnathan-horner/legal-document-classifier" target="_blank" rel="noopener noreferrer">GitHub</a>
-      </div>
-    </div>
-
-    <!-- 4. FinTech AI -->
-    <div class="project-card" data-vertical="finance">
-      <div class="card-top">
-        <span class="card-vertical finance">Financial Services</span>
-        <span class="card-compliance">SR 26-2 (formerly SR 11-7)</span>
-      </div>
-      <div class="card-title">FinTech AI</div>
-      <p class="card-problem">Portfolio analysis assistant with three LangGraph agents (market, risk, portfolio), a Monte Carlo CVaR risk engine and model risk controls in code: a 6-model inventory, held-out validation gates, PSI drift detection and a CRO report. Synthetic portfolio data.</p>
-      <div class="card-tech">
-        <span class="tech-tag">Anthropic Claude</span>
-        <span class="tech-tag">Amazon Bedrock</span>
-        <span class="tech-tag">Google Gemini</span>
-        <span class="tech-tag">LangGraph</span>
-        <span class="tech-tag">FAISS</span>
-        <span class="tech-tag">Monte Carlo CVaR</span>
-        <span class="tech-tag">Streamlit</span>
-        <span class="tech-tag capability-tag">MCP Server</span>
-        <span class="tech-tag capability-tag">CI/CD</span>
-        <span class="tech-tag capability-tag">OpenAPI</span>
-        <span class="tech-tag capability-tag">Model Card</span>
-        <span class="tech-tag capability-tag">ADRs</span>
-      </div>
-      <div class="card-highlights">
-        <div class="highlight">
-          <div class="highlight-label">Measured</div>
-          <div class="highlight-value">Held-out RAG: 23 of 23 passed, 100% exact-fact accuracy</div>
-        </div>
-        <div class="highlight">
-          <div class="highlight-label">Risk Engine</div>
-          <div class="highlight-value">10,000 Monte Carlo simulations, fat-tail mixture distribution, 5 historical stress scenarios</div>
-        </div>
-        <div class="highlight">
-          <div class="highlight-label">Backtest</div>
-          <div class="highlight-value">VaR over 254 days in the Basel green zone, Kupiec p-value 0.72 to 0.78</div>
-        </div>
-        <div class="highlight">
-          <div class="highlight-label">Governance</div>
-          <div class="highlight-value">Approval gate per model and prompt version, independent grader, audit traces</div>
-        </div>
-      </div>
-      <div class="card-diagram" onclick="openLightbox('/diagrams/fintech-ai.png')">
-        <img src="https://portfolio.johnathancloudspace.com/diagrams/fintech-ai.png" alt="FinTech AI target AWS architecture" >
-        <span class="diagram-label">Target AWS architecture (defined in CDK, not deployed). Click to expand</span>
-      </div>
-      <div class="card-links">
-        <span class="card-status" style="display: inline-block; padding: 8px 16px; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.5px; color: #4ade80; border: 1px solid #4ade80;">Live</span>
-        <a class="card-link" href="https://github.com/johnathan-horner/fintech-ai#case-study" target="_blank" rel="noopener noreferrer">Case Study</a>
-        <a class="card-link" href="https://fintech-ai-horner.streamlit.app" target="_blank" rel="noopener noreferrer">Live Demo</a>
-        <a class="card-link secondary" href="https://github.com/johnathan-horner/fintech-ai" target="_blank" rel="noopener noreferrer">GitHub</a>
-      </div>
-    </div>
-
-    <!-- 5. EduAI Connect -->
-    <div class="project-card" data-vertical="education">
-      <div class="card-top">
-        <span class="card-vertical education">Education</span>
-        <span class="card-compliance">Synthetic data</span>
-      </div>
-      <div class="card-title">EduAI Connect</div>
-      <p class="card-problem">Helps a teacher spot students who may be falling behind. The public demo's chat answers questions with Claude Haiku 4.5 on Bedrock, using only the synthetic student records it retrieves and showing them under each answer. The repo also holds a local LangGraph pipeline with two agents and explicit criteria. Privacy controls are partly built.</p>
-      <div class="card-tech">
-        <span class="tech-tag">Amazon Bedrock</span>
-        <span class="tech-tag">Claude Haiku 4.5</span>
-        <span class="tech-tag">Titan Embeddings</span>
-        <span class="tech-tag">LangGraph</span>
-        <span class="tech-tag">FAISS</span>
-        <span class="tech-tag">HyDE</span>
-        <span class="tech-tag">FastAPI</span>
-        <span class="tech-tag capability-tag">MCP Server</span>
-        <span class="tech-tag capability-tag">CI/CD</span>
-      </div>
-      <div class="card-highlights">
-        <div class="highlight">
-          <div class="highlight-label">Pattern</div>
-          <div class="highlight-value">Agentic RAG with query rewriting and LLM re-ranking</div>
-        </div>
-        <div class="highlight">
-          <div class="highlight-label">Criteria</div>
-          <div class="highlight-value">Grade below 70, attendance below 0.80, engagement below 60</div>
-        </div>
-        <div class="highlight">
-          <div class="highlight-label">Measured</div>
-          <div class="highlight-value">24 automated tests; in 3 live chat questions every answer cited only retrieved records, and 1 overstated a fact; accuracy not measured</div>
-        </div>
-        <div class="highlight">
-          <div class="highlight-label">Next</div>
-          <div class="highlight-value">Apply the Bedrock PII guardrail to every call and add sign-in</div>
-        </div>
-      </div>
-      <div class="card-links">
-        <span class="card-status" style="display: inline-block; padding: 8px 16px; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.5px; color: #fbbf24; border: 1px solid #fbbf24;">In progress</span>
-        <a class="card-link" href="https://github.com/johnathan-horner/eduai-connect#case-study" target="_blank" rel="noopener noreferrer">Case Study</a>
-        <a class="card-link" href="https://eduai-connect-horner.streamlit.app" target="_blank" rel="noopener noreferrer">Live Demo</a>
-        <a class="card-link secondary" href="https://github.com/johnathan-horner/eduai-connect" target="_blank" rel="noopener noreferrer">GitHub</a>
-      </div>
-    </div>
-
-    <!-- 6. ShootItPicks -->
-    <div class="project-card" data-vertical="sports">
-      <div class="card-top">
-        <span class="card-vertical sports">Sports Analytics</span>
-        <span class="card-compliance">8 Guardrails</span>
-      </div>
-      <div class="card-title">ShootItPicks</div>
-      <p class="card-problem">A live, revenue-generating NFL analytics SaaS with paying subscribers. 5-step Chain of Thought AI pipeline with MRM confidence calibration enforcing 8 guardrails before any pick reaches a user. This is a business.</p>
-      <div class="card-tech">
-        <span class="tech-tag">Anthropic Claude</span>
-        <span class="tech-tag">LangChain</span>
-        <span class="tech-tag">Monte Carlo CVaR</span>
-        <span class="tech-tag">8 Lambdas</span>
-        <span class="tech-tag">API Gateway</span>
-        <span class="tech-tag">Cognito</span>
-        <span class="tech-tag">DynamoDB</span>
-        <span class="tech-tag">S3/CloudFront</span>
-        <span class="tech-tag">Stripe</span>
-        <span class="tech-tag capability-tag">MCP Server</span>
-      </div>
-      <div class="card-highlights">
-        <div class="highlight">
-          <div class="highlight-label">ML Pattern</div>
-          <div class="highlight-value">5-step Chain of Thought pipeline with MRM confidence calibration layer</div>
-        </div>
-        <div class="highlight">
-          <div class="highlight-label">RAG Pattern</div>
-          <div class="highlight-value">Hybrid RAG: dense + sparse retrieval with 5-step Chain of Thought</div>
-        </div>
-        <div class="highlight">
-          <div class="highlight-label">Architecture</div>
-          <div class="highlight-value">Fully serverless: 8 Lambdas, API Gateway, Cognito auth, DynamoDB, S3/CloudFront</div>
-        </div>
-        <div class="highlight">
-          <div class="highlight-label">Business</div>
-          <div class="highlight-value">Revenue-generating SaaS with Stripe billing, tiered subscriptions, paying customers</div>
-        </div>
-      </div>
-      <div class="card-diagram" onclick="openLightbox('/diagrams/shootitpicks.png')">
-        <img src="https://portfolio.johnathancloudspace.com/diagrams/shootitpicks.png" alt="ShootItPicks AWS Architecture" >
-        <span class="diagram-label">Click to expand</span>
-      </div>
-      <div class="card-links">
-        <span class="card-status" style="display: inline-block; padding: 8px 16px; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.5px; color: #4ade80; border: 1px solid #4ade80;">Live</span>
-        <a class="card-link" href="https://shootitpicks.com" target="_blank" rel="noopener noreferrer">Live Product</a>
-      </div>
-    </div>
-
-    <!-- 7. ConnectIQ -->
-    <div class="project-card" data-vertical="contact">
+    <!-- 7. ConnectIQ: AI Receptionist Design -->
+    <div class="project-card" data-vertical="contact" id="connectiq">
       <div class="card-top">
         <span class="card-vertical contact">Contact Center</span>
         <span class="card-compliance">Architecture design</span>
       </div>
-      <div class="card-title">ConnectIQ: AI Call Center Design</div>
-      <p class="card-problem">Design for a multi-tenant AI call center on Amazon Connect, Lex and Bedrock covering 14 languages across 3 per-seat pricing tiers, with escalation prediction that routes high-risk callers to human agents.</p>
+      <div class="card-title">ConnectIQ: AI Receptionist Design</div>
+      <p class="card-problem">Design for a multi-tenant AI receptionist for New York small businesses on Amazon Connect: a tier-gated router and 16 Python Lambda agents for voicemail, language detection across 14 NYC languages, outbound calls, calendar, CRM, SMS and payments. Not deployed.</p>
       <div class="card-tech">
         <span class="tech-tag">Amazon Connect</span>
-        <span class="tech-tag">Lex</span>
-        <span class="tech-tag">Bedrock</span>
-        <span class="tech-tag">Lambda</span>
+        <span class="tech-tag">AWS Lambda</span>
+        <span class="tech-tag">Amazon Transcribe</span>
+        <span class="tech-tag">Amazon Comprehend</span>
+        <span class="tech-tag">Amazon Bedrock</span>
+        <span class="tech-tag">DynamoDB</span>
+        <span class="tech-tag">EventBridge</span>
         <span class="tech-tag">React</span>
       </div>
       <div class="card-highlights">
         <div class="highlight">
-          <div class="highlight-label">Pattern</div>
-          <div class="highlight-value">Voice intent detection with AI routing and escalation prediction</div>
+          <div class="highlight-label">Design</div>
+          <div class="highlight-value">Tier-gated router in front of 16 Lambda agents, one per integration area</div>
         </div>
         <div class="highlight">
-          <div class="highlight-label">Architecture</div>
-          <div class="highlight-value">Amazon Connect, Lex, Lambda agents, Bedrock</div>
+          <div class="highlight-label">Languages</div>
+          <div class="highlight-value">14 NYC languages detected, including Haitian Creole, Yiddish, Bengali and Urdu</div>
+        </div>
+        <div class="highlight">
+          <div class="highlight-label">Consent</div>
+          <div class="highlight-value">Recording disclosure uses the stricter of the caller&#x27;s and the business&#x27;s state rule</div>
         </div>
         <div class="highlight">
           <div class="highlight-label">Status</div>
-          <div class="highlight-value">Design and early Lambda and dashboard code; not deployed</div>
+          <div class="highlight-value">Lambda handlers and a dashboard mock-up; no infrastructure code or tests yet; not deployed</div>
         </div>
       </div>
-      <div class="card-links">
-        <span class="card-status" style="display: inline-block; padding: 8px 16px; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.5px; color: #fbbf24; border: 1px solid #fbbf24;">In progress</span>
+      <div class="card-diagram" role="button" tabindex="0" onclick="openLightbox('/diagrams/2026-11/connectiq-architecture.png')" onkeydown="if(event.key==='Enter')openLightbox('/diagrams/2026-11/connectiq-architecture.png')">
+        <img src="/diagrams/2026-11/connectiq-architecture-web.png" alt="ConnectIQ: AI Receptionist Design architecture: Architecture design (not deployed)" loading="lazy">
+        <span class="diagram-label">Architecture design (not deployed). Tap to enlarge</span>
       </div>
+      <div class="card-links">
+        <span class="card-status" style="display: inline-block; padding: 8px 16px; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.5px; color: #fbbf24; border: 1px solid #fbbf24;">Architecture design</span>
+        <a class="card-link secondary" href="https://portfolio.johnathancloudspace.com/diagrams/2026-11/connectiq-architecture.png" target="_blank" rel="noopener noreferrer">Diagram</a>
+      </div>
+      <details class="case-study" id="connectiq-case-study">
+        <summary>case study</summary>
+        <div class="cs-section">
+          <h4>The problem</h4>
+          <p>Small businesses in New York miss calls they can&#x27;t answer, many from callers who don&#x27;t speak English, and the tools that would act on a call (calendar, CRM, payments) live in separate systems.</p>
+        </div>
+        <div class="cs-section">
+          <h4>Why I built it</h4>
+          <p>I wanted to design an AI receptionist that answers in the caller&#x27;s language and acts through the business&#x27;s own tools, and to work through the multi-tenant, consent and cost questions before building the telephony.</p>
+        </div>
+        <div class="cs-section">
+          <h4>Key decisions</h4>
+          <ol>
+            <li><strong>A router in front of one Lambda per integration area.</strong> The router checks the tenant&#x27;s tier and calls the agent for that tool. Failures stay isolated per vendor and tiers are easy to enforce; the cost is synchronous Lambda-to-Lambda calls that bill twice and can chain timeouts.</li>
+            <li><strong>One DynamoDB table keyed by tenant.</strong> Tenant config, call logs and consent records share one table, with TTL-based retention. Simple to run; there is no per-tenant encryption or isolation yet.</li>
+            <li><strong>Detect the language instead of translating.</strong> Comprehend finds the dominant language, with pattern matching for Yiddish and Cantonese, and the agent answers in that language. Cheaper and faster than a translation step; quality then depends on the model in each language.</li>
+            <li><strong>Separate secrets per tenant for each business&#x27;s tools.</strong> Each tenant&#x27;s OAuth and API tokens are their own Secrets Manager entries, referenced from the tenant&#x27;s config. Clean separation, but the agent role needs broad read access to secrets.</li>
+          </ol>
+        </div>
+        <div class="cs-section">
+          <h4>Architecture</h4>
+          <p>A call comes into Amazon Connect, which would hand tool requests to the tier-gating router Lambda, and the router calls the agent Lambdas. The voicemail agent sends audio to Amazon Transcribe and the transcript to Bedrock for a summary and urgency score, the language agent uses Comprehend, and the outbound agent places calls through Connect and schedules callbacks with EventBridge. Tenant config, logs and consent records go to DynamoDB and tokens to Secrets Manager; the Connect flows and whatever invokes the router are not written yet.</p>
+        </div>
+        <div class="cs-section">
+          <h4>Governance and safety</h4>
+          <ul>
+            <li>Tools are gated by the tenant&#x27;s tier; a call above the tier is refused.</li>
+            <li>Recording disclosure uses the stricter of the caller&#x27;s and the business&#x27;s state rule, in the caller&#x27;s language, and writes a consent record kept for 7 years.</li>
+            <li>Voicemail transcripts are scored for urgency, and emergencies are flagged for a person.</li>
+            <li>The language log keeps only the first 100 characters of what the caller said.</li>
+            <li>Not built yet: CloudTrail, customer-managed KMS keys, sign-in, PII redaction, guardrails on the Bedrock call, and tests.</li>
+          </ul>
+        </div>
+        <div class="cs-section">
+          <h4>Results</h4>
+          <ul>
+            <li>No results yet: the repo has no tests or evaluations, and the cost and response-time figures in the design are targets, not measurements.</li>
+          </ul>
+        </div>
+        <div class="cs-section">
+          <h4>Limits</h4>
+          <p>Architecture design only: not deployed, no infrastructure code, no Connect flow and no tests, and about a third of the named integrations are stubs. No real callers or data.</p>
+        </div>
+        <div class="cs-section">
+          <h4>What I&#x27;d do in a real deployment</h4>
+          <p>Write the CDK stack and Connect flows, replace Lambda-to-Lambda calls with asynchronous events, add per-tenant encryption, CloudTrail and guardrails on every Bedrock call, and test with recorded calls before any real caller.</p>
+        </div>
+        <div class="cs-section">
+          <h4>Links</h4>
+          <p class="cs-links"><a class="cs-link" href="https://portfolio.johnathancloudspace.com/diagrams/2026-11/connectiq-architecture.png" target="_blank" rel="noopener noreferrer">Diagram</a></p>
+        </div>
+      </details>
     </div>
 
-    <!-- 8. CDK AI Constructs -->
-    <div class="project-card" data-vertical="tools">
+    <!-- 8. cdk-ai-constructs -->
+    <div class="project-card" data-vertical="tools" id="cdk-ai-constructs">
       <div class="card-top">
         <span class="card-vertical tools">Open Source</span>
         <span class="card-compliance">TypeScript</span>
       </div>
       <div class="card-title">cdk-ai-constructs</div>
-      <p class="card-problem">TypeScript AWS CDK library with 9 constructs for AI infrastructure: Bedrock access, SageMaker serverless endpoints, multi-tenant Cognito auth, auditable S3 storage, event pipelines, model cards, Streamlit on Fargate and Stripe billing. Not yet used by the other projects.</p>
+      <p class="card-problem">TypeScript AWS CDK library with 9 constructs for AI workloads: Bedrock access scoped to one model, SageMaker serverless endpoints, multi-tenant Cognito auth, audited S3 storage, event pipelines, model cards, Streamlit on Fargate and Stripe billing.</p>
       <div class="card-tech">
         <span class="tech-tag">AWS CDK</span>
         <span class="tech-tag">TypeScript</span>
-        <span class="tech-tag">Bedrock</span>
+        <span class="tech-tag">Amazon Bedrock</span>
         <span class="tech-tag">SageMaker</span>
         <span class="tech-tag">Cognito</span>
+        <span class="tech-tag">CloudTrail</span>
         <span class="tech-tag">Jest</span>
-        <span class="tech-tag capability-tag">CI/CD</span>
+        <span class="tech-tag capability-tag">CI</span>
       </div>
       <div class="card-highlights">
         <div class="highlight">
@@ -924,18 +1423,83 @@ body {
           <div class="highlight-value">147 Jest tests and 8 Python handler tests pass; all 9 constructs synthesize</div>
         </div>
         <div class="highlight">
-          <div class="highlight-label">Status</div>
-          <div class="highlight-value">Version 2.0.0 fixes the published 1.0.0, which cannot be imported; not yet published</div>
+          <div class="highlight-label">Defaults</div>
+          <div class="highlight-value">Permissions scoped to one model, endpoint or object; tenant ID only from the signed token</div>
+        </div>
+        <div class="highlight">
+          <div class="highlight-label">Package</div>
+          <div class="highlight-value">2.0.0 imports cleanly from a fresh project; npm still serves 1.0.0, which can&#x27;t be imported</div>
         </div>
         <div class="highlight">
           <div class="highlight-label">Limit</div>
           <div class="highlight-value">Tested by synthesis only; not deployed to a live AWS account</div>
         </div>
       </div>
-      <div class="card-links">
-        <span class="card-status" style="display: inline-block; padding: 8px 16px; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.5px; color: #fbbf24; border: 1px solid #fbbf24;">In progress</span>
-        <a class="card-link secondary" href="https://github.com/johnathan-horner/cdk-ai-constructs" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <div class="card-diagram" role="button" tabindex="0" onclick="openLightbox('/diagrams/2026-11/cdk-ai-constructs-architecture.png')" onkeydown="if(event.key==='Enter')openLightbox('/diagrams/2026-11/cdk-ai-constructs-architecture.png')">
+        <img src="/diagrams/2026-11/cdk-ai-constructs-architecture-web.png" alt="cdk-ai-constructs architecture: Constructs as synthesized (not deployed)" loading="lazy">
+        <span class="diagram-label">Constructs as synthesized (not deployed). Tap to enlarge</span>
       </div>
+      <div class="card-links">
+        <span class="card-status" style="display: inline-block; padding: 8px 16px; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.5px; color: #fbbf24; border: 1px solid #fbbf24;">On npm (1.0.0)</span>
+        <a class="card-link" href="https://www.npmjs.com/package/@johnathan-horner/cdk-ai-constructs" target="_blank" rel="noopener noreferrer">npm package (1.0.0)</a>
+        <a class="card-link secondary" href="https://github.com/johnathan-horner/cdk-ai-constructs" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a class="card-link secondary" href="https://portfolio.johnathancloudspace.com/diagrams/2026-11/cdk-ai-constructs-architecture.png" target="_blank" rel="noopener noreferrer">Diagram</a>
+      </div>
+      <details class="case-study" id="cdk-ai-constructs-case-study">
+        <summary>case study</summary>
+        <div class="cs-section">
+          <h4>The problem</h4>
+          <p>Teams putting AI on AWS rebuild the same wiring for every project: model access, tenant isolation, audit storage, model documentation. The details are easy to get wrong, like a Bedrock policy with a wildcard or a tenant ID read from the request body.</p>
+        </div>
+        <div class="cs-section">
+          <h4>Why I built it</h4>
+          <p>I wanted a small set of constructs that carry those guardrails by default, each checked by an automated test before anything is deployed.</p>
+        </div>
+        <div class="cs-section">
+          <h4>Key decisions</h4>
+          <ol>
+            <li><strong>Grant on the caller&#x27;s role instead of creating new roles.</strong> Version 1.0.0 created a role nothing used. Each construct now takes your Lambda function and grants on its role, so the permission reaches the code that calls Bedrock. The construct needs a function passed in.</li>
+            <li><strong>Scope every permission to exactly one model, endpoint or object.</strong> No anthropic.* wildcard, and the model data URL must be a literal s3:// path. Switching models means a redeploy.</li>
+            <li><strong>Fail at synth time on invalid input.</strong> Bad props stop the synth with a clear error, so mistakes show up in tests instead of in a half-deployed stack. The props are stricter as a result.</li>
+            <li><strong>Inline Python handlers, tested with fakes.</strong> No build step or asset bundling. Handlers must stay under 4,096 characters (a test enforces it), and the Stripe SDK comes from a layer you supply.</li>
+          </ol>
+        </div>
+        <div class="cs-section">
+          <h4>Architecture</h4>
+          <p>A stack built from the library puts API Gateway, a load balancer and Cognito at the edge, with the Stripe billing functions, Streamlit on Fargate and a sign-up trigger behind them. Your own Lambda functions get scoped grants to Bedrock, a SageMaker serverless endpoint, the model registry and a KMS-encrypted bucket, while CloudTrail records object-level events and CloudWatch alarms watch for errors. Nothing here is deployed; the diagram is what the constructs synthesize.</p>
+        </div>
+        <div class="cs-section">
+          <h4>Governance and safety</h4>
+          <ul>
+            <li>Least privilege by default: Bedrock access scoped to one model or inference profile, InvokeEndpoint to one endpoint.</li>
+            <li>Tenant isolation: the tenant ID comes only from the signed token, the app client can&#x27;t write tenant, tier or plan attributes, and sign-up never overwrites an existing tenant.</li>
+            <li>Stripe webhooks are signature-checked and checkout accepts only allow-listed price IDs.</li>
+            <li>CloudTrail data-event trails with log file validation; SSE-KMS with key rotation and TLS-only bucket policies.</li>
+            <li>The HIPAA, FERPA and SR 26-2 modes set retention periods and tags only; they do not make a stack compliant.</li>
+            <li>CI scans the full git history for secrets.</li>
+          </ul>
+        </div>
+        <div class="cs-section">
+          <h4>Results</h4>
+          <ul>
+            <li>147 Jest tests in 11 suites and 8 Python tests of the generated handlers pass (run on 2026-11-16).</li>
+            <li>All 9 constructs synthesize, and the packed 2.0.0 imports from a clean project with all 9 exported.</li>
+            <li>Typecheck and lint pass in CI.</li>
+          </ul>
+        </div>
+        <div class="cs-section">
+          <h4>Limits</h4>
+          <p>Tested by synthesis only and never deployed to a live account; no project imports it yet; npm still serves 1.0.0, which can&#x27;t be imported.</p>
+        </div>
+        <div class="cs-section">
+          <h4>What I&#x27;d do in a real deployment</h4>
+          <p>Publish 2.0.0, deploy each construct to a sandbox account with integration tests, add jsii builds for Python users, and adopt it in one of the other projects.</p>
+        </div>
+        <div class="cs-section">
+          <h4>Links</h4>
+          <p class="cs-links"><a class="cs-link" href="https://www.npmjs.com/package/@johnathan-horner/cdk-ai-constructs" target="_blank" rel="noopener noreferrer">npm package (1.0.0)</a> · <a class="cs-link" href="https://github.com/johnathan-horner/cdk-ai-constructs" target="_blank" rel="noopener noreferrer">GitHub</a> · <a class="cs-link" href="https://portfolio.johnathancloudspace.com/diagrams/2026-11/cdk-ai-constructs-architecture.png" target="_blank" rel="noopener noreferrer">Diagram</a></p>
+        </div>
+      </details>
     </div>
 
   </section>
@@ -984,7 +1548,8 @@ body {
 
 <!-- LIGHTBOX -->
 <div class="lightbox" id="lightbox" onclick="closeLightbox()">
-  <button class="lightbox-close" onclick="closeLightbox()">ESC to close</button>
+  <a class="lightbox-full" id="lightbox-full" href="#" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">Open full size</a>
+  <button class="lightbox-close" onclick="closeLightbox()">Close</button>
   <img id="lightbox-img" alt="Architecture Diagram">
 </div>
 
@@ -1006,6 +1571,7 @@ function openLightbox(src) {
   const lb = document.getElementById('lightbox');
   const img = document.getElementById('lightbox-img');
   img.src = src;
+  document.getElementById('lightbox-full').href = src;
   lb.classList.add('open');
   document.body.style.overflow = 'hidden';
 }
@@ -1020,7 +1586,18 @@ document.addEventListener('keydown', function(e) {
   if (e.key === 'Escape') closeLightbox();
 });
 
-// Image loading completed - no error handling interference
+
+function openFromHash() {
+  const id = decodeURIComponent(location.hash.slice(1));
+  if (!id) return;
+  const el = document.getElementById(id);
+  if (!el) return;
+  const details = el.matches('details') ? el : el.querySelector('details.case-study');
+  if (details) details.open = true;
+  el.scrollIntoView();
+}
+window.addEventListener('hashchange', openFromHash);
+window.addEventListener('DOMContentLoaded', openFromHash);
 </script>
 </body>
 </html>
