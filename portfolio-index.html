@@ -6,15 +6,15 @@
 <link rel="icon" type="image/png" href="/portfolio/favicon.png" />
 <link rel="icon" type="image/x-icon" href="/portfolio/favicon.ico" />
 <title>Johnathan Horner | AI Systems Portfolio</title>
-<meta name="description" content="AI projects by Johnathan Horner, Shoot It Analytics LLC: one live product, five live reference apps in finance, healthcare, education and legal, and an open-source AWS CDK library. Each with its architecture, results and limits.">
+<meta name="description" content="AI projects by Johnathan Horner, Shoot It Analytics LLC: one live product, five live reference apps in finance, healthcare, education and legal, an open-source AWS CDK library and one architecture design. Each with its architecture, results and limits.">
 <meta property="og:title" content="Johnathan Horner | AI Systems Portfolio" />
-<meta property="og:description" content="AI projects by Johnathan Horner, Shoot It Analytics LLC: one live product, five live reference apps in finance, healthcare, education and legal, and an open-source AWS CDK library. Each with its architecture, results and limits." />
+<meta property="og:description" content="AI projects by Johnathan Horner, Shoot It Analytics LLC: one live product, five live reference apps in finance, healthcare, education and legal, an open-source AWS CDK library and one architecture design. Each with its architecture, results and limits." />
 <meta property="og:image" content="https://portfolio.johnathancloudspace.com/portfolio/og-image.png" />
 <meta property="og:url" content="https://portfolio.johnathancloudspace.com" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Johnathan Horner | AI Systems Portfolio" />
-<meta name="twitter:description" content="AI projects by Johnathan Horner, Shoot It Analytics LLC: one live product, five live reference apps in finance, healthcare, education and legal, and an open-source AWS CDK library. Each with its architecture, results and limits." />
+<meta name="twitter:description" content="AI projects by Johnathan Horner, Shoot It Analytics LLC: one live product, five live reference apps in finance, healthcare, education and legal, an open-source AWS CDK library and one architecture design. Each with its architecture, results and limits." />
 <meta name="twitter:image" content="https://portfolio.johnathancloudspace.com/portfolio/og-image.png" />
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -619,13 +619,13 @@ body {
   <section class="hero">
     <div class="hero-tag">AI Systems Portfolio</div>
     <h1>I build AI systems<br><em>Built for Compliance</em></h1>
-    <p class="hero-sub">One live product and five live reference AI apps across finance, healthcare, education and legal, plus an open-source AWS CDK library. Each one has a case study with its architecture, real results and limits.</p>
+    <p class="hero-sub">One live product and five live reference AI apps across finance, healthcare, education and legal, plus an open-source AWS CDK library and one architecture design. Each one has a case study with its architecture, real results and limits.</p>
 
     <div class="hero-stats">
       <div><div class="stat-num">1</div><div class="stat-label">Live Product</div></div>
       <div><div class="stat-num">5</div><div class="stat-label">Live Reference Apps</div></div>
       <div><div class="stat-num">4</div><div class="stat-label">AWS Certifications</div></div>
-      <div><div class="stat-num">7</div><div class="stat-label">Case Studies</div></div>
+      <div><div class="stat-num">8</div><div class="stat-label">Case Studies</div></div>
     </div>
 
     <div class="compliance-caption" style="margin-top: 16px; font-family: 'DM Mono', monospace; font-size: 12px; color: #7c8aa5; letter-spacing: 0.5px; text-align: center;">FinTech AI: SR 26-2 leaves generative AI out of scope, so I applied its practices anyway: model inventory, validation, approval gates and monitoring. EduAI Connect: FERPA, partly built.</div>
@@ -666,6 +666,7 @@ body {
     <button class="vert-btn" onclick="filterCards('education')">Education</button>
     <button class="vert-btn" onclick="filterCards('legal')">Legal</button>
     <button class="vert-btn" onclick="filterCards('sports')">Sports Analytics</button>
+    <button class="vert-btn" onclick="filterCards('contact')">Contact Center</button>
     <button class="vert-btn" onclick="filterCards('tools')">Open Source</button>
   </div>
 
@@ -1586,6 +1587,143 @@ body {
             <li><a class="cs-link" href="https://www.npmjs.com/package/@johnathan-horner/cdk-ai-constructs" target="_blank" rel="noopener noreferrer">npm package</a></li>
             <li><a class="cs-link" href="https://github.com/johnathan-horner/cdk-ai-constructs" target="_blank" rel="noopener noreferrer">GitHub</a></li>
             <li><a class="cs-link" href="https://portfolio.johnathancloudspace.com/#cdk-ai-constructs" target="_blank" rel="noopener noreferrer">Portfolio</a></li>
+          </ul>
+        </div>
+        <p class="cs-footer">Built by Johnathan Horner, Shoot It Analytics LLC</p>
+      </details>
+    </div>
+
+    <!-- 8. ConnectIQ -->
+    <div class="project-card" data-vertical="contact" id="connectiq">
+      <div class="card-top">
+        <span class="card-vertical contact">Contact Center</span>
+        <span class="card-compliance">Design</span>
+      </div>
+      <div class="card-title">ConnectIQ</div>
+      <p class="card-problem">Design for a multi-tenant AI receptionist for New York small businesses on Amazon Connect: a tier-gated router and 15 Python Lambda agents for voicemail, language detection across 14 languages, recording disclosure, outbound calls, calendar, CRM, SMS, email and payments. The handlers are written; the telephony and infrastructure are designed, not built.</p>
+      <div class="card-tech">
+        <span class="tech-tag">Amazon Connect</span>
+        <span class="tech-tag">AWS Lambda</span>
+        <span class="tech-tag">Amazon Bedrock</span>
+        <span class="tech-tag">Amazon Transcribe</span>
+        <span class="tech-tag">Amazon Comprehend</span>
+        <span class="tech-tag">DynamoDB</span>
+        <span class="tech-tag">Python</span>
+        <span class="tech-tag capability-tag">Multi-tenant</span>
+      </div>
+      <div class="card-highlights">
+        <div class="highlight">
+          <div class="highlight-label">Written</div>
+          <div class="highlight-value">16 Lambda handlers: a tier-gating router and 15 agents; all 16 compile</div>
+        </div>
+        <div class="highlight">
+          <div class="highlight-label">Languages</div>
+          <div class="highlight-value">Of 14 target languages, 8 work on live calls on AWS today and 2 more need a test call</div>
+        </div>
+        <div class="highlight">
+          <div class="highlight-label">Consent</div>
+          <div class="highlight-value">Recording disclosure by state in 5 languages, with a consent record kept 7 years</div>
+        </div>
+        <div class="highlight">
+          <div class="highlight-label">Limit</div>
+          <div class="highlight-value">Designed, not built: Connect flows, Lex bot, infrastructure code, tests. Never deployed</div>
+        </div>
+      </div>
+      <div class="card-diagram" role="button" tabindex="0" onclick="openLightbox('/diagrams/2026-11/connectiq-architecture.png')" onkeydown="if(event.key==='Enter')openLightbox('/diagrams/2026-11/connectiq-architecture.png')">
+        <img src="/diagrams/2026-11/connectiq-architecture-web.png" alt="ConnectIQ: Architecture design (not deployed)" loading="lazy">
+        <span class="diagram-label">Architecture design (not deployed). Tap to enlarge</span>
+      </div>
+      <div class="card-links">
+        <span class="card-status" style="display: inline-block; padding: 8px 16px; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.5px; color: #fbbf24; border: 1px solid #fbbf24;">Architecture design</span>
+        <a class="card-link secondary" href="https://portfolio.johnathancloudspace.com/#connectiq" target="_blank" rel="noopener noreferrer">Portfolio</a>
+      </div>
+      <details class="case-study" id="connectiq-case-study">
+        <summary>case study</summary>
+        <div class="cs-section">
+          <h4>Real-world problem</h4>
+          <p>New York City's Local Law 30 report for fiscal year 2025 says 22% of New Yorkers have limited English proficiency, and that the 10 designated citywide languages (Spanish, Chinese, Russian, Bengali, Haitian Creole, Korean, Arabic, Urdu, French and Polish) cover about 1.5 million of them, 85% of the total (<a class="cs-link" href="https://www.nyc.gov/assets/immigrants/downloads/pdf/FY25-Language-Access-Annual-Report.pdf" target="_blank" rel="noopener noreferrer">NYC Mayor's Office of Immigrant Affairs</a>). A small business that answers its phone in English only can't serve many of those callers, and the tools that would act on a call (calendar, CRM, payments) sit in separate systems.</p>
+        </div>
+        <div class="cs-section">
+          <h4>Why I built it</h4>
+          <p>I wanted to design an AI receptionist that answers in the caller's language and acts through the business's own tools, and to work through the multi-tenant, consent and tier questions in code before paying for telephony.</p>
+        </div>
+        <div class="cs-section">
+          <h4>Key decisions</h4>
+          <ul>
+            <li><strong>A router in front of one Lambda per integration area.</strong> The router looks up the tenant's tier, refuses any tool above it, and invokes the agent for that tool. Failures stay with one vendor and tiers are enforced in one place. The cost is synchronous Lambda-to-Lambda calls, which bill twice and can chain timeouts.</li>
+            <li><strong>One DynamoDB table keyed by tenant.</strong> Tenant config, call logs and consent records share one table, with retention set by TTL. It is simple to run. There is no per-tenant encryption or isolation yet.</li>
+            <li><strong>Detect the language instead of translating.</strong> Amazon Comprehend finds the dominant language, a pattern check is added for Yiddish and Cantonese, and the agent is told to answer in that language. That avoids a translation step; quality then depends on the model in each language.</li>
+            <li><strong>Each tenant's tokens in their own Secrets Manager entries.</strong> The tenant's config row points to its own OAuth and API secrets. Separation is clean, but the agent role would need read access to many secrets.</li>
+          </ul>
+        </div>
+        <div class="cs-section">
+          <h4>Architecture</h4>
+          <p>Nothing here is deployed. In the design, a call reaches Amazon Connect, a contact flow plays the recording disclosure, and a Lex bot and a Bedrock conversation loop turn what the caller says into tool calls; those three parts are designed, not built. What is written is everything behind them: the router Lambda checks the tenant's tier in DynamoDB and invokes one of 15 agent Lambdas. The voicemail agent starts an Amazon Transcribe job on the audio in S3 and sends the transcript to Claude 3 Sonnet on Amazon Bedrock for a summary and an urgency level. The language agent calls Amazon Comprehend. The outbound agent places calls through Connect and schedules callbacks with EventBridge rules. The integration agents read each tenant's tokens from Secrets Manager and call Twilio, Stripe, Google, HubSpot and other vendor APIs over HTTPS. The repo also has a React dashboard mock-up (9 files with sample data); its API Gateway and Cognito backend are designed, not built.</p>
+        </div>
+        <div class="cs-section">
+          <h4>Languages</h4>
+          <p>The code targets 14 languages. I checked each one against the AWS documentation for the four services a call needs: Amazon Lex V2 to understand the caller, Amazon Transcribe for voicemail, Amazon Polly to speak and Amazon Translate (checked on 2026-11-17).</p>
+          <ul>
+            <li><strong>Live calls, 8 languages:</strong> English, Spanish, French, Portuguese, Mandarin, Cantonese, Korean and Polish have full locales in Lex V2 (<a class="cs-link" href="https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html" target="_blank" rel="noopener noreferrer">Lex V2 languages</a>).</li>
+            <li><strong>Live calls only after a test call, 2 languages:</strong> Arabic has a full Lex V2 locale, but it is Gulf Arabic (ar_AE), so it needs a test call with local speakers. Russian (ru_RU) is a limited-feature locale in Lex V2.</li>
+            <li><strong>Voicemail only, 2 languages:</strong> Haitian Creole and Bengali are in Amazon Transcribe and Amazon Translate, but Amazon Polly has no voice for either (<a class="cs-link" href="https://docs.aws.amazon.com/transcribe/latest/dg/supported-languages.html" target="_blank" rel="noopener noreferrer">Transcribe languages</a>, <a class="cs-link" href="https://docs.aws.amazon.com/polly/latest/dg/available-voices.html" target="_blank" rel="noopener noreferrer">Polly voices</a>).</li>
+            <li><strong>Not possible on AWS today, 2 languages:</strong> Urdu is in Amazon Translate only, and Yiddish is in none of the four (<a class="cs-link" href="https://docs.aws.amazon.com/translate/latest/dg/what-is-languages.html" target="_blank" rel="noopener noreferrer">Translate languages</a>).</li>
+          </ul>
+          <p>The launch list is therefore 8 languages, with Arabic and Russian added only if their test calls pass.</p>
+        </div>
+        <div class="cs-section">
+          <h4>Governance and safety</h4>
+          <ul>
+            <li>Tools are gated by tier: the router holds 37 tool names across 3 tiers and returns a 403 for a tool above the tenant's tier.</li>
+            <li>Recording disclosure: a two-party-consent state takes precedence over a one-party state, the text is written in 5 languages (English, Spanish, Mandarin, French and Haitian Creole) with English as the fallback, and each disclosure writes a consent record (call ID, caller phone, state, language) kept 7 years by TTL.</li>
+            <li>Voicemail transcripts get an urgency level, and an emergency is marked to notify the owner and escalate to a person.</li>
+            <li>The language log keeps only the first 100 characters of what the caller said and expires after 30 days. Integration logs expire after 90 days.</li>
+            <li>Designed, not built: CloudTrail, customer-managed KMS keys, sign-in for the dashboard, PII redaction, a guardrail on the Bedrock call, and tests.</li>
+          </ul>
+        </div>
+        <div class="cs-section">
+          <h4>Results</h4>
+          <ul>
+            <li>No measured results: nothing is deployed, and the repo has no tests or evaluations.</li>
+            <li>16 handler files (6,377 lines of Python) are written, and all 16 compile with Python 3.11 (checked on 2026-11-17).</li>
+            <li>The router maps 17 tool categories; 15 have a handler, and Slack and Mailchimp do not yet.</li>
+          </ul>
+        </div>
+        <div class="cs-section">
+          <h4>What I got wrong</h4>
+          <ul>
+            <li><strong>The first README described a product, not the code.</strong> It listed infrastructure code, a Lex bot, pricing and cost figures that the repo does not contain or measure. The case study now says what is written and what is only designed.</li>
+            <li><strong>Two-party states fall back to one-party wording.</strong> The code lists 11 two-party-consent states but has disclosure text for only 5 states; any other state gets New York's one-party text. That has to be fixed before a real call.</li>
+            <li><strong>The tenant ID comes from the request.</strong> Every handler trusts the tenant_id in the event. In a real build it has to come from the Connect instance or a signed token.</li>
+            <li><strong>The model ID is hard-coded.</strong> The voicemail agent names Claude 3 Sonnet in the code, so a model change is a code change.</li>
+          </ul>
+        </div>
+        <div class="cs-section">
+          <h4>Constraints</h4>
+          <ul>
+            <li>No AWS spend so far: no Connect instance, phone number or deployed stack, and the product's website is not paid for yet.</li>
+            <li>The repo is private, so there is no public code link.</li>
+            <li>One developer, with no real callers or recordings to test with.</li>
+            <li>Voicemail transcription maps 10 of the 14 languages to an Amazon Transcribe language code; the other 4 fall back to English.</li>
+          </ul>
+        </div>
+        <div class="cs-section">
+          <h4>Limits</h4>
+          <p>Architecture design only. It has never been deployed and has no infrastructure code, Connect flow, Lex bot or tests. Nothing in the repo invokes the router, and several integrations (Jane App, HousecallPro, Mindbody, Clio) are stubs that return a fixed success.</p>
+        </div>
+        <div class="cs-section">
+          <h4>What I&#x27;d do in a real deployment</h4>
+          <p>Write the CDK stack and the Connect flows, take the tenant ID from the Connect instance, replace Lambda-to-Lambda calls with events and queues, add per-tenant encryption, CloudTrail and a guardrail on every Bedrock call, finish disclosure text for every two-party state with a lawyer's review, and test with recorded calls in each language before any real caller.</p>
+        </div>
+        <div class="cs-section">
+          <h4>Sources</h4>
+          <ul>
+            <li><a class="cs-link" href="https://www.nyc.gov/assets/immigrants/downloads/pdf/FY25-Language-Access-Annual-Report.pdf" target="_blank" rel="noopener noreferrer">NYC Mayor's Office of Immigrant Affairs: Local Law 30 Report for Fiscal Year 2025</a></li>
+            <li><a class="cs-link" href="https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html" target="_blank" rel="noopener noreferrer">Amazon Lex V2: supported languages and locales</a></li>
+            <li><a class="cs-link" href="https://docs.aws.amazon.com/transcribe/latest/dg/supported-languages.html" target="_blank" rel="noopener noreferrer">Amazon Transcribe: supported languages</a></li>
+            <li><a class="cs-link" href="https://docs.aws.amazon.com/polly/latest/dg/available-voices.html" target="_blank" rel="noopener noreferrer">Amazon Polly: available voices</a></li>
+            <li><a class="cs-link" href="https://docs.aws.amazon.com/translate/latest/dg/what-is-languages.html" target="_blank" rel="noopener noreferrer">Amazon Translate: supported languages</a></li>
+            <li><a class="cs-link" href="https://portfolio.johnathancloudspace.com/#connectiq" target="_blank" rel="noopener noreferrer">Portfolio</a></li>
           </ul>
         </div>
         <p class="cs-footer">Built by Johnathan Horner, Shoot It Analytics LLC</p>
