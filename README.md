@@ -157,7 +157,7 @@ Tests: `pip install pytest httpx` then `pytest`.
 - Measure the At-Risk Agent on a labeled synthetic set (precision and recall per risk level).
 - Apply the guardrail to every model call and test it with PII red-team prompts.
 - Compute demo-mode risk levels from the data instead of presetting them.
-- Move `cloudspace-deploy/` and `portfolio-index.html` out of this repo.
+- Move `portfolio-index.html` out of this repo.
 
 ## More docs
 
