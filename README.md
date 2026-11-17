@@ -1,6 +1,6 @@
 # EduAI Connect
 
-**Status: In progress.** The hosted app runs on Streamlit Cloud with a fixed sample of 12 synthetic
+**Status: Live.** The hosted app runs on Streamlit Cloud with a fixed sample of 12 synthetic
 students and preset risk levels. Its chat answers questions with Claude Haiku 4.5 on Amazon Bedrock,
 grounded in the student records it retrieves, when the app has AWS credentials; without them it
 shows the matching records and says no AI answer was generated. Full mode (RAG and agents) runs
@@ -8,7 +8,7 @@ locally only; its accuracy has not been measured and it has never been deployed.
 
 Independent reference project by Shoot It Analytics LLC. Built with public or synthetic data.
 
-Demo (Streamlit Cloud): https://eduai-connect-horner.streamlit.app
+Live app (Streamlit Cloud): https://eduai-connect-horner.streamlit.app
 
 ## What it does
 
@@ -28,65 +28,95 @@ next, by asking plain-language questions about grades, attendance and engagement
     session; one audit log entry per answer (question, record IDs, model, tokens, cost, latency);
     with no credentials, a clearly labeled demo mode that shows records and no AI text.
 - **Full mode** (AWS credentials): synthetic student records are embedded with Amazon Titan Text
-  Embeddings v2 into a FAISS index; questions are rewritten, results re-ranked, and Claude 3 Haiku on
-  Amazon Bedrock answers. A LangGraph workflow runs a Grading Agent and an At-Risk Agent; the
+  Embeddings v2 into a FAISS index and Claude 3 Haiku on Amazon Bedrock answers from the top 4
+  matches. Query rewriting and re-ranking exist only in the command-line script `src/rag/rag_chain.py`. A LangGraph workflow runs a Grading Agent and an At-Risk Agent; the
   At-Risk Agent asks the model to apply three explicit criteria (grade below 70, attendance below
   0.80, engagement below 60). A FastAPI backend serves `/health`, `/chat`, `/insights/grading` and
   `/insights/at-risk`.
-- An MCP server (`mcp_server.py`) exposes the same analytics to MCP clients.
+- An MCP server (`mcp_server.py`) gives MCP clients the same tool names; its tools return
+  simulated values, not the app's analytics.
 
 All student data is synthetic, in Canvas LMS API format. No real student records have been used.
 
-## Why I built this
+## Case study
 
-**The problem.** Teachers often learn that a student is struggling only after a failed test or
-report card, when it is late to help. The signals are usually already in the school's systems
-(grades, attendance, assignment completion) but spread across screens nobody has time to read.
+**EduAI Connect.** Lets a teacher ask plain questions about a class and get an answer from Claude Haiku 4.5 on Bedrock that uses only the student records it retrieved, with those records shown under the answer.
 
-**What I set out to prove.** Whether a retrieval-and-agents design can answer a teacher's plain
-questions about their class from those records, with explicit and explainable at-risk criteria, while
-keeping student data inside the school's own cloud account.
+Status: **Live** · [Live app](https://eduai-connect-horner.streamlit.app) · [GitHub](https://github.com/johnathan-horner/eduai-connect) · [Portfolio](https://portfolio.johnathancloudspace.com/#eduai-connect)
 
-**Key design decisions**
-- **Data:** synthetic Canvas-format records only, so the design can be shown without any student data.
-- **Explainable criteria:** the at-risk thresholds are written in the prompt and documented, not
-  learned from data nobody can inspect.
-- **Model:** Claude 3 Haiku for low cost per question; Titan embeddings and FAISS so the index can
-  live in the school's AWS account.
-- **Guardrails (partly built):** a script creates a Bedrock Guardrail for PII, but it is not applied
-  to the chat chain yet. See [docs/FERPA_COMPLIANCE.md](docs/FERPA_COMPLIANCE.md) for what is built.
-- **Cost:** the demo needs no AWS account; full mode uses the cheapest Claude model.
+### Real-world problem
 
-**Results.** No accuracy, false positive rate or hallucination rate has been measured yet. What is
-measured: 11 automated tests (every demo page renders, the synthetic data loads, the API answers its
-health check, the MCP server imports).
+About 28% of U.S. students were chronically absent in the 2022-23 school year, meaning they missed at least 10% of school days ([U.S. Department of Education](https://www.ed.gov/teaching-and-administration/supporting-students/chronic-absenteeism)). Teachers have the grades, attendance and engagement data that show who is slipping, but it is spread across systems and there is little time to read it.
 
-**Limits.** Synthetic data only; never used with real students. Not FERPA compliant as it stands,
-and not a certified or regulated product. Several privacy controls are designed but not built.
+### Why I built it
 
-**What I'd do next in a real deployment.** Apply the guardrail to every model call, add real
-authentication and per-section access in the API, add audit logging, measure accuracy and false
-positives on de-identified historical data with the school's permission, test for differences across
-student groups, and complete the district's privacy review.
+I wanted to see whether a chat answer about students can be something a teacher can check: built only from the records it retrieved, showing those records, and refusing to guess when something fails. I also wanted to map what a FERPA-aware version would need in the school's own AWS account.
+
+### Version 1
+
+The first version described a Canvas-to-Bedrock pipeline (EventBridge, Lambda, KMS-encrypted S3, Titan embeddings, FAISS, Claude 3 Sonnet and Bedrock Guardrails), and the app showed "FERPA Compliant", "Guardrails Active" and "KMS Encryption On" badges that the code did not back. I rebuilt it in October 2026 so the hosted chat really answers from Claude Haiku 4.5 using only the records it retrieved, and the README and app now say what is built and what is not.
+
+### Key decisions
+
+- **Two tiers: a light hosted app and a local RAG and agents stack.** The hosted chat finds records by keyword and makes one Bedrock call; LangGraph, FAISS and FastAPI stay local. There is no semantic search online, but the hosted app installs in seconds and makes exactly one model call per question.
+- **Show the sources and check the citations instead of trusting the answer.** Every answer lists the records sent to the model, and any student ID it cites that was not retrieved is flagged. IDs are checked, facts are not, so a teacher still has to read.
+- **Fail closed.** With no key, the cap reached or any error, the app shows the matching records and says no AI answer was generated. A broken key means no answers at all rather than a made-up one.
+- **Small, capped model use.** Claude Haiku 4.5 through the US inference profile, 400 output tokens, temperature 0, 10 live calls per browser session and the cost shown per answer. Cheap and predictable, with less depth than a larger model.
+
+### Architecture
+
+![EduAI Connect: Live architecture](docs/architecture/architecture.png)
+
+The teacher's question goes to the grounded chat, which picks matching records by keyword (named students, or the whole class sorted by topic) and sends only those records and the question to Claude Haiku 4.5 on Amazon Bedrock. The answer comes back with the records underneath, a citation check and one audit log line. The repo also has CDK code for a production design (KMS-encrypted S3, an EventBridge-triggered ingestion Lambda, CloudWatch logs) that was never deployed and is not complete.
+
+### Governance and safety
+
+- Answers may use only the retrieved records and must cite record IDs; the records are shown under every answer.
+- A citation check flags any student ID the answer cites that was not retrieved.
+- Fail closed: no key, cap reached or any error shows records only, never generated text.
+- 10 live calls per browser session; credentials only from the host's secret store.
+- One audit log line per answer with the full question and answer text; on the free host it is wiped when the app restarts.
+- The app states it is not FERPA compliant. Built: synthetic data only, the audit log, the session cap. Not built: sign-in, a PII guardrail on each call, CloudTrail, retention rules.
+
+### Results
+
+- 24 automated tests pass in CI, including 13 for the grounded chat run against a fake Bedrock client.
+- Accuracy, false positives and hallucination rate have not been measured; there is no labelled evaluation set yet.
+
+### What I got wrong
+
+- **The app showed controls that weren't built.** Badges like "FERPA Compliant" came off, and the app and docs now mark each control as built, defined or not built.
+- **The full stack could not run on the free host.** The RAG and agent modules open Bedrock clients and load FAISS as soon as they are imported, so the hosted app became a separate light tier with one model call per question.
+- **The audit log keeps full text.** The privacy design asks for no student details in logs, but the chat log stores the full question and answer. It is documented as a gap to fix before any real student data.
+- **Accuracy is still unmeasured.** There is no labelled evaluation set yet, so I state that instead of quoting a number.
+
+### Constraints
+
+- Synthetic student records only; never used with real students.
+- Hosted on the free Streamlit tier, which cannot load the RAG and agent stack and has no IAM role, so the Bedrock key comes from the host's secret store.
+- One Bedrock call per question and 10 live calls per browser session.
+- When anything fails, the app shows records and no generated text.
+
+### Limits
+
+Synthetic data only: 12 student records in the hosted app with preset risk levels. Not FERPA compliant and not reviewed by any school, district or regulator.
+
+### What I'd do in a real deployment
+
+Run it in the school's AWS account behind sign-in with role-based access, apply a Bedrock PII guardrail to every call, keep the audit log in encrypted durable storage without full student text, and measure accuracy on a labelled set before a teacher relies on it.
+
+### Sources
+
+- [U.S. Department of Education: Chronic Absenteeism](https://www.ed.gov/teaching-and-administration/supporting-students/chronic-absenteeism)
+- [Live app](https://eduai-connect-horner.streamlit.app)
+- [GitHub](https://github.com/johnathan-horner/eduai-connect)
+- [Portfolio](https://portfolio.johnathancloudspace.com/#eduai-connect)
+
+Built by Johnathan Horner, Shoot It Analytics LLC
 
 ## Architecture
 
-```mermaid
-flowchart LR
-    D[Synthetic Canvas-format data] --> E[Titan embeddings]
-    E --> F[(FAISS index)]
-    Q[Teacher question] --> R[Query rewrite]
-    R --> F
-    F --> RR[Re-rank]
-    RR --> G[LangGraph: Grading Agent, At-Risk Agent]
-    G --> H[Claude 3 Haiku on Bedrock]
-    H --> A[FastAPI]
-    A --> S[Streamlit dashboard]
-```
-
-Infrastructure as code: `terraform/main.py` is an AWS CDK app (despite the folder name) that defines
-a KMS key, a KMS-encrypted S3 bucket, a log group, an ingestion Lambda and EventBridge schedules. It
-has not been deployed.
+The architecture diagram and how it works are in the [Case study](#architecture) above.
 
 ## How to run
 
