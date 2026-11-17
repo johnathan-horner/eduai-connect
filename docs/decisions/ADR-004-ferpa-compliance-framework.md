@@ -1,3 +1,5 @@
+Superseded: describes an earlier design. See README for the current architecture.
+
 # ADR-004: FERPA Compliance Framework for Educational AI
 
 ## Status: Accepted

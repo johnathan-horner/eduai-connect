@@ -19,7 +19,8 @@ infrastructure code but never deployed), **Not built**.
 | Bedrock Guardrail that blocks or masks PII | Partly built: a script can create the guardrail, but nothing applies it to the chat chain | `src/guardrails/bedrock_guardrails.py` |
 | Role-based access (teacher vs administrator) | Not built: the dashboard has a role selector, but it does not change which students are shown | `streamlit_app/app.py` |
 | CloudTrail audit logging | Not built | |
-| Application audit log of queries and agent runs | Not built | |
+| Chat audit log: one entry per answer with the full question and answer text, the record IDs sent to the model, the model, tokens, cost and latency | Built. It stores student names and details as written, and on Streamlit Cloud it is wiped when the app restarts | `streamlit_app/live_chat.py` |
+| Audit log of the local API and agent runs | Not built | |
 | VPC endpoints for Bedrock, API Gateway, rate limiting | Not built | |
 | Data retention and deletion workflow | Not built | |
 | Measured RAG accuracy or hallucination rate | Not measured: `notebooks/rag_evaluation.ipynb` has no saved results | |
@@ -28,6 +29,8 @@ infrastructure code but never deployed), **Not built**.
 
 - Apply the Bedrock Guardrail to every model call and test it with PII red-team prompts.
 - Real authentication and per-section authorization enforced in the API, not only the UI.
-- CloudTrail and an application audit log for every query, with no student PII in logs.
+- CloudTrail and an application audit log for every query, with no student PII in logs. The chat audit
+  log built today keeps the full question and answer text, so it would need redaction or encrypted,
+  access-controlled storage before any real student data.
 - A data processing agreement with the school or district, retention and deletion procedures, and
   a review by the district's privacy officer.
