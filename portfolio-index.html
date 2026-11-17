@@ -1618,7 +1618,7 @@ body {
         </div>
         <div class="highlight">
           <div class="highlight-label">Languages</div>
-          <div class="highlight-value">Detector covers 14 languages, including all 10 that New York City designates citywide</div>
+          <div class="highlight-value">Of 14 target languages, 8 work on live calls on AWS today and 2 more need a test call</div>
         </div>
         <div class="highlight">
           <div class="highlight-label">Consent</div>
@@ -1659,6 +1659,17 @@ body {
         <div class="cs-section">
           <h4>Architecture</h4>
           <p>Nothing here is deployed. In the design, a call reaches Amazon Connect, a contact flow plays the recording disclosure, and a Lex bot and a Bedrock conversation loop turn what the caller says into tool calls; those three parts are designed, not built. What is written is everything behind them: the router Lambda checks the tenant's tier in DynamoDB and invokes one of 15 agent Lambdas. The voicemail agent starts an Amazon Transcribe job on the audio in S3 and sends the transcript to Claude 3 Sonnet on Amazon Bedrock for a summary and an urgency level. The language agent calls Amazon Comprehend. The outbound agent places calls through Connect and schedules callbacks with EventBridge rules. The integration agents read each tenant's tokens from Secrets Manager and call Twilio, Stripe, Google, HubSpot and other vendor APIs over HTTPS. The repo also has a React dashboard mock-up (9 files with sample data); its API Gateway and Cognito backend are designed, not built.</p>
+        </div>
+        <div class="cs-section">
+          <h4>Languages</h4>
+          <p>The code targets 14 languages. I checked each one against the AWS documentation for the four services a call needs: Amazon Lex V2 to understand the caller, Amazon Transcribe for voicemail, Amazon Polly to speak and Amazon Translate (checked on 2026-11-17).</p>
+          <ul>
+            <li><strong>Live calls, 8 languages:</strong> English, Spanish, French, Portuguese, Mandarin, Cantonese, Korean and Polish have full locales in Lex V2 (<a class="cs-link" href="https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html" target="_blank" rel="noopener noreferrer">Lex V2 languages</a>).</li>
+            <li><strong>Live calls only after a test call, 2 languages:</strong> Arabic has a full Lex V2 locale, but it is Gulf Arabic (ar_AE), so it needs a test call with local speakers. Russian (ru_RU) is a limited-feature locale in Lex V2.</li>
+            <li><strong>Voicemail only, 2 languages:</strong> Haitian Creole and Bengali are in Amazon Transcribe and Amazon Translate, but Amazon Polly has no voice for either (<a class="cs-link" href="https://docs.aws.amazon.com/transcribe/latest/dg/supported-languages.html" target="_blank" rel="noopener noreferrer">Transcribe languages</a>, <a class="cs-link" href="https://docs.aws.amazon.com/polly/latest/dg/available-voices.html" target="_blank" rel="noopener noreferrer">Polly voices</a>).</li>
+            <li><strong>Not possible on AWS today, 2 languages:</strong> Urdu is in Amazon Translate only, and Yiddish is in none of the four (<a class="cs-link" href="https://docs.aws.amazon.com/translate/latest/dg/what-is-languages.html" target="_blank" rel="noopener noreferrer">Translate languages</a>).</li>
+          </ul>
+          <p>The launch list is therefore 8 languages, with Arabic and Russian added only if their test calls pass.</p>
         </div>
         <div class="cs-section">
           <h4>Governance and safety</h4>
@@ -1708,6 +1719,10 @@ body {
           <h4>Sources</h4>
           <ul>
             <li><a class="cs-link" href="https://www.nyc.gov/assets/immigrants/downloads/pdf/FY25-Language-Access-Annual-Report.pdf" target="_blank" rel="noopener noreferrer">NYC Mayor's Office of Immigrant Affairs: Local Law 30 Report for Fiscal Year 2025</a></li>
+            <li><a class="cs-link" href="https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html" target="_blank" rel="noopener noreferrer">Amazon Lex V2: supported languages and locales</a></li>
+            <li><a class="cs-link" href="https://docs.aws.amazon.com/transcribe/latest/dg/supported-languages.html" target="_blank" rel="noopener noreferrer">Amazon Transcribe: supported languages</a></li>
+            <li><a class="cs-link" href="https://docs.aws.amazon.com/polly/latest/dg/available-voices.html" target="_blank" rel="noopener noreferrer">Amazon Polly: available voices</a></li>
+            <li><a class="cs-link" href="https://docs.aws.amazon.com/translate/latest/dg/what-is-languages.html" target="_blank" rel="noopener noreferrer">Amazon Translate: supported languages</a></li>
             <li><a class="cs-link" href="https://portfolio.johnathancloudspace.com/#connectiq" target="_blank" rel="noopener noreferrer">Portfolio</a></li>
           </ul>
         </div>
