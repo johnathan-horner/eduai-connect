@@ -40,26 +40,34 @@ All student data is synthetic, in Canvas LMS API format. No real student records
 
 ## Case study
 
-Built by Johnathan Horner, Shoot It Analytics LLC. The same case study is on the [portfolio](https://portfolio.johnathancloudspace.com/#eduai-connect).
+**EduAI Connect.** Lets a teacher ask plain questions about a class and get an answer from Claude Haiku 4.5 on Bedrock that uses only the student records it retrieved, with those records shown under the answer.
 
-### The problem
+Status: **Live** · [Live app](https://eduai-connect-horner.streamlit.app) · [GitHub](https://github.com/johnathan-horner/eduai-connect) · [Portfolio](https://portfolio.johnathancloudspace.com/#eduai-connect)
 
-Teachers have grades, attendance and engagement data spread across systems and little time to read it. A student who is slipping often gets noticed late, after the pattern is already obvious.
+### Real-world problem
+
+About 28% of U.S. students were chronically absent in the 2022-23 school year, meaning they missed at least 10% of school days ([U.S. Department of Education](https://www.ed.gov/teaching-and-administration/supporting-students/chronic-absenteeism)). Teachers have the grades, attendance and engagement data that show who is slipping, but it is spread across systems and there is little time to read it.
 
 ### Why I built it
 
 I wanted to see whether a chat answer about students can be something a teacher can check: built only from the records it retrieved, showing those records, and refusing to guess when something fails. I also wanted to map what a FERPA-aware version would need in the school's own AWS account.
 
+### Version 1
+
+The first version described a Canvas-to-Bedrock pipeline (EventBridge, Lambda, KMS-encrypted S3, Titan embeddings, FAISS, Claude 3 Sonnet and Bedrock Guardrails), and the app showed "FERPA Compliant", "Guardrails Active" and "KMS Encryption On" badges that the code did not back. I rebuilt it in October 2026 so the hosted chat really answers from Claude Haiku 4.5 using only the records it retrieved, and the README and app now say what is built and what is not.
+
 ### Key decisions
 
-1. **Two tiers: a light hosted app and a local RAG and agents stack.** The hosted chat finds records by keyword and makes one Bedrock call; LangGraph, FAISS and FastAPI stay local. There is no semantic search online, but the hosted app installs in seconds and makes exactly one model call per question.
-2. **Show the sources and check the citations instead of trusting the answer.** Every answer lists the records sent to the model, and any student ID it cites that was not retrieved is flagged. IDs are checked, facts are not, so a teacher still has to read.
-3. **Fail closed.** With no key, the cap reached or any error, the app shows the matching records and says no AI answer was generated. A broken key means no answers at all rather than a made-up one.
-4. **Small, capped model use.** Claude Haiku 4.5 through the US inference profile, 400 output tokens, temperature 0, 10 live calls per browser session and the cost shown per answer. Cheap and predictable, with less depth than a larger model.
+- **Two tiers: a light hosted app and a local RAG and agents stack.** The hosted chat finds records by keyword and makes one Bedrock call; LangGraph, FAISS and FastAPI stay local. There is no semantic search online, but the hosted app installs in seconds and makes exactly one model call per question.
+- **Show the sources and check the citations instead of trusting the answer.** Every answer lists the records sent to the model, and any student ID it cites that was not retrieved is flagged. IDs are checked, facts are not, so a teacher still has to read.
+- **Fail closed.** With no key, the cap reached or any error, the app shows the matching records and says no AI answer was generated. A broken key means no answers at all rather than a made-up one.
+- **Small, capped model use.** Claude Haiku 4.5 through the US inference profile, 400 output tokens, temperature 0, 10 live calls per browser session and the cost shown per answer. Cheap and predictable, with less depth than a larger model.
 
 ### Architecture
 
-The diagram and the flow are in [Architecture](#architecture) below.
+![EduAI Connect: Live architecture](docs/architecture/architecture.png)
+
+The teacher's question goes to the grounded chat, which picks matching records by keyword (named students, or the whole class sorted by topic) and sends only those records and the question to Claude Haiku 4.5 on Amazon Bedrock. The answer comes back with the records underneath, a citation check and one audit log line. The repo also has CDK code for a production design (KMS-encrypted S3, an EventBridge-triggered ingestion Lambda, CloudWatch logs) that was never deployed and is not complete.
 
 ### Governance and safety
 
@@ -67,13 +75,27 @@ The diagram and the flow are in [Architecture](#architecture) below.
 - A citation check flags any student ID the answer cites that was not retrieved.
 - Fail closed: no key, cap reached or any error shows records only, never generated text.
 - 10 live calls per browser session; credentials only from the host's secret store.
-- One audit log line per answer; on the free host it is wiped when the app restarts.
+- One audit log line per answer with the full question and answer text; on the free host it is wiped when the app restarts.
 - The app states it is not FERPA compliant. Built: synthetic data only, the audit log, the session cap. Not built: sign-in, a PII guardrail on each call, CloudTrail, retention rules.
 
 ### Results
 
 - 24 automated tests pass in CI, including 13 for the grounded chat run against a fake Bedrock client.
 - Accuracy, false positives and hallucination rate have not been measured; there is no labelled evaluation set yet.
+
+### What I got wrong
+
+- **The app showed controls that weren't built.** Badges like "FERPA Compliant" came off, and the app and docs now mark each control as built, defined or not built.
+- **The full stack could not run on the free host.** The RAG and agent modules open Bedrock clients and load FAISS as soon as they are imported, so the hosted app became a separate light tier with one model call per question.
+- **The audit log keeps full text.** The privacy design asks for no student details in logs, but the chat log stores the full question and answer. It is documented as a gap to fix before any real student data.
+- **Accuracy is still unmeasured.** There is no labelled evaluation set yet, so I state that instead of quoting a number.
+
+### Constraints
+
+- Synthetic student records only; never used with real students.
+- Hosted on the free Streamlit tier, which cannot load the RAG and agent stack and has no IAM role, so the Bedrock key comes from the host's secret store.
+- One Bedrock call per question and 10 live calls per browser session.
+- When anything fails, the app shows records and no generated text.
 
 ### Limits
 
@@ -83,11 +105,14 @@ Synthetic data only: 12 student records in the hosted app with preset risk level
 
 Run it in the school's AWS account behind sign-in with role-based access, apply a Bedrock PII guardrail to every call, keep the audit log in encrypted durable storage without full student text, and measure accuracy on a labelled set before a teacher relies on it.
 
-### Links
+### Sources
 
-- Live app: https://eduai-connect-horner.streamlit.app
-- GitHub: https://github.com/johnathan-horner/eduai-connect
-- Diagram: [docs/architecture/architecture.png](docs/architecture/architecture.png)
+- [U.S. Department of Education: Chronic Absenteeism](https://www.ed.gov/teaching-and-administration/supporting-students/chronic-absenteeism)
+- [Live app](https://eduai-connect-horner.streamlit.app)
+- [GitHub](https://github.com/johnathan-horner/eduai-connect)
+- [Portfolio](https://portfolio.johnathancloudspace.com/#eduai-connect)
+
+Built by Johnathan Horner, Shoot It Analytics LLC
 
 ## Architecture
 
