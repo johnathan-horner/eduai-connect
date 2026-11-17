@@ -116,16 +116,7 @@ Built by Johnathan Horner, Shoot It Analytics LLC
 
 ## Architecture
 
-![EduAI Connect: What runs today](docs/architecture/architecture.png)
-
-The teacher's question goes to the grounded chat, which picks matching records by keyword (named students, or the whole class sorted by topic) and sends only those records and the question to Claude Haiku 4.5 on Amazon Bedrock. The answer comes back with the records underneath, a citation check and one audit log line. The repo also has CDK code for a production design (KMS-encrypted S3, an EventBridge-triggered ingestion Lambda, CloudWatch logs) that was never deployed and is not complete.
-
-The diagram is built with the Python `diagrams` library from [`docs/architecture/`](docs/architecture/). Each arrow is checked against the code and, for AWS calls, the AWS documentation; see [`docs/architecture/arrow-verification.md`](docs/architecture/arrow-verification.md). A 1200x1500 copy of each diagram (`*-linkedin.png`) is in the same folder.
-
-Infrastructure as code: `terraform/main.py` is an AWS CDK app (despite the folder name) that defines
-a KMS key, a KMS-encrypted S3 bucket, a log group, an ingestion Lambda, one EventBridge schedule and
-one EventBridge event rule. It has not been deployed, and the
-Lambda's handler file (`src/etl/handler.py`) does not exist yet.
+The architecture diagram and how it works are in the [Case study](#architecture) above.
 
 ## How to run
 
