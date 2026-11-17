@@ -1,42 +1,40 @@
-"""EduAI Connect: what runs today on Streamlit Community Cloud.
+"""EduAI Connect: what runs today (live on Streamlit Community Cloud)."""
+import sys
+from pathlib import Path
 
-Traced from origin/main: streamlit_app/streamlit_app.py (entry point), demo_pages.py, live_chat.py.
-src/ (LangGraph agents, FAISS RAG, FastAPI), mcp_server.py and streamlit_app/app.py are local-only
-and are not imported by the hosted app, so they are not drawn.
-"""
-from diagrams.aws.general import User
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from diagrams import Diagram
 from diagrams.aws.ml import Bedrock
+from diagrams.aws.security import IAM
+from diagrams.onprem.client import User
 
-from archstyle import arch, aws_cloud, box, e, layer, linkedin, outside
+from style import EDGE, GRAPH, NODE, area, flow, icon, primary, soft
 
-OUT = "architecture"
-with arch("EduAI Connect", "What runs today", OUT):
-    teacher = User("Teacher (visitor)")
-    with outside("Streamlit Community Cloud"):
-        with layer("App"):
-            router = box("streamlit_app.py\npage router")
-            pages = box("Dashboard pages\nclass, at-risk, profiles,\nsystem info")
-        with layer("Grounded chat (live_chat.py)", margin=36):
-            chat = box("answer_question\nmax 10 live AI calls / session\nno key, cap or error:\nrecords only, no AI answer")
-            retr = box("Keyword retrieval\nnamed students, else whole\nclass sorted by topic")
-            cite = box("Citation check\ncited IDs vs retrieved")
-        with layer("Data"):
-            records = box("12 synthetic student records\ninline in demo_pages.py\n(risk levels preset)")
-        with layer("Governance"):
-            audit = box("Audit log (JSON Lines)\non app disk,\nresets on restart")
-            secrets = box("Streamlit secrets [aws]\naccess key + region")
-    with aws_cloud():
-        with layer("Generative AI", margin=40):
-            llm = Bedrock("Amazon Bedrock\nClaude Haiku 4.5\n(us. inference profile)")
+with Diagram("EduAI Connect  |  Live architecture",
+             filename=str(Path(__file__).with_name("architecture")), outformat="png", direction="TB",
+             show=False, graph_attr=GRAPH, node_attr=NODE, edge_attr=EDGE):
+    user = User("Teacher\n(browser)")
 
-    teacher >> e("HTTPS") >> router
-    router >> e("renders page") >> pages
-    router >> e("chat question") >> chat
-    pages >> e("reads records") >> records
-    chat >> e("question") >> retr
-    retr >> e("keyword match") >> records
-    chat >> e("reads [aws] key") >> secrets
-    chat >> e("Converse API (SigV4):\nrecords + question", minlen="2", headport="n") >> llm
-    chat >> e("answer text") >> cite
-    chat >> e("appends 1 entry per answer") >> audit
-linkedin(OUT)
+    with area("Streamlit Community Cloud", "host"):
+        app = icon("streamlit", "Streamlit app\ndashboard, at-risk,\nprofiles, AI chat")
+        with area("Data"):
+            records = icon("database-green", "12 synthetic\nstudent records")
+        with area("Grounded chat"):
+            cap = icon("gauge-red", "Session cap\n10 live answers")
+            retrieve = icon("search-ink", "Record retrieval\nby name, topic, subject")
+        with area("Audit"):
+            audit = icon("scroll-text-green", "Audit log (JSON Lines)\none entry per answer")
+
+    with area("AWS Cloud  (us-east-1)", "aws"):
+        iam = IAM("IAM user\nallowed: Haiku 4.5 only")
+        bedrock = Bedrock("Amazon Bedrock\nClaude Haiku 4.5\nUS inference profile")
+
+    user >> flow("question") >> app
+    app >> flow("dashboards") >> records
+    app >> flow("chat question") >> cap
+    cap >> flow("under cap") >> retrieve
+    records >> flow("matching\nrecords") >> retrieve
+    retrieve >> primary("Converse API\nanswer only from these\nrecords, cite their IDs") >> bedrock
+    iam >> soft() >> bedrock
+    bedrock >> primary("answer + cited IDs") >> audit
+    cap >> soft("over cap or no keys:\nshow records, no AI answer") >> audit
